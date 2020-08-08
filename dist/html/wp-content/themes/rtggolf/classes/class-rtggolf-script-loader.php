@@ -7,15 +7,15 @@
  * Based on a solution in WP Rig.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
+ * @subpackage RTG_Golf
+ * @since RTG Golf 1.0
  */
 
-if ( ! class_exists( 'TwentyTwenty_Script_Loader' ) ) {
+if ( ! class_exists( 'rtgGolf_Script_Loader' ) ) {
 	/**
 	 * A class that provides a way to add `async` or `defer` attributes to scripts.
 	 */
-	class TwentyTwenty_Script_Loader {
+	class rtgGolf_Script_Loader {
 
 		/**
 		 * Adds async/defer attributes to enqueued / registered scripts.

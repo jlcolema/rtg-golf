@@ -1,23 +1,23 @@
 <?php
 /**
- * Twenty Twenty Starter Content
+ * RTG Golf Starter Content
  *
  * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
+ * @subpackage RTG_Golf
+ * @since RTG Golf 1.0
  */
 
 /**
  * Function to return the array of starter content for the theme.
  *
- * Passes it through the `twentytwenty_starter_content` filter before returning.
+ * Passes it through the `rtggolf_starter_content` filter before returning.
  *
- * @since Twenty Twenty 1.0
+ * @since RTG Golf 1.0
  * @return array a filtered array of args for the starter_content.
  */
-function twentytwenty_get_starter_content() {
+function rtggolf_get_starter_content() {
 
 	// Define and register starter content to showcase the theme on new sites.
 	$starter_content = array(
@@ -35,7 +35,7 @@ function twentytwenty_get_starter_content() {
 		// Create the custom image attachments used as post thumbnails for pages.
 		'attachments' => array(
 			'image-opening' => array(
-				'post_title' => _x( 'The New UMoMA Opens its Doors', 'Theme starter content', 'twentytwenty' ),
+				'post_title' => _x( 'The New UMoMA Opens its Doors', 'Theme starter content', 'rtggolf' ),
 				'file'       => 'assets/images/2020-landscape-1.png', // URL relative to the template directory.
 			),
 		),
@@ -44,7 +44,7 @@ function twentytwenty_get_starter_content() {
 		'posts'       => array(
 			'front' => array(
 				'post_type'    => 'page',
-				'post_title'   => __( 'The New UMoMA Opens its Doors', 'twentytwenty' ),
+				'post_title'   => __( 'The New UMoMA Opens its Doors', 'rtggolf' ),
 				// Use the above featured image with the predefined about page.
 				'thumbnail'    => '{{image-opening}}',
 				'post_content' => join(
@@ -52,7 +52,7 @@ function twentytwenty_get_starter_content() {
 					array(
 						'<!-- wp:group {"align":"wide"} -->',
 						'<div class="wp-block-group alignwide"><div class="wp-block-group__inner-container"><!-- wp:heading {"align":"center"} -->',
-						'<h2 class="has-text-align-center">' . __( 'The premier destination for modern art in Northern Sweden. Open from 10 AM to 6 PM every day during the summer months.', 'twentytwenty' ) . '</h2>',
+						'<h2 class="has-text-align-center">' . __( 'The premier destination for modern art in Northern Sweden. Open from 10 AM to 6 PM every day during the summer months.', 'rtggolf' ) . '</h2>',
 						'<!-- /wp:heading --></div></div>',
 						'<!-- /wp:group -->',
 						'<!-- wp:columns {"align":"wide"} -->',
@@ -63,13 +63,13 @@ function twentytwenty_get_starter_content() {
 						'<figure class="wp-block-image alignfull size-full"><img src="' . get_theme_file_uri() . '/assets/images/2020-three-quarters-1.png" alt="" class="wp-image-37"/></figure>',
 						'<!-- /wp:image -->',
 						'<!-- wp:heading {"level":3} -->',
-						'<h3>' . __( 'Works and Days', 'twentytwenty' ) . '</h3>',
+						'<h3>' . __( 'Works and Days', 'rtggolf' ) . '</h3>',
 						'<!-- /wp:heading -->',
 						'<!-- wp:paragraph -->',
-						'<p>' . __( 'August 1 -- December 1', 'twentytwenty' ) . '</p>',
+						'<p>' . __( 'August 1 -- December 1', 'rtggolf' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:button {"className":"is-style-outline"} -->',
-						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'twentytwenty' ) . '</a></div>',
+						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'rtggolf' ) . '</a></div>',
 						'<!-- /wp:button --></div></div>',
 						'<!-- /wp:group -->',
 						'<!-- wp:group -->',
@@ -78,13 +78,13 @@ function twentytwenty_get_starter_content() {
 						'<figure class="wp-block-image alignfull size-full"><img src="' . get_theme_file_uri() . '/assets/images/2020-three-quarters-3.png" alt="" class="wp-image-37"/></figure>',
 						'<!-- /wp:image -->',
 						'<!-- wp:heading {"level":3} -->',
-						'<h3>' . __( 'Theatre of Operations', 'twentytwenty' ) . '</h3>',
+						'<h3>' . __( 'Theatre of Operations', 'rtggolf' ) . '</h3>',
 						'<!-- /wp:heading -->',
 						'<!-- wp:paragraph -->',
-						'<p>' . __( 'October 1 -- December 1', 'twentytwenty' ) . '</p>',
+						'<p>' . __( 'October 1 -- December 1', 'rtggolf' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:button {"className":"is-style-outline"} -->',
-						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'twentytwenty' ) . '</a></div>',
+						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'rtggolf' ) . '</a></div>',
 						'<!-- /wp:button --></div></div>',
 						'<!-- /wp:group --></div>',
 						'<!-- /wp:column -->',
@@ -95,13 +95,13 @@ function twentytwenty_get_starter_content() {
 						'<figure class="wp-block-image alignfull size-full"><img src="' . get_theme_file_uri() . '/assets/images/2020-three-quarters-2.png" alt="" class="wp-image-37"/></figure>',
 						'<!-- /wp:image -->',
 						'<!-- wp:heading {"level":3} -->',
-						'<h3>' . __( 'The Life I Deserve', 'twentytwenty' ) . '</h3>',
+						'<h3>' . __( 'The Life I Deserve', 'rtggolf' ) . '</h3>',
 						'<!-- /wp:heading -->',
 						'<!-- wp:paragraph -->',
-						'<p>' . __( 'August 1 -- December 1', 'twentytwenty' ) . '</p>',
+						'<p>' . __( 'August 1 -- December 1', 'rtggolf' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:button {"className":"is-style-outline"} -->',
-						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'twentytwenty' ) . '</a></div>',
+						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'rtggolf' ) . '</a></div>',
 						'<!-- /wp:button --></div></div>',
 						'<!-- /wp:group -->',
 						'<!-- wp:group -->',
@@ -110,13 +110,13 @@ function twentytwenty_get_starter_content() {
 						'<figure class="wp-block-image alignfull size-full"><img src="' . get_theme_file_uri() . '/assets/images/2020-three-quarters-4.png" alt="" class="wp-image-37"/></figure>',
 						'<!-- /wp:image -->',
 						'<!-- wp:heading {"level":3} -->',
-						'<h3>' . __( 'From Signac to Matisse', 'twentytwenty' ) . '</h3>',
+						'<h3>' . __( 'From Signac to Matisse', 'rtggolf' ) . '</h3>',
 						'<!-- /wp:heading -->',
 						'<!-- wp:paragraph -->',
-						'<p>' . __( 'October 1 -- December 1', 'twentytwenty' ) . '</p>',
+						'<p>' . __( 'October 1 -- December 1', 'rtggolf' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:button {"className":"is-style-outline"} -->',
-						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'twentytwenty' ) . '</a></div>',
+						'<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Read More', 'rtggolf' ) . '</a></div>',
 						'<!-- /wp:button --></div></div>',
 						'<!-- /wp:group --></div>',
 						'<!-- /wp:column --></div>',
@@ -126,14 +126,14 @@ function twentytwenty_get_starter_content() {
 						'<!-- /wp:image -->',
 						'<!-- wp:group {"align":"wide"} -->',
 						'<div class="wp-block-group alignwide"><div class="wp-block-group__inner-container"><!-- wp:heading {"align":"center","textColor":"accent"} -->',
-						'<h2 class="has-accent-color has-text-align-center">' . __( '&#8220;Cyborgs, as the philosopher Donna Haraway established, are not reverent. They do not remember the cosmos.&#8221;', 'twentytwenty' ) . '</h2>',
+						'<h2 class="has-accent-color has-text-align-center">' . __( '&#8220;Cyborgs, as the philosopher Donna Haraway established, are not reverent. They do not remember the cosmos.&#8221;', 'rtggolf' ) . '</h2>',
 						'<!-- /wp:heading --></div></div>',
 						'<!-- /wp:group -->',
 						'<!-- wp:paragraph {"dropCap":true} -->',
-						'<p class="has-drop-cap">' . __( 'With seven floors of striking architecture, UMoMA shows exhibitions of international contemporary art, sometimes along with art historical retrospectives. Existential, political and philosophical issues are intrinsic to our programme. As visitor you are invited to guided tours artist talks, lectures, film screenings and other events with free admission', 'twentytwenty' ) . '</p>',
+						'<p class="has-drop-cap">' . __( 'With seven floors of striking architecture, UMoMA shows exhibitions of international contemporary art, sometimes along with art historical retrospectives. Existential, political and philosophical issues are intrinsic to our programme. As visitor you are invited to guided tours artist talks, lectures, film screenings and other events with free admission', 'rtggolf' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:paragraph -->',
-						'<p>' . __( 'The exhibitions are produced by UMoMA in collaboration with artists and museums around the world and they often attract international attention. UMoMA has received a Special Commendation from the European Museum of the Year, and was among the top candidates for the Swedish Museum of the Year Award as well as for the Council of Europe Museum Prize.', 'twentytwenty' ) . '</p>',
+						'<p>' . __( 'The exhibitions are produced by UMoMA in collaboration with artists and museums around the world and they often attract international attention. UMoMA has received a Special Commendation from the European Museum of the Year, and was among the top candidates for the Swedish Museum of the Year Award as well as for the Council of Europe Museum Prize.', 'rtggolf' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:paragraph -->',
 						'<p></p>',
@@ -141,13 +141,13 @@ function twentytwenty_get_starter_content() {
 						'<!-- wp:group {"customBackgroundColor":"#ffffff","align":"wide"} -->',
 						'<div class="wp-block-group alignwide has-background" style="background-color:#ffffff"><div class="wp-block-group__inner-container"><!-- wp:group -->',
 						'<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:heading {"align":"center"} -->',
-						'<h2 class="has-text-align-center">' . __( 'Become a Member and Get Exclusive Offers!', 'twentytwenty' ) . '</h2>',
+						'<h2 class="has-text-align-center">' . __( 'Become a Member and Get Exclusive Offers!', 'rtggolf' ) . '</h2>',
 						'<!-- /wp:heading -->',
 						'<!-- wp:paragraph {"align":"center"} -->',
-						'<p class="has-text-align-center">' . __( 'Members get access to exclusive exhibits and sales. Our memberships cost $99.99 and are billed annually.', 'twentytwenty' ) . '</p>',
+						'<p class="has-text-align-center">' . __( 'Members get access to exclusive exhibits and sales. Our memberships cost $99.99 and are billed annually.', 'rtggolf' ) . '</p>',
 						'<!-- /wp:paragraph -->',
 						'<!-- wp:button {"align":"center"} -->',
-						'<div class="wp-block-button aligncenter"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Join the Club', 'twentytwenty' ) . '</a></div>',
+						'<div class="wp-block-button aligncenter"><a class="wp-block-button__link" href="https://make.wordpress.org/core/2019/09/27/block-editor-theme-related-updates-in-wordpress-5-3/">' . __( 'Join the Club', 'rtggolf' ) . '</a></div>',
 						'<!-- /wp:button --></div></div>',
 						'<!-- /wp:group --></div></div>',
 						'<!-- /wp:group -->',
@@ -173,7 +173,7 @@ function twentytwenty_get_starter_content() {
 		'nav_menus'   => array(
 			// Assign a menu to the "primary" location.
 			'primary'  => array(
-				'name'  => __( 'Primary', 'twentytwenty' ),
+				'name'  => __( 'Primary', 'rtggolf' ),
 				'items' => array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',
@@ -183,7 +183,7 @@ function twentytwenty_get_starter_content() {
 			),
 			// This replicates primary just to demonstrate the expanded menu.
 			'expanded' => array(
-				'name'  => __( 'Primary', 'twentytwenty' ),
+				'name'  => __( 'Primary', 'rtggolf' ),
 				'items' => array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',
@@ -193,7 +193,7 @@ function twentytwenty_get_starter_content() {
 			),
 			// Assign a menu to the "social" location.
 			'social'   => array(
-				'name'  => __( 'Social Links Menu', 'twentytwenty' ),
+				'name'  => __( 'Social Links Menu', 'rtggolf' ),
 				'items' => array(
 					'link_yelp',
 					'link_facebook',
@@ -206,12 +206,12 @@ function twentytwenty_get_starter_content() {
 	);
 
 	/**
-	 * Filters Twenty Twenty array of starter content.
+	 * Filters RTG Golf array of starter content.
 	 *
-	 * @since Twenty Twenty 1.0
+	 * @since RTG Golf 1.0
 	 *
 	 * @param array $starter_content Array of starter content.
 	 */
-	return apply_filters( 'twentytwenty_starter_content', $starter_content );
+	return apply_filters( 'rtggolf_starter_content', $starter_content );
 
 }
