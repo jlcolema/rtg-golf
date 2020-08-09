@@ -30,8 +30,8 @@ var browsersync = require('browser-sync');
 var basePaths = {
 
 	dev:    'src/',
-	dist:   'dist/html/system/user/templates/labyrinth/',
-	assets: 'dist/html/themes/user/site/labyrinth/assets/'
+	dist:   'dist/html/wp-content/themes/rtggolf/',
+	assets: 'dist/html/wp-content/themes/rtggolf/assets/'
 
 };
 
@@ -155,7 +155,7 @@ gulp.task('watch', function() {
 
 	gulp.watch(basePaths.dev + 'fonts/**/*', gulp.series('fonts'));
 
-	gulp.watch(basePaths.dist + '**/*.html').on('change', browsersync.reload);
+	gulp.watch(basePaths.dist + '**/*.php').on('change', browsersync.reload);
 
 });
 
