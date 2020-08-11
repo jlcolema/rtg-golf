@@ -9,179 +9,119 @@
  * @since RTG Golf 1.0
  */
 
-?><!DOCTYPE html>
+?>
 
-<html class="no-js" <?php language_attributes(); ?>>
+<!doctype html>
 
-	<head>
+<html <?php language_attributes(); ?> class="no-js">
 
-		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<head>
 
-		<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
 
-		<?php wp_head(); ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
-	</head>
+	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<body <?php body_class(); ?>>
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rufina:wght@400;700&display=swap" rel="stylesheet"> -->
 
-		<?php
-		wp_body_open();
-		?>
+	<!--
 
-		<header id="site-header" class="header-footer-group" role="banner">
+		font-family: 'Montserrat', sans-serif;
+		font-family: 'Rufina', serif;
 
-			<div class="header-inner section-inner">
+	-->
 
-				<div class="header-titles-wrapper">
+	<?php wp_head(); ?>
 
-					<?php
+</head>
 
-					// Check whether the header search is activated in the customizer.
-					$enable_header_search = get_theme_mod( 'enable_header_search', true );
+<body <?php body_class(); ?>>
 
-					if ( true === $enable_header_search ) {
+	<header role="banner" id="" class="header">
 
-						?>
+		<div class="wrap header__wrap">
 
-						<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
-							<span class="toggle-inner">
-								<span class="toggle-icon">
-									<?php rtggolf_the_theme_svg( 'search' ); ?>
-								</span>
-								<span class="toggle-text"><?php _e( 'Search', 'rtggolf' ); ?></span>
-							</span>
-						</button><!-- .search-toggle -->
+			<div class="logo">
 
-					<?php } ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo__link">
+				
+					<?php bloginfo( 'name' ); ?>
+				
+				</a>
 
-					<div class="header-titles">
+			</div>
 
-						<?php
-							// Site title or logo.
-							rtggolf_site_logo();
+			<nav role="navigation" class="nav">
 
-							// Site description.
-							rtggolf_site_description();
-						?>
+				<div class="nav__toggle">
 
-					</div><!-- .header-titles -->
+					<span class="nav__label">Menu</span>
 
-					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-						<span class="toggle-inner">
-							<span class="toggle-icon">
-								<?php rtggolf_the_theme_svg( 'ellipsis' ); ?>
-							</span>
-							<span class="toggle-text"><?php _e( 'Menu', 'rtggolf' ); ?></span>
-						</span>
-					</button><!-- .nav-toggle -->
+				</div>
 
-				</div><!-- .header-titles-wrapper -->
+				<?php
 
-				<div class="header-navigation-wrapper">
+					wp_nav_menu(
+			
+						array(
+			
+							'menu'					=> 'Primary Navigation',
+							'menu_class'			=> '',
+							'menu_id'				=> '',
+							'container'				=> '',
+							// 'container_class'	=> '',
+							// 'container_id'		=> '',
+							// 'fallback_cb'		=> '',
+							// 'before'				=> '',
+							// 'after'				=> '',
+							// 'link_before'		=> '',
+							// 'link_after'			=> '',
+							// 'echo'				=> true,
+							'depth'					=> 1,
+							// 'walker'				=> '',
+							'theme_location'		=> 'primary',
+							'items_wrap'			=> '<ol class="nav__list %2$s">%3$s</ol>',
+							// 'item_spacing'		=> 'preserve'
+							
+						)
+						
+					);
 
-					<?php
-					if ( has_nav_menu( 'primary' ) || ! has_nav_menu( 'expanded' ) ) {
-						?>
+				?>
 
-							<nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'rtggolf' ); ?>" role="navigation">
+			</nav>
 
-								<ul class="primary-menu reset-list-style">
+			<div id="" class="utilities">
 
-								<?php
-								if ( has_nav_menu( 'primary' ) ) {
+				<ul class="utilities__list">
 
-									wp_nav_menu(
-										array(
-											'container'  => '',
-											'items_wrap' => '%3$s',
-											'theme_location' => 'primary',
-										)
-									);
+					<li class="utilities__item">
 
-								} elseif ( ! has_nav_menu( 'expanded' ) ) {
+						<a href="#" class="utilities__link">Member Login</a>
 
-									wp_list_pages(
-										array(
-											'match_menu_classes' => true,
-											'show_sub_menu_icons' => true,
-											'title_li' => false,
-											'walker'   => new rtggolf_Walker_Page(),
-										)
-									);
+					</li>
 
-								}
-								?>
+					<li class="utilities__item">
 
-								</ul>
+						<a href="#" class="utilities__link">Contact Us</a>
 
-							</nav><!-- .primary-menu-wrapper -->
+					</li>
 
-						<?php
-					}
+					<!-- <li class="utilities__item">
 
-					if ( true === $enable_header_search || has_nav_menu( 'expanded' ) ) {
-						?>
+						<a href="#" class="utilities__link">Shopping Bag</a>
 
-						<div class="header-toggles hide-no-js">
+					</li> -->
 
-						<?php
-						if ( has_nav_menu( 'expanded' ) ) {
-							?>
+				</ul>
 
-							<div class="toggle-wrapper nav-toggle-wrapper has-expanded-menu">
+			</div>
 
-								<button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-									<span class="toggle-inner">
-										<span class="toggle-text"><?php _e( 'Menu', 'rtggolf' ); ?></span>
-										<span class="toggle-icon">
-											<?php rtggolf_the_theme_svg( 'ellipsis' ); ?>
-										</span>
-									</span>
-								</button><!-- .nav-toggle -->
+		</div>
 
-							</div><!-- .nav-toggle-wrapper -->
+	</header>
 
-							<?php
-						}
+	<main role="main" id="" class="main">
 
-						if ( true === $enable_header_search ) {
-							?>
-
-							<div class="toggle-wrapper search-toggle-wrapper">
-
-								<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
-									<span class="toggle-inner">
-										<?php rtggolf_the_theme_svg( 'search' ); ?>
-										<span class="toggle-text"><?php _e( 'Search', 'rtggolf' ); ?></span>
-									</span>
-								</button><!-- .search-toggle -->
-
-							</div>
-
-							<?php
-						}
-						?>
-
-						</div><!-- .header-toggles -->
-						<?php
-					}
-					?>
-
-				</div><!-- .header-navigation-wrapper -->
-
-			</div><!-- .header-inner -->
-
-			<?php
-			// Output the search modal (if it is activated in the customizer).
-			if ( true === $enable_header_search ) {
-				get_template_part( 'template-parts/modal-search' );
-			}
-			?>
-
-		</header><!-- #site-header -->
-
-		<?php
-		// Output the menu modal.
-		get_template_part( 'template-parts/modal-menu' );
+		<div class="wrap main___wrap">
