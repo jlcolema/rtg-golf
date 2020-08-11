@@ -10,13 +10,9 @@
 get_header();
 ?>
 
-<main id="site-content" role="main">
+	<h1 class="entry-title"><?php _e( 'Page Not Found', 'rtggolf' ); ?></h1>
 
-	<div class="section-inner thin error404-content">
-
-		<h1 class="entry-title"><?php _e( 'Page Not Found', 'rtggolf' ); ?></h1>
-
-		<div class="intro-text"><p><?php _e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'rtggolf' ); ?></p></div>
+	<div class="intro-text"><p><?php _e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'rtggolf' ); ?></p></div>
 
 		<?php
 		get_search_form(
@@ -25,12 +21,6 @@ get_header();
 			)
 		);
 		?>
-
-	</div><!-- .section-inner -->
-
-</main><!-- #site-content -->
-
-<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
 
 <?php
 get_footer();

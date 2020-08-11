@@ -12,23 +12,32 @@
 get_header();
 ?>
 
-<main id="site-content" role="main">
+	<!-- Banner -->
 
-	<?php
+	Title
 
-	if ( have_posts() ) {
+	[Image]
 
-		while ( have_posts() ) {
-			the_post();
+	August 2, 2020
 
-			get_template_part( 'template-parts/content', get_post_type() );
-		}
-	}
+	Category
 
-	?>
+	RTG golf traveled with a small group of golfers in August of 2019. Most of the travelers are veterans of several trips to Ireland & Scotland having played most of the courses that grab the headlines.
 
-</main><!-- #site-content -->
+	This trip was designed to play a couple of the big names as well as get off the beaten path. Total success on both initiatives. The group loved Ailsa at Turnberry, Dundonald Links and Western Gailes–but the trip became memorable once we ventured further west from the Ayrshire coast.
 
-<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
+	We took the long and winding road (yes, the one of Beatles lore) to the tiny village of Machrihanish located in the shadow of Campbeltown.
+
+	<!-- Sidebar -->
+
+	<!-- List of Posts -->
+
+	Title
+
+	Date
+
+	<!-- List of Categories -->
+
+	Title
 
 <?php get_footer(); ?>
