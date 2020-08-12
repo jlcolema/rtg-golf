@@ -1,0 +1,111 @@
+//------------------------------
+// Screen Stylesheet
+//------------------------------
+
+// RTG Golf
+// Source: http://www.rtggolf.com
+
+// New Structure?
+
+// @charset 'utf-8';
+
+// 1. Configuration and Helpers
+
+// @import 'abstracts/variables';
+// @import 'abstracts/functions';
+// @import 'abstracts/mixins';
+// @import 'abstracts/placeholders';
+
+// 2. Vendors
+
+// @import 'vendors/boostrap';
+// @import 'vendors/jquery-ui';
+
+// 3. Base Stuff
+
+// @import 'base/reset';
+// @import 'base/typography';
+
+// 4. Layout-related Sections
+
+// @import 'layout/navigation';
+// @import 'layout/grid';
+// @import 'layout/header';
+// @import 'layout/footer';
+// @import 'layout/sidebar';
+// @import 'layout/forms';
+
+// 5. Components
+
+// @import 'components/buttons';
+// @import 'components/carousel';
+// @import 'components/cover';
+// @import 'componenets/dropdown';
+
+// 6. Page-specific Styles
+
+// @import 'pages/home';
+// @import 'pages/contact';
+
+// 7. Themes
+
+// @import 'themes/theme';
+// @import 'themes/admin';
+
+// Common
+//------------------------------
+
+// Notes...
+
+@import "common/normalize";
+
+// Notes...
+
+@import "common/mixins";
+
+// Notes...
+
+@import "common/variables";
+
+// Notes...
+
+@import "common/fonts";
+
+// Notes...
+
+@import "common/baseline";
+
+// Notes...
+
+@import "common/miscellaneous";
+
+// Components
+//------------------------------
+
+// Notes...
+
+// @import "components/button";
+
+// Sections
+//------------------------------
+
+// Notes...
+
+// @import "sections/banner";
+// @import "sections/hero";
+// @import "sections/content";
+
+// Layouts
+//------------------------------
+
+// Notes...
+
+@import "layouts/header";
+
+// Notes...
+
+@import "layouts/main";
+
+// Notes...
+
+@import "layouts/footer";
