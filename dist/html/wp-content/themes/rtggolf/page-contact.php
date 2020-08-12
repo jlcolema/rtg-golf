@@ -10,6 +10,8 @@
 
 	<!-- Title -->
 
+	<?php echo do_shortcode( '[contact-form-7 id="27" title="Contact"]' ); ?>
+
 	Please Get In Touch
 
 	Send us a message
