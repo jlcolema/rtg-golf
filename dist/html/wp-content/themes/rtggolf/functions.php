@@ -351,24 +351,40 @@ add_filter( 'wpcf7_load_js', '__return_false' );
 
 // Notes...
 
-// if ( functions_exists( 'acf_add_options_page' ) ) {
+if ( function_exists( 'acf_add_options_page' ) ) {
 
-	// acf_add_options_page( array(
+	acf_add_options_page( array(
 
-		// 'page_title'	=> 'Theme General Settings',
-		// 'menu_title'	=> 'Globals',
-		// 'menu_slug'	=> 'globals',
-		// 'capability'	=> 'edit_posts',
-		// 'redirect'	=> false
+		'page_title'	=> 'Globals',
+		'menu_title'	=> 'Globals',
+		'menu_slug'		=> 'globals',
+		'capability'	=> 'edit_posts',
+		// 'redirect'		=> false
 
-	// ) );
+	) );
 
-	// acf_add_options_sub_page( array(
+	acf_add_options_sub_page( array(
 
-		// 'page_title'		=> 'Banner',
-		// 'menu_title'		=> 'Banner',
-		// 'parent_slug'	=> 'globals'
+		'page_title'		=> 'Contact Information',
+		'menu_title'		=> 'Contact Information',
+		'parent_slug'	=> 'globals'
 
-	// ) );
+	) );
 
-// }
+	acf_add_options_sub_page( array(
+
+		'page_title'		=> 'Affiliations',
+		'menu_title'		=> 'Affiliations',
+		'parent_slug'	=> 'globals'
+
+	) );
+
+	acf_add_options_sub_page( array(
+
+		'page_title'		=> 'Social Media',
+		'menu_title'		=> 'Social Media',
+		'parent_slug'	=> 'globals'
+
+	) );
+
+}
