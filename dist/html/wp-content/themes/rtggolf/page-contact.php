@@ -1,33 +1,29 @@
 <?php get_header(); ?>
 
-	<h1 class=""><?php the_title(); ?></h1>
+	<?php /* Banner */ ?>
 
-	<!-- Banner -->
+	<div class="banner">
 
-	Contact Us
+		<div class="banner__inner-wrap">
 
-	[Image]
+			<h1 class="">Contact Us</h1>
 
-	<!-- Title -->
+		</div>
 
-	<?php echo do_shortcode( '[contact-form-7 id="27" title="Contact"]' ); ?>
+	</div>
 
-	Please Get In Touch
+	<?php /* Form */ ?>
 
-	Send us a message
+	<div class="">
 
-	Tom Kozlak
+		<div class="">
 
-	tomk@rtggolf.com
+			<h2 class="">Please Get in Touch</h2>
 
-	(612) 816-3337
+			<?php echo do_shortcode( '[contact-form-7 id="27" title="Contact"]' ); ?>
 
-	Scott Cole
+		</div>
 
-	scottc@rtggolf.com
-
-	(612) 816-3337
-
-	<!-- Newsletter -->
+	</div>
 
 <?php get_footer(); ?>
