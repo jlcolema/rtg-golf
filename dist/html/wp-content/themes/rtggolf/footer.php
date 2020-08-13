@@ -21,63 +21,177 @@
 
 		<div class="wrap footer__wrap">
 
-			<div class="contact">
+			<div class="widgets">
 
-				<h3 class="contact__header">Contact</h3>
+				<?php /* Explore */ ?>
 
-				<div class="h-card contact__h-card">
+				<div class="widget__item">
 
-					<div class="p-name">Tom Kozlak</div>
+					<h3 class="widget__header">Explore</h3>
 
-					<div class="p-adr">
+					<div class="widget__content">
 
-						<span class="p-locality">St. Paul,</span>
-							
-						<span class="p-region">MN</span>
-					
-					</div>
+						<nav role="navigation" class="secondary-nav">
 
-					<div class="p-tel">(612) 816-3337</div>
+							<?php
 
-					<div class="u-email">
+								wp_nav_menu(
 
-						<a href="mailto:tomk@rtggolf.com">tomk@rtggolf.com</a>
+									array(
+
+										'menu'					=> 'Primary Navigation',
+										'menu_class'			=> '',
+										'menu_id'				=> '',
+										'container'				=> '',
+										// 'container_class'	=> '',
+										// 'container_id'		=> '',
+										// 'fallback_cb'		=> '',
+										// 'before'				=> '',
+										// 'after'				=> '',
+										// 'link_before'		=> '',
+										// 'link_after'			=> '',
+										// 'echo'				=> true,
+										'depth'					=> 1,
+										// 'walker'				=> '',
+										'theme_location'		=> 'primary',
+										'items_wrap'			=> '<ol class="secondary-nav__list %2$s">%3$s</ol>',
+										// 'item_spacing'		=> 'preserve'
+										
+									)
+									
+								);
+
+							?>
+
+						</nav>
 
 					</div>
 
 				</div>
 
-				<div class="h-card contact__h-card">
+				<?php /* Recent Posts */ ?>
 
-					<div class="p-name">Scott Cole</div>
+				<div class="widget__item">
 
-					<div class="p-adr">
+					<h3 class="widget__header">Recent Post</h3>
 
-						<span class="p-locality">New Richmond,</span>
+					<div class="widget__content">
 
-						<span class="p-region">WI</span>
+						<article class="">
+
+							<h1 class="">
+
+								<a href="#" class="">Title</a>
+
+							</h1>
+
+							<div class="">
+
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat hic provident quae ducimus dolorem asperiores repudiandae, excepturi illo culpa distinctio laboriosam molestiae? Vero eaque, repellendus minus eos fugit magni voluptatem!</p>
+
+							</div>
+
+							<footer class="">
+
+								<time datetime="" class="">August 11, 2020</time>
+
+							</footer>
+
+						</article>
+
+						<div class="">
+
+							<a href="#" class="">See More</a>
+
+						</div>
 
 					</div>
 
-					<div class="p-tel">(715) 529-4979</div>
+				</div>
 
-					<div class="u-email">
+				<?php /* Contact Us */ ?>
 
-						<a href="mailto:scottc@rtggolf.com">scottc@rtggolf.com</a>
+				<div class="widget__item">
+
+					<h3 class="widget__header">Contact Us</h3>
+
+					<div class="widget__content">
+
+						<div class="h-card contact__h-card">
+
+							<div class="p-name">Tom Kozlak</div>
+
+							<div class="p-adr">
+
+								<span class="p-locality">St. Paul,</span>
+									
+								<span class="p-region">MN</span>
+
+							</div>
+
+							<div class="p-tel">(612) 816-3337</div>
+
+							<div class="u-email">
+
+								<a href="mailto:tomk@rtggolf.com">tomk@rtggolf.com</a>
+
+							</div>
+
+						</div>
+
+						<div class="h-card contact__h-card">
+
+							<div class="p-name">Scott Cole</div>
+
+							<div class="p-adr">
+
+								<span class="p-locality">New Richmond,</span>
+
+								<span class="p-region">WI</span>
+
+							</div>
+
+							<div class="p-tel">(715) 529-4979</div>
+
+							<div class="u-email">
+
+								<a href="mailto:scottc@rtggolf.com">scottc@rtggolf.com</a>
+
+							</div>
+
+						</div>
+
+						<div class="social">
+
+							<ul class="social__list">
+
+								<li class="social__item">
+
+									<a href="https://www.facebook/rtggolf" rel="external" class="social__link">Facebook</a>
+
+								</li>
+
+								<li class="social__item">
+
+									<a href="https://www.twitter/rtggolf" rel="external" class="social__link">Twitter</a>
+
+								</li>
+
+								<li class="social__item">
+
+									<a href="https://www.instagram/rtggolf" rel="external" class="social__link">Instagram</a>
+
+								</li>
+
+							</ul>
+
+						</div>
 
 					</div>
 
 				</div>
 
 			</div>
-
-			<!-- Social -->
-
-			Facebook: https://facebook.com/rtggolf
-
-			Twitter: https://twitter.com/rtggolf
-
-			Instagram: https://instagram.com/rtggolf [???]
 
 			<div class="affiliations">
 
@@ -105,9 +219,9 @@
 
 			</div>
 
-			<div class="">
+			<div class="callout">
 
-				<a href="" class="">Sign up for monthly newsletter</a> and stay up to date with news and updates.
+				<a href="https://airtable.com/shrCKH5OjqWsRTRUi" rel="external" class="callout__link">Sign up for monthly newsletter</a> and stay up to date with news and updates.
 
 			</div>
 
