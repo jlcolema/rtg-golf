@@ -104,7 +104,7 @@
 
 					<li class="utilities__item">
 
-						<a href="#" class="utilities__link">Contact Us</a>
+						<a href="/contact/" class="utilities__link">Contact Us</a>
 
 					</li>
 
