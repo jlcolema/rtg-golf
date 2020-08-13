@@ -1,15 +1,39 @@
 <?php get_header(); ?>
 
-	<h1 class=""><?php the_title(); ?></h1>
+	<?php /* Banner */ ?>
 
-	<!-- Banner -->
+	<div class="banner">
 
-	Title
+		<div class="banner__inner-wrap">
 
-	[Image]
+			<h1 class=""><?php the_title(); ?></h1>
 
-	<!-- Overview -->
+		</div>
 
-	<!-- List of Locations -->
+	</div>
+
+	<?php /* Overview */ ?>
+
+	<div class="">
+
+		<div class="">
+
+			Overview
+
+		</div>
+
+	</div>
+
+	<?php /* List of Locations */ ?>
+	
+	<div class="">
+
+		<div class="">
+
+			List of Locations
+
+		</div>
+
+	</div>
 
 <?php get_footer(); ?>
