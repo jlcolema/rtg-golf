@@ -1,63 +1,177 @@
 <?php get_header(); ?>
 
-	<h1 class=""><?php the_title(); ?></h1>
+	<?php /* Hero */ ?>
 
-	<!-- Hero -->
+	<div class="hero">
 
-	RTG Golf
+		<div class="hero__inner-wrap">
 
-	Another Trip of a Lifetime
+			<div class="hero__label">RTG Golf</div>
 
-	We take golf trips from good to great!
+			<h1 class="hero__header">Another Trip of a Lifetime</h1>
 
-	[Authorized Provider]
+			<div class="hero__details">
 
-	Read More
+				<p>We take golf trips from good to great!</p>
 
-	[Background Image]
+			</div>
 
-	<!-- Featured Destinations -->
+			<div class="hero__provider">
 
-	RTG Golf
+				<span class="">St. Andrews Links Authorized Provider</span>
 
-	From concept to completion and every detail in between
+			</div>
 
-	[Image]
+			<div class="hero__more">
 
-	The British Isles
+				<a href="/about-us/" class="hero__more-link">Learn More</a>
 
-	The British Isles – Ireland, Scotland, and England have been the focus of international golf travel for the past two decades.
+			</div>
 
-	RTG has years of experience in designing and executing trips to every corner of these three amazing golf destinations. 
+		</div>
 
-	We can show you how to experience Ireland, Scotland, and England with a myriad of possible itineraries and routes.
+	</div>
 
-	Learn More
+	<?php /* Featured Destinations */ ?>
 
-	[Image]
+	<div class="featured-destinations">
 
-	Domestic Golf Trips
+		<div class="featured-destinations__inner-wrap">
 
-	Our clients want to know, “Where are we going this year?” With years of experience with destinations around the country – we have the answers.
+			<div class="featured-destinations__title">RTG Golf</div>
 
-	We can show you how to check off the destinations on your Play The Greats List…
+			<h2 class="featured-destinations__header">From concept to completion and every detail in between</h2>
 
-	…as well as provide destination information on great venues for your annual family or buddies trip.
+			<div class="featured-destinations__title">
 
-	Learn More
+				<ul class="featured-destinations__list">
 
-	[Image]
+					<li class="featured-destinations__item">
 
-	The Rest of the World
+						<div class="featured-destinations__thumbnail">
 
-	There is great golf everywhere – RTG can show you how to experience it anywhere in the world.
+							<a href="#" class="featured-destinations__link">
 
-	Along with the British Isles we have sent golf travelers around the world including trips to:
+								<img src="https://via.placeholder.com/400x400" alt="The British Isles" class="featured-destinations__img" />
 
-	Spain, Portugal, China, Thailand, Vietnam, United Arab Emirates, Dominican Republic, Columbia, Argentina, Brazil, Costa Rica, Mexico, Canada, New Zealand, and Australia.
+							</a>
 
-	Learn More
+						</div>
 
-	<!-- Email Newsletter -->
+						<h3 class="featured-destinations__location">
+							
+							<a href="#" class="featured-destinations__link">The British Isles</a>
+						
+						</h3>
+
+						<div class="featured-destinations__details">
+
+							<p>The British Isles – Ireland, Scotland, and England have been the focus of international golf travel for the past two decades.</p>
+
+							<p>RTG has years of experience in designing and executing trips to every corner of these three amazing golf destinations.</p>
+
+							<p>We can show you how to experience Ireland, Scotland, and England with a myriad of possible itineraries and routes.</p>
+
+						</div>
+
+						<div class="featured-destinations__more">
+
+							<a href="#" class="featured-destinations__title">Learn More</a>
+
+						</div>
+
+					</li>
+
+					<li class="featured-destinations__item">
+
+						<div class="">
+
+							<a href="#" class="">
+
+								<img src="https://via.placeholder.com/400x400" alt="Domestic Golf Trips" class="" />
+
+							</a>
+
+						</div>
+
+						<h3 class="">
+
+							<a href="#" class="">Domestic Golf Trips</a>
+
+						</h3>
+
+						<div class="">
+
+							Our clients want to know, “Where are we going this year?” With years of experience with destinations around the country – we have the answers.
+
+							We can show you how to check off the destinations on your Play The Greats List…
+
+							…as well as provide destination information on great venues for your annual family or buddies trip.
+
+						</div>
+
+						<div class="">
+
+							<a href="#" class="">Learn More</a>
+
+						</div>
+
+					</li>
+
+					<li class="">
+
+						<div class="">
+
+							<a href="#" class="">
+
+								<img src="https://via.placeholder.com/400x400" alt="The Rest of the World" class="" />
+
+							</a>
+
+						</div>
+
+						<h3 class="">
+
+							<a href="#" class="">The Rest of the World</a>
+
+						</h3>
+
+						<div class="">
+
+							There is great golf everywhere – RTG can show you how to experience it anywhere in the world.
+
+							Along with the British Isles we have sent golf travelers around the world including trips to:
+
+							Spain, Portugal, China, Thailand, Vietnam, United Arab Emirates, Dominican Republic, Columbia, Argentina, Brazil, Costa Rica, Mexico, Canada, New Zealand, and Australia.
+
+						</div>
+
+						<div class="">
+
+							<a href="#" class="">Learn More</a>
+
+						</div>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<?php /* Email Newsletter */ ?>
+
+	<div class="newsletter">
+
+		<div class="newsletter__inner-wrap">
+
+			<iframe class="newsletter__iframe airtable-embed" src="https://airtable.com/embed/shrCKH5OjqWsRTRUi?backgroundColor=purple"; frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+
+		</div>
+
+	</div>
 
 <?php get_footer(); ?>
