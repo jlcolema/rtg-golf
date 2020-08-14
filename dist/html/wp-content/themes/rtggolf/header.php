@@ -19,19 +19,12 @@
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rufina:wght@400;700&display=swap" rel="stylesheet"> -->
-
-	<!--
-
-		font-family: 'Montserrat', sans-serif;
-		font-family: 'Rufina', serif;
-
-	-->
-
+    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Rufina:wght@400;700&display=swap" rel="stylesheet" media="screen, projection" />
+	
 	<?php wp_head(); ?>
 
 </head>
