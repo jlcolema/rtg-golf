@@ -23,7 +23,7 @@
 
 			<div class="widgets">
 
-				<?php /* Explore */ ?>
+				<?php /* Navigation Widget */ ?>
 
 				<div class="widget__item">
 
@@ -69,7 +69,7 @@
 
 				</div>
 
-				<?php /* Recent Posts */ ?>
+				<?php /* Recent Posts Widget */ ?>
 
 				<div class="widget__item">
 
@@ -109,7 +109,7 @@
 
 				</div>
 
-				<?php /* Contact Us */ ?>
+				<?php /* Contact Us Widget */ ?>
 
 				<div class="widget__item">
 
