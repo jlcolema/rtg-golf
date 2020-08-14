@@ -18,34 +18,94 @@ get_header();
 
 ?>
 
-	<!-- Banner -->
+	<?php /* Banner */ ?>
 
-	Blog
+	<div class="banner">
 
-	[Image]
+		<div class="banner__inner-wrap">
 
-	<!-- List of Posts -->
+			<h1 class="">Blog</h1>
 
-	[Image]
+		</div>
 
-	Title
+	</div>
 
-	Date
+	<?php /* List of Posts */ ?>
 
-	Excerpt
+	<div class="">
 
-	Read More
+		<div class="">
 
-	<!-- Sidebar -->
+			<div class="posts__list">
 
-	<!-- List of Posts -->
+				<article class="posts__item h-entry">
 
-	Title
+					<div class="">
 
-	Date
+						<img src="https://via.placeholder.com/400x300" alt="A very nice description." class="" />
 
-	<!-- List of Categories -->
+					</div>
 
-	Title
+					<h1 class="">
+						
+						<a href="#" class="">Title</a>
+					
+					</h1>
+
+					<div class="">
+
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid corporis quasi sequi quos sit repellendus odio, est hic voluptatibus odit, accusantium animi quidem officia quae cupiditate nisi, pariatur repudiandae laborum.</p>
+
+					</div>
+
+					<div class="">
+
+						<a href="#" class="">Read More</a>
+
+					</div>
+
+					<footer class="">
+
+						<time datetime="" class="">August 20, 2020</time>
+
+					</footer>
+
+				</article>
+
+			</div>
+
+			<div class="">
+
+				<?php /* Post Navigation */ ?>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<?php /* Sidebar */ ?>
+
+	<div class="">
+
+		<?php /* List of Recent Posts */ ?>
+
+		<div class="">
+
+			<h3 class="">Recent Posts</h3>
+
+			Date
+
+		</div>
+
+		<?php /* List of Categories */ ?>
+
+		<div class="">
+
+			<h3 class="">Categories</h3>
+
+		</div>
+
+	</div>
 
 <?php get_footer();
