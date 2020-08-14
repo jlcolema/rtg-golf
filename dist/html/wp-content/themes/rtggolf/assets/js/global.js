@@ -1,0 +1,1 @@
+!function(n){n(document).on("ready",function(){}),n(window).on("load",function(){n("body").addClass("dev");var d=n(window).width(),i=n(window).height();n(".footer").after('<div id="dev"></div>'),n("#dev").text(d+" W / "+i+" H")}),n(window).on("resize",function(){var d=n(window).width(),i=n(window).height();n("#dev").text(d+" W / "+i+" H")})}(window.jQuery);
