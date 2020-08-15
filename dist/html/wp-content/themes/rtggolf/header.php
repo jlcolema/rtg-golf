@@ -31,6 +31,40 @@
 
 <body <?php body_class(); ?>>
 
+	<div class="pre-header">
+
+		<div class="wrap pre-header__wrap">
+
+			<div id="" class="utilities">
+
+				<ul class="utilities__list">
+
+					<li class="utilities__item">
+
+						<a href="#" class="utilities__link">Member Login</a>
+
+					</li>
+
+					<li class="utilities__item">
+
+						<a href="/contact-us/" class="utilities__link">Contact Us</a>
+
+					</li>
+
+					<!-- <li class="utilities__item">
+
+						<a href="#" class="utilities__link">Shopping Bag</a>
+
+					</li> -->
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
 	<header role="banner" id="" class="header">
 
 		<div class="wrap header__wrap">
@@ -84,32 +118,6 @@
 				?>
 
 			</nav>
-
-			<div id="" class="utilities">
-
-				<ul class="utilities__list">
-
-					<li class="utilities__item">
-
-						<a href="#" class="utilities__link">Member Login</a>
-
-					</li>
-
-					<li class="utilities__item">
-
-						<a href="/contact-us/" class="utilities__link">Contact Us</a>
-
-					</li>
-
-					<!-- <li class="utilities__item">
-
-						<a href="#" class="utilities__link">Shopping Bag</a>
-
-					</li> -->
-
-				</ul>
-
-			</div>
 
 		</div>
 

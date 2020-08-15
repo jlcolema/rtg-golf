@@ -3,3 +3,41 @@
 ------------------------------*/
 
 // Notes...
+
+.header {}
+
+	.header__wrap {}
+
+		.logo {}
+
+			.logo__link {}
+
+		.nav {}
+
+			.nav__toggle {}
+
+				.nav__label {}
+
+			.nav__list {}
+
+				.nav__item,
+				.menu__item {
+
+					a {
+
+						&:hover {}
+
+					}
+
+				}
+
+				.nav__item--is-current,
+				.current-menu-item {
+
+					a {
+
+						&:hover {}
+
+					}
+
+				}
