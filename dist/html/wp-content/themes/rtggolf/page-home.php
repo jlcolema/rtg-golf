@@ -168,7 +168,7 @@
 
 		<div class="newsletter__inner-wrap">
 
-			<iframe class="newsletter__iframe airtable-embed" src="https://airtable.com/embed/shrCKH5OjqWsRTRUi?backgroundColor=purple"; frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+			<iframe class="newsletter__iframe airtable-embed" src="https://airtable.com/embed/shrCKH5OjqWsRTRUi?backgroundColor=purple"; frameborder="0" onmousewheel="" width="100%" height="533"></iframe>
 
 		</div>
 
