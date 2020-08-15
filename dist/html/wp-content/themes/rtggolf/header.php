@@ -97,7 +97,7 @@
 
 					<li class="utilities__item">
 
-						<a href="/contact/" class="utilities__link">Contact Us</a>
+						<a href="/contact-us/" class="utilities__link">Contact Us</a>
 
 					</li>
 
