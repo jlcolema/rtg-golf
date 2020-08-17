@@ -18,18 +18,6 @@ get_header();
 
 ?>
 
-	<?php /* Banner */ ?>
-
-	<div class="banner">
-
-		<div class="banner__inner-wrap">
-
-			<h1 class="">Blog</h1>
-
-		</div>
-
-	</div>
-
 	<?php /* List of Posts */ ?>
 
 	<div class="">
