@@ -13,9 +13,61 @@
 
 ?>
 
+			</div>
+
+			<?php if ( ! is_front_page() && is_home() ) : ?>
+
+				<div class="main__secondary">Secondary</div>
+
+			<?php endif; ?>
+
 		</div>
 
 	</main>
+
+	<div class="pre-footer">
+
+		<div class="wrap pre-footer__wrap">
+
+			<?php /* Newsletter */ ?>
+
+			<?php /* Form */ ?>
+
+			<?php /*
+
+			<div class="newsletter">
+
+				<div class="newsletter__inner-wrap">
+
+					<iframe class="newsletter__iframe airtable-embed" src="https://airtable.com/embed/shrCKH5OjqWsRTRUi?backgroundColor=purple"; frameborder="0" onmousewheel="" width="100%" height="533"></iframe>
+
+				</div>
+
+			</div>
+
+			*/ ?>
+
+			<?php /* CTA */ ?>
+
+			<div class="newsletter">
+
+				<div class="newsletter__inner-wrap">
+
+					<h3 class="newsletter__title">Join Our E-mail List</h3>
+
+					<div class="newsletter__detail">
+
+						<p><a href="https://airtable.com/shrCKH5OjqWsRTRUi">Sign up for monthly newsletter</a> to keep up to date with new destinations and trip ideas.</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
 
 	<footer role="contentinfo" id="" class="footer">
 
@@ -77,33 +129,33 @@
 
 					<div class="widget__content">
 
-						<article class="">
+						<article class="summary">
 
-							<h1 class="">
+							<h1 class="summary__title">
 
-								<a href="#" class="">Title</a>
+								<a href="#" class="summary__link">Title</a>
 
 							</h1>
 
-							<div class="">
+							<footer class="summary__footer">
+
+								<time datetime="" class="summary__time">August 11, 2020</time>
+
+							</footer>
+
+							<div class="summary__excerpt">
 
 								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat hic provident quae ducimus dolorem asperiores repudiandae, excepturi illo culpa distinctio laboriosam molestiae? Vero eaque, repellendus minus eos fugit magni voluptatem!</p>
 
 							</div>
 
-							<footer class="">
+							<div class="summary__more">
 
-								<time datetime="" class="">August 11, 2020</time>
+								<a href="/blog/" class="summary__more-link">Read More</a>
 
-							</footer>
+							</div>
 
 						</article>
-
-						<div class="">
-
-							<a href="#" class="">See More</a>
-
-						</div>
 
 					</div>
 
@@ -133,7 +185,7 @@
 
 							<div class="u-email">
 
-								<a href="mailto:tomk@rtggolf.com">tomk@rtggolf.com</a>
+								<a href="mailto:tomk@rtggolf.com" class="u-email__link">tomk@rtggolf.com</a>
 
 							</div>
 
@@ -155,7 +207,7 @@
 
 							<div class="u-email">
 
-								<a href="mailto:scottc@rtggolf.com">scottc@rtggolf.com</a>
+								<a href="mailto:scottc@rtggolf.com" class="u-email__link">scottc@rtggolf.com</a>
 
 							</div>
 
@@ -219,13 +271,7 @@
 
 			</div>
 
-			<div class="callout">
-
-				<a href="https://airtable.com/shrCKH5OjqWsRTRUi" rel="external" class="callout__link">Sign up for monthly newsletter</a> and stay up to date with news and updates.
-
-			</div>
-
-			<p class="copyright">Copyright <?php echo date_i18n( _x( 'Y', 'copyright date format', 'rtggolf' ) ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class=""><?php bloginfo( 'name' ); ?></a>. All rights reserved.</p>
+			<p class="copyright">Copyright <?php echo date_i18n( _x( 'Y', 'copyright date format', 'rtggolf' ) ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="copyright__link"><?php bloginfo( 'name' ); ?></a>. All rights reserved.</p>
 
 		</div>
 
