@@ -74,7 +74,7 @@ gulp.task('js', function() {
 	return gulp.src([
 
 		// basePaths.dev + 'js/modernizr.js',
-		// basePaths.dev + 'js/jquery.js',
+		basePaths.dev + 'js/libraries/jquery-3.5.1.js',
 		// basePaths.dev + 'js/flexslider.js',
 		// basePaths.dev + 'js/scroll.js',
 		// basePaths.dev + 'js/holder.js',
