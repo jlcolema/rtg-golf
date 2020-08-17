@@ -4,28 +4,83 @@
 
 // Notes...
 
-.header {}
+.header {
 
-	.header__wrap {}
+	border-bottom: 1px solid $color-gray-10;
+
+}
+
+	.header__wrap {
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		align-content: flex-start;
+
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+
+	}
 
 		.logo {}
 
-			.logo__link {}
+			.logo__link {
+
+				display: block;
+				width: 200px;
+				height: 100px;
+				background: url(../img/logo.svg) center center no-repeat;
+				@include hide-text();
+
+			}
 
 		.nav {}
 
-			.nav__toggle {}
+			.nav__toggle {
+
+				display: none;
+
+			}
 
 				.nav__label {}
 
-			.nav__list {}
+			.nav__list {
+
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				align-content: flex-start;
+
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+			}
 
 				.nav__item,
-				.menu__item {
+				.menu-item {
+
+					margin: 0 0 0 1.75em;
+					font-weight: bold;
 
 					a {
 
-						&:hover {}
+						display: block;
+						// padding: 1em 0 1em 0;
+						color: $color-gray-80;
+						// background: pink;
+						text-decoration: none;
+
+						&:hover {
+
+							color: $color-primary-green;
+
+						}
 
 					}
 
@@ -35,6 +90,8 @@
 				.current-menu-item {
 
 					a {
+
+						color: $color-primary-green;
 
 						&:hover {}
 
