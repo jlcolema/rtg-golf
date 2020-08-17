@@ -4,6 +4,57 @@
 
 // Notes...
 
-.pre-footer {}
+.pre-footer {
 
-	.pre-footer__wrap {}
+	margin: 3em 0 0 0;
+
+}
+
+	.pre-footer__wrap {
+
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+
+	}
+
+		.newsletter {
+
+			color: $color-base-white;
+			background: $color-primary-green;
+
+		}
+
+			.newsletter__inner-wrap {
+
+				padding: 3em;
+
+			}
+
+				.newsletter__title {}
+
+				.newsletter__detail {
+
+					p {
+
+						&:last-of-type {
+
+							margin: 0;
+
+						}
+
+					}
+
+						a {
+
+							color: $color-base-white;
+
+							&:hover {
+
+								text-decoration: underline;
+
+							}
+
+						}
+
+				}
