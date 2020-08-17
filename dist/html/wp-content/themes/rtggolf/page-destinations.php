@@ -1,17 +1,5 @@
 <?php get_header(); ?>
 
-	<?php /* Banner */ ?>
-
-	<div class="banner">
-
-		<div class="banner__inner-wrap">
-
-			<h1 class="">Destinations</h1>
-
-		</div>
-
-	</div>
-
 	<?php /* List of Destinations */ ?>
 
 	<div class="">

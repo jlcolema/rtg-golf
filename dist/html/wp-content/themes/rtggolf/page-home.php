@@ -1,37 +1,5 @@
 <?php get_header(); ?>
 
-	<?php /* Hero */ ?>
-
-	<div class="hero">
-
-		<div class="hero__inner-wrap">
-
-			<div class="hero__label">RTG Golf</div>
-
-			<h1 class="hero__header">Another Trip of a Lifetime</h1>
-
-			<div class="hero__details">
-
-				<p>We take golf trips from good to great!</p>
-
-			</div>
-
-			<div class="hero__provider">
-
-				<span class="">St. Andrews Links Authorized Provider</span>
-
-			</div>
-
-			<div class="hero__more">
-
-				<a href="/about-us/" class="hero__more-link">Learn More</a>
-
-			</div>
-
-		</div>
-
-	</div>
-
 	<?php /* Featured Destinations */ ?>
 
 	<div class="featured-destinations">
@@ -157,18 +125,6 @@
 				</ul>
 
 			</div>
-
-		</div>
-
-	</div>
-
-	<?php /* Email Newsletter */ ?>
-
-	<div class="newsletter">
-
-		<div class="newsletter__inner-wrap">
-
-			<iframe class="newsletter__iframe airtable-embed" src="https://airtable.com/embed/shrCKH5OjqWsRTRUi?backgroundColor=purple"; frameborder="0" onmousewheel="" width="100%" height="533"></iframe>
 
 		</div>
 

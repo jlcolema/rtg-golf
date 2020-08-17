@@ -1,17 +1,5 @@
 <?php get_header(); ?>
 
-	<!-- Banner -->
-
-	<div class="banner">
-
-		<div class="banner__inner-wrap">
-
-			<h1 class="">The Experience</h1>
-
-		</div>
-
-	</div>
-
 	<?php /* Title */ ?>
 
 	<div class="">

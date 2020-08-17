@@ -1,17 +1,5 @@
 <?php get_header(); ?>
 
-	<?php /* Banner */ ?>
-
-	<div class="banner">
-
-		<div class="banner__inner-wrap">
-
-			<h1 class="">Favorite Trips</h1>
-
-		</div>
-
-	</div>
-
 	<?php /* Favorite Trips */ ?>
 
 	<div class="">
