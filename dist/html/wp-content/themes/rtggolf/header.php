@@ -51,11 +51,17 @@
 
 					</li>
 
-					<!-- <li class="utilities__item">
+					<li class="utilities__item utilities__shopping-bag">
 
-						<a href="#" class="utilities__link">Shopping Bag</a>
+						<a href="#" class="utilities__link">
+							
+							Shopping Bag
+						
+							<span class="utilities__quantity">3</span>
 
-					</li> -->
+						</a>
+
+					</li>
 
 				</ul>
 
@@ -123,6 +129,28 @@
 
 	</header>
 
+	<?php /* Section */ ?>
+
+	<div class="section">
+
+		<div class="wrap section__wrap">
+
+			<?php if ( is_page( 'home' ) ) : ?>
+
+				<?php get_template_part( 'inc/hero' ); ?>
+
+			<?php else : ?>
+
+				<?php get_template_part( 'inc/banner' ); ?>
+
+			<?php endif; ?>
+
+		</div>
+
+	</div>
+
 	<main role="main" id="" class="main">
 
-		<div class="wrap main___wrap">
+		<div class="wrap main__wrap">
+
+			<div class="main__primary">
