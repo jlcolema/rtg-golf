@@ -6,16 +6,63 @@
 
 .pre-header {
 
-	background: pink;
+	color: $color-base-white;
+	background: $color-primary-green;
 
 }
 
-	.pre-header__wrap {}
+	.pre-header__wrap {
+
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+
+	}
 
 		.utilities {}
 
-			.utilities__list {}
+			.utilities__list {
 
-				.utilities__item {}
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				align-content: flex-start;
+				margin: 0;
+				padding: 0;
+				list-style: none;
 
-					.utilities__link {}
+			}
+
+				.utilities__item {
+
+					margin: 0;
+					font-size: 0.75rem;
+					border-left: 1px solid rgba($color-base-white, 0.25);
+
+				}
+
+					.utilities__link {
+
+						display: block;
+						padding: 1em 1.5em 1em 1.5em;
+						color: $color-base-white;
+
+					}
+
+				.utilities__shopping-bag {
+
+					margin-left: auto;
+					border: none;
+
+					.utilities__link {
+
+						padding-left: 0;
+						padding-right: 0;
+
+					}
+
+				}
+
+						.utilities__quantity {}
