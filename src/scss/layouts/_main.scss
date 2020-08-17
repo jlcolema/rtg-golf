@@ -3,3 +3,34 @@
 ------------------------------*/
 
 // Notes...
+
+.main {}
+
+	.main__wrap {
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		align-content: flex-start;
+
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+		background: pink;
+
+	}
+
+		.main__primary {
+
+			flex: 2;
+
+		}
+
+		.main__secondary {
+
+			flex: 1;
+			margin-left: 3em;
+
+		}
