@@ -2,7 +2,19 @@
 
 	<div class="banner__inner-wrap">
 
-		<h1 class="banner__title"><?php the_title(); ?></h1>
+		<h1 class="banner__title">
+		
+			<?php if ( ! is_front_page() && is_home() ) : ?>
+
+				Blog
+
+			<?php else : ?>
+
+				<?php the_title(); ?>
+		
+			<?php endif; ?>
+
+		</h1>
 
 		<picture class="banner__picture">
 
