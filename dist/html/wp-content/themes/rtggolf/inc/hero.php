@@ -30,11 +30,11 @@
 
 		<picture class="hero__picture">
 
-			<source srcset="https://via.placeholder.com/1600x500" media="(min-width: 1000px)">
+			<source srcset="https://via.placeholder.com/1600x600" media="(min-width: 1000px)">
 
-			<source srcset="https://via.placeholder.com/1200x500" media="(min-width: 700px)">
+			<source srcset="https://via.placeholder.com/1200x600" media="(min-width: 700px)">
 
-			<img src="https://via.placeholder.com/1000x500" alt="A very nice description." class="hero__img">
+			<img src="https://via.placeholder.com/1000x600" alt="A very nice description." class="hero__img">
 
 		</picture>
 
