@@ -2,77 +2,91 @@
 
 	<?php /* Favorite Trips */ ?>
 
-	<div class="">
+	<div class="favorite-trips">
 
-		<div class="">
+		<div class="wrap favorite-trips__inner-wrap">
 
-			<div class="">
+			<ul class="favorite-trips__list">
 
-				<ul class="">
+				<li class="favorite-trips__item">
 
-					<li class="">
+					<picture class="favorite-trips__picture">
 
-						<div class="">
+						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
 
-							<img src="https://via.placeholder.com/400x200" alt="A very nice description." class="" />
+						<source srcset="https://via.placeholder.com/9600x400" media="(min-width: 700px)">
 
-						</div>
+						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="favorite-trips__img">
 
-						<h2 class="">Ireland Itineraries</h2>
+					</picture>
 
-						<p class="">A short description of the trip.</p>
+					<div class="favorite-trips__overlay">
 
-						<div class="">
+						<h2 class="favorite-trips__title">Ireland Itineraries</h2>
 
-							<a href="/favorite-trips/ireland-itineraries/" class="">Learn More</a>
+						<div class="favorite-trips__more">
 
-						</div>
-
-					</li>
-
-					<li class="">
-
-						<div class="">
-
-							<img src="https://via.placeholder.com/400x200" alt="A very nice description." class="" />
+							<a href="/favorite-trips/ireland-itineraries/" class="favorite-trips__link">Learn More</a>
 
 						</div>
 
-						<h2 class="">Scotland Itineraries</h2>
+					</div>
 
-						<p class="">A short description of the trip.</p>
+				</li>
 
-						<div class="">
+				<li class="favorite-trips__item">
 
-							<a href="/favorite-trips/scotland-itineraries/" class="">Learn More</a>
+					<picture class="favorite-trips__picture">
 
-						</div>
+						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
 
-					</li>
+						<source srcset="https://via.placeholder.com/9600x400" media="(min-width: 700px)">
 
-					<li class="">
+						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="favorite-trips__img">
 
-						<div class="">
+					</picture>
 
-							<img src="https://via.placeholder.com/400x200" alt="A very nice description." class="" />
+					<div class="favorite-trips__overlay">
 
-						</div>
+						<h2 class="favorite-trips__title">Scotland Itineraries</h2>
 
-						<h2 class="">England Itineraries</h2>
+						<div class="favorite-trips__more">
 
-						<p class="">A short description of the trip.</p>
-
-						<div class="">
-
-							<a href="/favorite-trips/england-itineraries/" class="">Learn More</a>
+							<a href="/favorite-trips/scotland-itineraries/" class="favorite-trips__link">Learn More</a>
 
 						</div>
 
-					</li>
+					</div>
 
-				</ul>
+				</li>
 
-			</div>
+				<li class="favorite-trips__item">
+
+					<picture class="favorite-trips__picture">
+
+						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
+
+						<source srcset="https://via.placeholder.com/9600x400" media="(min-width: 700px)">
+
+						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="favorite-trips__img">
+
+					</picture>
+
+					<div class="favorite-trips__overlay">
+
+						<h2 class="favorite-trips__title">England Itineraries</h2>
+
+						<div class="favorite-trips__more">
+
+							<a href="/favorite-trips/england-itineraries/" class="favorite-trips__link">Learn More</a>
+
+						</div>
+
+					</div>
+
+				</li>
+
+			</ul>
 
 		</div>
 

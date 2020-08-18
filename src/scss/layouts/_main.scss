@@ -18,7 +18,7 @@
 		width: 100%;
 		max-width: 960px;
 		margin: 0 auto;
-		background: pink;
+		// background: rgba(pink, 0.35);
 
 	}
 
@@ -34,3 +34,82 @@
 			margin-left: 3em;
 
 		}
+
+			/* Favorite Trips */
+
+			.favorite-trips {}
+
+				.favorite-trips__inner-wrap {}
+
+					.favorite-trips__list {
+
+						margin: 0;
+						padding: 0;
+						list-style: none;
+
+					}
+
+						.favorite-trips__item {
+
+							position: relative;
+							margin: 0 0 3em 0;
+							background: pink;
+
+							&:last-of-type {
+
+								margin: 0;
+
+							}
+
+						}
+
+							.favorite-trips__picture {}
+
+								.favorite-trips__img {}
+
+							.favorite-trips__overlay {
+
+								display: flex;
+								flex-direction: column;
+								flex-wrap: nowrap;
+								justify-content: flex-end;
+								align-items: flex-start;
+								align-content: flex-start;
+
+								position: absolute;
+								left: 0;
+								top: 0;
+								width: 100%;
+								height: 100%;
+								padding: 3em;
+								z-index: 1;
+
+							}
+
+								.favorite-trips__title {
+
+									margin: 0;
+									color: $color-base-white;
+
+								}
+
+								.favorite-trips__more {
+
+									margin: 2.5em 0 0 0;
+
+								}
+
+									.favorite-trips__link {
+
+										display: inline-block;
+										padding: 1em 2.5em 1em 2.5em;
+										color: $color-base-white;
+										background: $color-primary-green;
+			
+										&:hover {
+			
+											text-decoration: none;
+			
+										}
+
+									}
