@@ -4,7 +4,7 @@
 
 	<div class="favorite-trips">
 
-		<div class="wrap favorite-trips__inner-wrap">
+		<div class="inner-wrap favorite-trips__inner-wrap">
 
 			<ul class="favorite-trips__list">
 
