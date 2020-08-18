@@ -2,137 +2,78 @@
 
 	<?php /* List of Destinations */ ?>
 
-	<div class="">
+	<div class="destinations">
 
-		<div class="">
+		<div class="inner-wrap destinations__inner-wrap">
 
-			<div class="">
+			<ul class="destinations__list">
 
-				<ul class="">
+				<?php
 
-					<li class="">
+					$destination_listing_options = array(
 
-						<div class="">
+						'post_type'		=> 'destination',
+						'post_status'	=> 'publish',
+						'numberposts'	=> -1,
+						'orderby'		=> 'menu_order',
+						'order'			=> 'ASC'
 
-							<img src="https://via.placeholder.com/400x200" alt="A very nice description." class="" />
+					);
 
-						</div>
+					$destinations = get_posts( $destination_listing_options );
 
-						<h2 class="">Title</h2>
+				?>
 
-						<p class="">A short description of the trip.</p>
+				<?php foreach ( $destinations as $destination ) : ?>
 
-						<div class="">
+				<?php
 
-							<a href="/destinations/title/" class="">Learn More</a>
+					/* Thumbnail
+					------------------------------*/
 
-						</div>
+					// Attachment
 
-					</li>
+					$destination_thumbnail_attachment_id = get_field( 'destination_thumbnail', $destination->ID );
 
-					<li class="">
+					// Size
 
-						<div class="">
+					$destination_thumbnail_size_full = 'full';
 
-							<img src="https://via.placeholder.com/400x200" alt="A very nice description." class="" />
+					// Options
 
-						</div>
+					$destination_thumbnail_full = wp_get_attachment_image_src( $destination_thumbnail_attachment_id, $destination_thumbnail_size_full );
 
-						<h2 class="">Title</h2>
+				?>
 
-						<p class="">A short description of the trip.</p>
+				<li class="destinations__item">
 
-						<div class="">
+					<picture class="destinations__picture">
 
-							<a href="/destinations/title/" class="">Learn More</a>
+						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
 
-						</div>
+						<source srcset="https://via.placeholder.com/9600x400" media="(min-width: 700px)">
 
-					</li>
+						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="destinations__img">
 
-					<li class="">
+					</picture>
 
-						<div class="">
+					<div class="destinations__overlay">
 
-							<img src="https://via.placeholder.com/400x200" alt="A very nice description." class="" />
+						<h2 class="destinations__title"><?php echo $destination->post_title; ?></h2>
 
-						</div>
+						<div class="destinations__more">
 
-						<h2 class="">Title</h2>
-
-						<p class="">A short description of the trip.</p>
-
-						<div class="">
-
-							<a href="/destinations/title/" class="">Learn More</a>
-
-						</div>
-
-					</li>
-
-					<li class="">
-
-						<div class="">
-
-							<img src="https://via.placeholder.com/400x200" alt="A very nice description." class="" />
+							<a href="<?php echo get_permalink( $destination->ID ); ?>" class="destinations__link">Learn More</a>
 
 						</div>
 
-						<h2 class="">Title</h2>
+					</div>
 
-						<p class="">A short description of the trip.</p>
+				</li>
 
-						<div class="">
+				<?php endforeach; ?>
 
-							<a href="/destinations/title/" class="">Learn More</a>
-
-						</div>
-
-					</li>
-
-					<li class="">
-
-						<div class="">
-
-							<img src="https://via.placeholder.com/400x200" alt="A very nice description." class="" />
-
-						</div>
-
-						<h2 class="">Title</h2>
-
-						<p class="">A short description of the trip.</p>
-
-						<div class="">
-
-							<a href="/destinations/title/" class="">Learn More</a>
-
-						</div>
-
-					</li>
-
-					<li class="">
-
-						<div class="">
-
-							<img src="https://via.placeholder.com/400x200" alt="A very nice description." class="" />
-
-						</div>
-
-						<h2 class="">Title</h2>
-
-						<p class="">A short description of the trip.</p>
-
-						<div class="">
-
-							<a href="/destinations/title/" class="">Learn More</a>
-
-						</div>
-
-					</li>
-
-				</ul>
-
-			</div>
+			</ul>
 
 		</div>
 
