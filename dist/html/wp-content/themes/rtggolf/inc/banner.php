@@ -18,11 +18,11 @@
 
 		<picture class="banner__picture">
 
-			<source srcset="https://via.placeholder.com/1600x300" media="(min-width: 1000px)">
+			<source srcset="https://via.placeholder.com/1600x200" media="(min-width: 1000px)">
 
-			<source srcset="https://via.placeholder.com/1200x300" media="(min-width: 700px)">
+			<source srcset="https://via.placeholder.com/1200x200" media="(min-width: 700px)">
 
-			<img src="https://via.placeholder.com/1000x300" alt="A very nice description." class="banner__img">
+			<img src="https://via.placeholder.com/1000x200" alt="A very nice description." class="banner__img">
 
 		</picture>
 
