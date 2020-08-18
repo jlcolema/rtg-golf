@@ -57,7 +57,7 @@
 
 					<div class="newsletter__detail">
 
-						<p><a href="https://airtable.com/shrCKH5OjqWsRTRUi">Sign up for monthly newsletter</a> to keep up to date with new destinations and trip ideas.</p>
+						<p><a href="https://airtable.com/shrCKH5OjqWsRTRUi">Sign up for our newsletter</a> to keep up to date with new destinations and trip ideas.</p>
 
 					</div>
 
