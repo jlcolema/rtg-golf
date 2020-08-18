@@ -8,83 +8,70 @@
 
 			<ul class="favorite-trips__list">
 
-				<li class="favorite-trips__item">
+				<?php
 
-					<picture class="favorite-trips__picture">
+					$trip_listing_options = array(
 
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
+						'post_type'		=> 'trip',
+						'post_status'	=> 'publish',
+						'numberposts'	=> -1,
+						'orderby'		=> 'menu_order',
+						'order'			=> 'ASC'
 
-						<source srcset="https://via.placeholder.com/9600x400" media="(min-width: 700px)">
+					);
 
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="favorite-trips__img">
+					$trips = get_posts( $trip_listing_options );
 
-					</picture>
+				?>
 
-					<div class="favorite-trips__overlay">
+				<?php foreach ( $trips as $trip ) : ?>
 
-						<h2 class="favorite-trips__title">Ireland Itineraries</h2>
+					<?php
 
-						<div class="favorite-trips__more">
+						/* Thumbnail
+						------------------------------*/
 
-							<a href="/favorite-trips/ireland-itineraries/" class="favorite-trips__link">Learn More</a>
+						// Attachment
 
-						</div>
+						$trip_thumbnail_attachment_id = get_field( 'trip_thumbnail', $trip->ID );
 
-					</div>
+						// Size
 
-				</li>
+						$trip_thumbnail_size_full = 'full';
 
-				<li class="favorite-trips__item">
+						// Options
 
-					<picture class="favorite-trips__picture">
+						$trip_thumbnail_full = wp_get_attachment_image_src( $trip_thumbnail_attachment_id, $trip_thumbnail_size_full );
 
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
+					?>
 
-						<source srcset="https://via.placeholder.com/9600x400" media="(min-width: 700px)">
+					<li class="favorite-trips__item">
 
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="favorite-trips__img">
+						<picture class="favorite-trips__picture">
 
-					</picture>
+							<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
 
-					<div class="favorite-trips__overlay">
+							<source srcset="https://via.placeholder.com/9600x400" media="(min-width: 700px)">
 
-						<h2 class="favorite-trips__title">Scotland Itineraries</h2>
+							<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="favorite-trips__img">
 
-						<div class="favorite-trips__more">
+						</picture>
 
-							<a href="/favorite-trips/scotland-itineraries/" class="favorite-trips__link">Learn More</a>
+						<div class="favorite-trips__overlay">
 
-						</div>
+							<h2 class="favorite-trips__title"><?php echo $trip->post_title; ?></h2>
 
-					</div>
+							<div class="favorite-trips__more">
 
-				</li>
+								<a href="<?php echo get_permalink( $trip->ID ); ?>" class="favorite-trips__link">Learn More</a>
 
-				<li class="favorite-trips__item">
-
-					<picture class="favorite-trips__picture">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
-
-						<source srcset="https://via.placeholder.com/9600x400" media="(min-width: 700px)">
-
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="favorite-trips__img">
-
-					</picture>
-
-					<div class="favorite-trips__overlay">
-
-						<h2 class="favorite-trips__title">England Itineraries</h2>
-
-						<div class="favorite-trips__more">
-
-							<a href="/favorite-trips/england-itineraries/" class="favorite-trips__link">Learn More</a>
+							</div>
 
 						</div>
 
-					</div>
+					</li>
 
-				</li>
+				<?php endforeach; ?>
 
 			</ul>
 
