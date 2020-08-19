@@ -23,7 +23,7 @@
 
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Rufina:wght@400;700&display=swap" rel="stylesheet" media="screen, projection" />
+    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" media="screen, projection" />
 	
 	<?php wp_head(); ?>
 
