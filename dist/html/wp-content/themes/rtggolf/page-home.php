@@ -6,45 +6,45 @@
 
 		<div class="featured-destinations__inner-wrap">
 
-			<div class="featured-destinations__title">RTG Golf</div>
+			<div class="featured-destinations__title-one">
 
-			<h2 class="featured-destinations__header">From concept to completion and every detail in between</h2>
+				<div class="featured-destinations__title">The Experience</div>
 
-			<div class="featured-destinations__title">
+				<h2 class="featured-destinations__header">From concept to completion <u>and every detail in between</u></h2>
+
+			</div>
+
+			<div class="featured-destinations__title-two">
 
 				<ul class="featured-destinations__list">
 
 					<li class="featured-destinations__item">
 
-						<div class="featured-destinations__thumbnail">
+						<picture class="featured-destinations__picture">
 
-							<a href="#" class="featured-destinations__link">
+							<source srcset="https://via.placeholder.com/400x400" media="(min-width: 1000px)">
 
-								<img src="https://via.placeholder.com/400x400" alt="The British Isles" class="featured-destinations__img" />
+							<source srcset="https://via.placeholder.com/400x400" media="(min-width: 700px)">
 
-							</a>
+							<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="featured-destinations__img">
 
-						</div>
+						</picture>
 
 						<h3 class="featured-destinations__location">
 							
-							<a href="#" class="featured-destinations__link">The British Isles</a>
+							<a href="#" class="featured-destinations__link">Step One</a>
 						
 						</h3>
 
 						<div class="featured-destinations__details">
 
-							<p>The British Isles – Ireland, Scotland, and England have been the focus of international golf travel for the past two decades.</p>
-
-							<p>RTG has years of experience in designing and executing trips to every corner of these three amazing golf destinations.</p>
-
-							<p>We can show you how to experience Ireland, Scotland, and England with a myriad of possible itineraries and routes.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id at velit, dolorum tempora ipsam iusto maxime culpa totam quaerat, illum voluptas rerum dicta alias ad sed quasi nihil voluptatum numquam.</p>
 
 						</div>
 
 						<div class="featured-destinations__more">
 
-							<a href="#" class="featured-destinations__title">Learn More</a>
+							<a href="#" class="featured-destinations__more-link">Learn More</a>
 
 						</div>
 
@@ -52,77 +52,79 @@
 
 					<li class="featured-destinations__item">
 
-						<div class="">
+						<picture class="featured-destinations__picture">
 
-							<a href="#" class="">
+							<source srcset="https://via.placeholder.com/400x400" media="(min-width: 1000px)">
 
-								<img src="https://via.placeholder.com/400x400" alt="Domestic Golf Trips" class="" />
+							<source srcset="https://via.placeholder.com/400x400" media="(min-width: 700px)">
 
-							</a>
+							<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="featured-destinations__img">
 
-						</div>
+						</picture>
 
-						<h3 class="">
-
-							<a href="#" class="">Domestic Golf Trips</a>
-
+						<h3 class="featured-destinations__location">
+							
+							<a href="#" class="featured-destinations__link">Step Two</a>
+						
 						</h3>
 
-						<div class="">
+						<div class="featured-destinations__details">
 
-							Our clients want to know, “Where are we going this year?” With years of experience with destinations around the country – we have the answers.
-
-							We can show you how to check off the destinations on your Play The Greats List…
-
-							…as well as provide destination information on great venues for your annual family or buddies trip.
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id at velit, dolorum tempora ipsam iusto maxime culpa totam quaerat, illum voluptas rerum dicta alias ad sed quasi nihil voluptatum numquam.</p>
 
 						</div>
 
-						<div class="">
+						<div class="featured-destinations__more">
 
-							<a href="#" class="">Learn More</a>
+							<a href="#" class="featured-destinations__more-link">Learn More</a>
 
 						</div>
 
 					</li>
 
-					<li class="">
+					<li class="featured-destinations__item">
 
-						<div class="">
+						<picture class="featured-destinations__picture">
 
-							<a href="#" class="">
+							<source srcset="https://via.placeholder.com/400x400" media="(min-width: 1000px)">
 
-								<img src="https://via.placeholder.com/400x400" alt="The Rest of the World" class="" />
+							<source srcset="https://via.placeholder.com/400x400" media="(min-width: 700px)">
 
-							</a>
+							<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="featured-destinations__img">
 
-						</div>
+						</picture>
 
-						<h3 class="">
-
-							<a href="#" class="">The Rest of the World</a>
-
+						<h3 class="featured-destinations__location">
+							
+							<a href="#" class="featured-destinations__link">Step Three</a>
+						
 						</h3>
 
-						<div class="">
+						<div class="featured-destinations__details">
 
-							There is great golf everywhere – RTG can show you how to experience it anywhere in the world.
-
-							Along with the British Isles we have sent golf travelers around the world including trips to:
-
-							Spain, Portugal, China, Thailand, Vietnam, United Arab Emirates, Dominican Republic, Columbia, Argentina, Brazil, Costa Rica, Mexico, Canada, New Zealand, and Australia.
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id at velit, dolorum tempora ipsam iusto maxime culpa totam quaerat, illum voluptas rerum dicta alias ad sed quasi nihil voluptatum numquam.</p>
 
 						</div>
 
-						<div class="">
+						<div class="featured-destinations__more">
 
-							<a href="#" class="">Learn More</a>
+							<a href="#" class="featured-destinations__more-link">Learn More</a>
 
 						</div>
 
 					</li>
 
 				</ul>
+
+			</div>
+
+			<div class="featured-destinations__three">
+
+				<div class="featured-destinations__learn-more">
+
+					<a href="/the-experience/" class="featured-destinations__learn-more-link">Learn More About the Experience</a>
+
+				</div>
 
 			</div>
 
