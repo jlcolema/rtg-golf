@@ -13,6 +13,10 @@
 
 ?>
 
+				<?php /* Testimonial */ ?>
+
+				<?php get_template_part( 'inc/testimonial' ); ?>
+
 			</div>
 
 			<?php if ( ! is_front_page() && is_home() ) : ?>
@@ -53,11 +57,21 @@
 
 				<div class="newsletter__inner-wrap">
 
-					<h3 class="newsletter__title">Join Our E-mail List</h3>
+					<div class="newsletter__cta">
 
-					<div class="newsletter__detail">
+						<h3 class="newsletter__title">Join Our E-mail List</h3>
 
-						<p><a href="https://airtable.com/shrCKH5OjqWsRTRUi">Sign up for our newsletter</a> to keep up to date with new destinations and trip ideas.</p>
+						<div class="newsletter__detail">
+
+							<p>Sign up for our newsletter and keep up to date with new destinations and trip ideas.</p>
+
+						</div>
+
+					</div>
+
+					<div class="newsletter__more">
+
+						<a href="#" class="newsletter__link">Sign Up</a>
 
 					</div>
 
