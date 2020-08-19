@@ -1,0 +1,60 @@
+/*------------------------------
+ Banner
+------------------------------*/
+
+// Notes...
+
+.banner {
+
+	position: relative;
+	width: 100vw;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	margin-bottom: 3em;
+	overflow: hidden;
+
+}
+
+	.banner__inner-wrap {
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		align-content: flex-start;
+
+		width: 100%;
+		max-width: 960px;
+		height: 200px;
+		margin: 0 auto;
+		color: $color-base-white;
+
+	}
+
+		.banner__title {
+
+			margin: 0;
+			font-size: 3.375rem;
+
+		}
+
+		.banner__picture {
+
+			position: absolute;
+			left: 50%;
+			top: 0;
+			height: 100%;
+			transform: translate(-50%, 0);
+			z-index: -1;
+
+		}
+
+			.banner__img {
+
+				max-width: none;
+				height: 100%;
+
+			}

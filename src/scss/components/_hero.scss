@@ -1,0 +1,113 @@
+/*------------------------------
+ Hero
+------------------------------*/
+
+// Notes...
+
+.hero {
+
+	position: relative;
+	width: 100vw;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	margin-bottom: 3em;
+	overflow: hidden;
+
+}
+
+	.hero__inner-wrap {
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: flex-end;
+		align-content: flex-start;
+
+		width: 100%;
+		max-width: 960px;
+		height: 600px;
+		margin: 0 auto;
+		padding: 5em 0;
+		color: $color-base-white;
+
+	}
+
+		.hero__cta {}
+
+			.hero__label {
+
+				display: none;
+
+			}
+
+			.hero__header {
+
+				max-width: 560px; 
+				margin: 0;
+				font-size: 4.5rem;
+
+			}
+
+			.hero__details {
+
+				margin: 1.5em 0 0 0;
+
+				p {
+
+					&:last-of-type {
+
+						margin: 0;
+
+					}
+
+				}
+
+			}
+
+			.hero__more {
+
+				margin: 2.5em 0 0 0;
+
+			}
+
+				.hero__link {
+
+					display: inline-block;
+					padding: 1em 2.5em 1em 2.5em;
+					color: $color-base-white;
+					background: $color-primary-orange;
+
+					&:hover {
+
+						text-decoration: none;
+
+					}
+
+				}
+
+		.hero__provider {
+
+			display: none;
+
+		}
+
+		.hero__picture {
+
+			position: absolute;
+			left: 50%;
+			top: 0;
+			height: 100%;
+			transform: translate(-50%, 0);
+			z-index: -1;
+
+		}
+
+			.hero__img {
+
+				max-width: none;
+				height: 100%;
+
+			}

@@ -1,0 +1,71 @@
+/*------------------------------
+ Newsletter
+------------------------------*/
+
+// Notes...
+
+.newsletter {
+
+	color: $color-base-white;
+	background: $color-primary-green;
+
+}
+
+	.newsletter__inner-wrap {
+
+		padding: 3em;
+
+	}
+
+		.newsletter__cta {}
+
+			.newsletter__title {}
+
+			.newsletter__detail {
+
+				p {
+
+					&:last-of-type {
+
+						margin: 0;
+
+					}
+
+				}
+
+					a {
+
+						color: $color-base-white;
+
+						&:hover {
+
+							text-decoration: underline;
+
+						}
+
+					}
+
+			}
+		
+		.newsletter__more {
+
+			margin: 2em 0 0 0;
+
+		}
+
+			.newsletter__link {
+
+				display: block;
+				width: 200px;
+				padding: 1em 3.5em 1em 3.5em;
+				text-align: center;
+				color: $color-base-white;
+				background: lighten($color-primary-green, 5%);
+
+				&:hover {
+
+					text-decoration: none;
+
+				}
+
+			}

@@ -319,32 +319,3 @@
 								}
 
 							}
-
-			/* Testimonial */
-
-			.testimonial {
-
-				margin: 4.5em 0 0 0;
-				background: pink;
-
-			}
-
-				.testimonial__inner-wrap {}
-
-					.testimonial__blockquote {}
-
-						.testimonial__quote {
-
-							p {
-
-								&:last-of-type {}
-
-							}
-
-						}
-
-						.testimonial__source {}
-
-							.testimonial__name {}
-
-							.testimonial__title {}
