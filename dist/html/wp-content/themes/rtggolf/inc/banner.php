@@ -4,7 +4,7 @@
 
 		<h1 class="banner__title">
 		
-			<?php if ( ! is_front_page() && is_home() ) : ?>
+			<?php if ( ! is_front_page() && is_home() OR is_single() ) : ?>
 
 				Blog
 
