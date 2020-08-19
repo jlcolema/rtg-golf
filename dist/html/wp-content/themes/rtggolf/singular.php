@@ -12,18 +12,6 @@
 get_header();
 ?>
 
-	<?php /* Banner */ ?>
-
-	<div class="banner">
-
-		<div class="banner__inner-wrap">
-
-			<h1 class="">Blog (Individual Entry)</h1>
-
-		</div>
-
-	</div>
-
 	<?php /* Post */ ?>
 
 	<article class="">
