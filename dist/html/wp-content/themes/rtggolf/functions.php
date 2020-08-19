@@ -373,6 +373,14 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 
 	acf_add_options_sub_page( array(
 
+		'page_title'		=> 'Newsletter',
+		'menu_title'		=> 'Newsletter',
+		'parent_slug'	=> 'globals'
+
+	) );
+
+	acf_add_options_sub_page( array(
+
 		'page_title'		=> 'Affiliations',
 		'menu_title'		=> 'Affiliations',
 		'parent_slug'	=> 'globals'
