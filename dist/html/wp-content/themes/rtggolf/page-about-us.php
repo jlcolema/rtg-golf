@@ -60,101 +60,78 @@
 					
 	<?php /* Partners */ ?>
 
-	<div class="">
+	<div class="partners">
 
-		<div class="">
+		<div class="inner-wrap partners__inner-wrap">
 
-			<div class="">
+			<div class="partners__one">
 
-				<ul class="">
+				<ul class="partners__list">
 
-					<li class="">
+					<?php
 
-						<div class="">
+						$partner_listing_options = array(
 
-							<img src="https://via.placeholder.com/300x300" alt="Tom Kozlak" class="" />
+							'post_type'		=> 'partner',
+							'post_status'	=> 'publish',
+							'numberposts'	=> -1,
+							'orderby'		=> 'menu_order',
+							'order'			=> 'ASC'
 
-						</div>
+						);
 
-						<h2 class="">Tom Kozlak</h2>
+						$partners = get_posts( $partner_listing_options );
 
-						<h3 class="">Partner</h3>
+					?>
 
-						<div class="">
+					<?php foreach ( $partners as $partner ) : ?>
 
-							<p>RTG Golf is a second career for me. In 1999, after 25 years in the restaurant business I decided I wanted to explore a second career. Still at it 20 years later.</p>
+						<?php
 
-							<p>In that 20 years I have “researched” golf all over the world and have gained the expertise to create great golf itineraries domestically and internationally.</p>
+							/* Thumbnail
+							------------------------------*/
 
-						</div>
+							// Attachment
 
-					</li>
+							$partner_thumbnail_attachment_id = get_field( 'partner_thumbnail', $partner->ID );
 
-					<li class="">
+							// Size
 
-						<div class="">
+							$partner_thumbnail_size_full = 'full';
 
-							<img src="https://via.placeholder.com/300x300" alt="Scott Cole" class="" />
+							// Options
 
-						</div>
+							$partner_thumbnail_full = wp_get_attachment_image_src( $partner_thumbnail_attachment_id, $partner_thumbnail_size_full );
 
-						<h2 class="">Scott Cole</h2>
+						?>
 
-						<h3 class="">Partner</h3>
+						<li class="partners__item">
 
-						<div class="">
-							
-							<p>Scott Cole has been with RTG Golf for three years. Scott has been in the golf business for 28 years. Golf has been in Scott’s blood since the age of 4. After winning two Wisconsin State High School Individual Championships and two Team Championships, he went on to play college golf at University of Southern Mississippi. After a year and a half, he transferred to Marquette University to play on the golf team and graduate in 1999.</p>
+							<picture class="partners__picture">
 
-							<p>In 2001, Scott turned professional and played mini-tours in Florida until March of 2002 when he became the Head Golf Professional at New Richmond Golf Club. Scott spent 13 years as the Head Golf Professional at New Richmond Golf Club. Scott participated in the 2013 and 2014 National PGA Club Pro Championship. In 2014, Scott accepted the Head Professional job at Stoneridge Golf Club. Scott participated in the 2013 and 2014 National Club Pro Championship. After three years at Stoneridge Golf Club, it was time for change. In May of 2017, Scott came onboard at RTG Golf.</p>
+								<source srcset="https://via.placeholder.com/400x400" media="(min-width: 1000px)">
 
-							<p>Scott currently resides in New Richmond, Wisconsin with his wife Katie and daughters, Kenley and Gracie.</p>
+								<source srcset="https://via.placeholder.com/400x400" media="(min-width: 700px)">
 
-						</div>
+								<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="partners__img">
 
-					</li>
+							</picture>
 
-				</ul>
+							<h2 class="partners__name"><?php echo $partner->post_title; ?></h2>
 
-			</div>
+							<h3 class="partners__title">Partner</h3>
 
-		</div>
+							<div class="partners__bio">
 
-	</div>
+								<p>RTG Golf is a second career for me. In 1999, after 25 years in the restaurant business I decided I wanted to explore a second career. Still at it 20 years later.</p>
 
-	<?php /* Testimonials */ ?>
-
-	<div class="">
-
-		<div class="">
-
-			<h2 class="">Testimonials</h2>
-
-			<div class="">
-
-				<ul class="">
-
-					<li class="">
-
-						<blockquote class="">
-
-							<div class="">
-
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti et iste eius! Excepturi, recusandae laboriosam! Ipsum facere molestias eum iure esse pariatur nulla, similique sit porro necessitatibus fugit eligendi quos.</p>
+								<p>In that 20 years I have “researched” golf all over the world and have gained the expertise to create great golf itineraries domestically and internationally.</p>
 
 							</div>
 
-							<span class="">
+						</li>
 
-								<strong class="">Jane Appleseed</strong>
-								
-								<i class="">CEO</i>
-
-							</span>
-
-						</blockquote>
-
-					</li>
+					<?php endforeach; ?>
 
 				</ul>
 
