@@ -231,19 +231,19 @@
 
 							<ul class="social__list">
 
-								<li class="social__item">
+								<li class="social__item social__facebook">
 
 									<a href="https://www.facebook/rtggolf" rel="external" class="social__link">Facebook</a>
 
 								</li>
 
-								<li class="social__item">
+								<li class="social__item social__twitter">
 
 									<a href="https://www.twitter/rtggolf" rel="external" class="social__link">Twitter</a>
 
 								</li>
 
-								<li class="social__item">
+								<li class="social__item social__instagram">
 
 									<a href="https://www.instagram/rtggolf" rel="external" class="social__link">Instagram</a>
 

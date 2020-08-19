@@ -143,7 +143,7 @@
 
 					.social {
 
-						margin: 3em 0 0 0;
+						margin: 2em 0 0 0;
 
 					}
 
@@ -173,18 +173,59 @@
 									display: block;
 									width: 40px;
 									height: 40px;
-									background: $color-base-white;
+									background: rgba($color-base-white, 0.25) url(../img/social.svg) 0 0 no-repeat;
+									background-size: 120px 40px;
+									border-radius: 50%;
 									@include hide-text;
+									transition: background-color 0.35s ease-in-out;
+
+									&:hover {
+
+										background-color: rgba($color-base-white, 0.35);
+
+									}
+
+								}
+
+							// Facebook
+
+							.social__facebook {
+
+								.social__link {
 
 									&:hover {}
 
 								}
 
-								// Facebook
+							}
 
-								// Twitter
+							// Twitter
 
-								// Instagram
+							.social__twitter {
+
+								.social__link {
+
+									background-position-x: -40px;
+
+									&:hover {}
+
+								}
+
+							}
+
+							// Instagram
+
+							.social__instagram {
+
+								.social__link {
+
+									background-position-x: -80px;
+
+									&:hover {}
+
+								}
+
+							}
 
 		.affiliations {
 
