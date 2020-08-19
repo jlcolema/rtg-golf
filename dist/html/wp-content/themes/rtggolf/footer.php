@@ -19,9 +19,41 @@
 
 			</div>
 
-			<?php if ( ! is_front_page() && is_home() ) : ?>
+			<?php if ( ! is_front_page() && is_home() OR is_single() && ! is_singular( 'trip' ) && ! is_singular( 'destination' ) ) : ?>
 
-				<div class="main__secondary">Secondary</div>
+				<div class="main__secondary">
+
+					<div class="widgets">
+
+						<div class="widget__item widget__recent-posts">
+
+							<h3 class="widget__header">Title</h3>
+
+							<div class="widget__content">
+
+								<article class="summary">
+
+									<h1 class="summary__title">
+
+										<a href="#" class="summary__link">Title</a>
+
+									</h1>
+
+									<footer class="summary__footer">
+
+										<time datetime="" class="summary__time">August 11, 2020</time>
+
+									</footer>
+
+								</article>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
 
 			<?php endif; ?>
 
@@ -143,33 +175,53 @@
 
 					<div class="widget__content">
 
-						<article class="summary">
+						<?php
 
-							<h1 class="summary__title">
+							$post_listing_options = array(
 
-								<a href="#" class="summary__link">Title</a>
+								'post_type'		=> 'post',
+								'post_status'	=> 'publish',
+								'numberposts'	=> 1,
+								'orderby'		=> 'menu_order',
+								'order'			=> 'ASC'
 
-							</h1>
+							);
 
-							<footer class="summary__footer">
+							$posts = get_posts( $post_listing_options );
 
-								<time datetime="" class="summary__time">August 11, 2020</time>
+						?>
 
-							</footer>
+						<?php foreach ( $posts as $post ) : ?>
 
-							<div class="summary__excerpt">
+							<article class="summary">
 
-								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat hic provident quae ducimus dolorem asperiores repudiandae, excepturi illo culpa distinctio laboriosam molestiae? Vero eaque, repellendus minus eos fugit magni voluptatem!</p>
+								<h1 class="summary__title">
 
-							</div>
+									<a href="<?php the_permalink(); ?>" class="summary__link"><?php the_title(); ?></a>
 
-							<div class="summary__more">
+								</h1>
 
-								<a href="/blog/" class="summary__more-link">Read More</a>
+								<footer class="summary__footer">
 
-							</div>
+									<time datetime="" class="summary__time">August 11, 2020</time>
 
-						</article>
+								</footer>
+
+								<div class="summary__excerpt">
+
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat hic provident quae ducimus dolorem asperiores repudiandae, excepturi illo culpa distinctio laboriosam molestiae? Vero eaque, repellendus minus eos fugit magni voluptatem!</p>
+
+								</div>
+
+								<div class="summary__more">
+
+									<a href="<?php the_permalink(); ?>" class="summary__more-link">Read More</a>
+
+								</div>
+
+							</article>
+
+						<?php endforeach; ?>
 
 					</div>
 
