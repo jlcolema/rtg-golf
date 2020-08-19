@@ -319,3 +319,74 @@
 								}
 
 							}
+
+			/* Partners */
+
+			.partners {
+
+				margin: 5em 0 0 0;
+
+			}
+
+				.partners__inner-wrap {}
+
+					.partners__one {}
+
+						.partners__list {
+
+							display: flex;
+							flex-direction: row;
+							flex-wrap: nowrap;
+							justify-content: space-between;
+							align-items: flex-start;
+							align-content: flex-start;
+
+							margin: 0;
+							padding: 0;
+							list-style: none;
+
+						}
+
+							.partners__item {
+
+								width: calc(50% - 2em);
+								margin: 0;
+
+							}
+
+								.partners__picture {
+
+									display: block;
+									margin: 0 0 2em 0;
+
+								}
+
+									.partners__img {}
+
+								.partners__name {
+
+									margin: 0;
+
+								}
+
+								.partners__title {
+
+									color: $color-gray-30;
+									font-weight: normal;
+									font-style: italic;
+
+								}
+
+								.partners__bio {
+
+									p {
+
+										&:last-of-type {
+
+											margin: 0;
+
+										}
+
+									}
+
+								}
