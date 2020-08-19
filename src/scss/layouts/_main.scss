@@ -192,3 +192,130 @@
 										}
 
 									}
+			
+			/* Featured Destinations */
+
+			.featured-destinations {}
+
+				.featured-destinations__inner-wrap {}
+
+					.featured-destinations__title-one {
+
+						margin: 0 0 2em 0;
+
+					}
+
+						.featured-destinations__title {
+
+							font-size: 2.25rem;
+							font-family: 'Rufina', Times, 'Times New Roman', serif;
+							font-weight: bold;
+							text-align: center;
+
+						}
+
+						.featured-destinations__header {
+
+							margin: 0;
+							font-size: 1.5em;
+							font-family: 'Montserrat', Helvetica, Arial, Helvetica, sans-serif;
+							font-weight: normal;
+							text-align: center;
+							color: $color-primary-orange;
+
+						}
+
+					.featured-destinations__title-two {}
+
+						.featured-destinations__list {
+
+							display: flex;
+							flex-direction: row;
+							flex-wrap: nowrap;
+							justify-content: space-between;
+							align-items: flex-start;
+							align-content: flex-start;
+
+							margin: 0;
+							padding: 0;
+							list-style: none;
+
+							// background: pink;
+
+						}
+
+							.featured-destinations__item {
+
+								width: calc(33.33333% - 2em);
+								margin: 0;
+								// background: pink;
+
+							}
+
+								.featured-destinations__picture {
+
+									display: block;
+									margin: 0 0 1.5em 0;
+
+								}
+
+									.featured-destinations__img {}
+
+								.featured-destinations__location {}
+
+									.featured-destinations__link {}
+
+								.featured-destinations__details {
+
+									p {
+
+										&:last-of-type {}
+
+									}
+
+								}
+
+								.featured-destinations__more {
+
+									display: none;
+									margin: 2.5em 0 0 0;
+
+								}
+
+									.featured-destinations__more-link {
+
+										display: inline-block;
+										padding: 1em 1.5em;
+										color: $color-base-white;
+										background: $color-primary-green;
+			
+										&:hover {
+			
+											text-decoration: none;
+			
+										}
+
+									}
+					
+					.featured-destinations__three {}
+
+						.featured-destinations__learn-more {}
+
+							.featured-destinations__learn-more-link {
+
+								display: block;
+								width: 100%;
+								max-width: 500px;
+								margin: 1.5em auto 0 auto;
+								padding: 1em 1.5em;
+								text-align: center;
+								color: $color-base-white;
+								background: $color-primary-orange;
+
+								&:hover {
+
+									text-decoration: none;
+
+								}
+
+							}
