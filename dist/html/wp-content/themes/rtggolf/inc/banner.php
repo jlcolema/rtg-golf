@@ -4,7 +4,15 @@
 
 		<h1 class="banner__title">
 		
-			<?php if ( ! is_front_page() && is_home() OR is_single() ) : ?>
+			<?php if ( is_singular( 'trip' ) ) : ?>
+
+				Favorite Trips
+
+			<?php elseif ( is_singular( 'destination' ) ) :?>
+
+				Destinations
+
+			<?php elseif ( ! is_front_page() && is_home() OR is_single() ) : ?>
 
 				Blog
 
