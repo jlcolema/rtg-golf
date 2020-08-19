@@ -6,7 +6,7 @@
 
 .pre-footer {
 
-	margin: 3em 0 0 0;
+	margin: 4em 0 0 0;
 
 }
 
@@ -31,30 +31,55 @@
 
 			}
 
-				.newsletter__title {}
+				.newsletter__cta {}
 
-				.newsletter__detail {
+					.newsletter__title {}
 
-					p {
+					.newsletter__detail {
 
-						&:last-of-type {
+						p {
 
-							margin: 0;
+							&:last-of-type {
 
-						}
-
-					}
-
-						a {
-
-							color: $color-base-white;
-
-							&:hover {
-
-								text-decoration: underline;
+								margin: 0;
 
 							}
 
 						}
 
+							a {
+
+								color: $color-base-white;
+
+								&:hover {
+
+									text-decoration: underline;
+
+								}
+
+							}
+
+					}
+				
+				.newsletter__more {
+
+					margin: 2em 0 0 0;
+
 				}
+
+					.newsletter__link {
+
+						display: block;
+						width: 200px;
+						padding: 1em 3.5em 1em 3.5em;
+						text-align: center;
+						color: $color-base-white;
+						background: lighten($color-primary-green, 5%);
+
+						&:hover {
+
+							text-decoration: none;
+
+						}
+
+					}
