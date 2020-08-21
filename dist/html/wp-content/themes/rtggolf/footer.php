@@ -317,19 +317,55 @@
 
 					<li class="affiliations__item">
 						
-						<a href="#" class="affiliations__link">RTG Golf</a>
+						<a href="#" class="affiliations__link">
+						
+							<picture class="affiliations__picture">
+
+								<source srcset="https://via.placeholder.com/200x80" media="(min-width: 1000px)">
+
+								<source srcset="https://via.placeholder.com/200x80" media="(min-width: 700px)">
+
+								<img src="https://via.placeholder.com/200x80" alt="RTG Golf" class="banner__img">
+
+							</picture>
+
+						</a>
 					
 					</li>
 
 					<li class="affiliations__item">
 						
-						<a href="#" rel="external" class="affiliations__link">St. Andrews Links</a>
+						<a href="#" rel="external" class="affiliations__link">
+						
+							<picture class="affiliations__picture">
+
+								<source srcset="https://via.placeholder.com/200x80" media="(min-width: 1000px)">
+
+								<source srcset="https://via.placeholder.com/200x80" media="(min-width: 700px)">
+
+								<img src="https://via.placeholder.com/200x80" alt="St. Andrews Links Authorized Provider" class="banner__img">
+
+							</picture>
+						
+						</a>
 					
 					</li>
 					
 					<li class="affiliations__item">
 						
-						<a href="#" rel="external" class="affiliations__link">IAGTO</a>
+						<a href="#" rel="external" class="affiliations__link">
+						
+							<picture class="affiliations__picture">
+
+								<source srcset="https://via.placeholder.com/200x80" media="(min-width: 1000px)">
+
+								<source srcset="https://via.placeholder.com/200x80" media="(min-width: 700px)">
+
+								<img src="https://via.placeholder.com/200x80" alt="IAGTO" class="banner__img">
+
+							</picture>
+						
+						</a>
 					
 					</li>
 
