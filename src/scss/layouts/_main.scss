@@ -233,7 +233,7 @@
 							flex-direction: row;
 							flex-wrap: nowrap;
 							justify-content: space-between;
-							align-items: flex-start;
+							align-items: stretch;
 							align-content: flex-start;
 
 							margin: 0;
@@ -269,7 +269,11 @@
 
 									p {
 
-										&:last-of-type {}
+										&:last-of-type {
+
+											margin: 0;
+
+										}
 
 									}
 
@@ -296,29 +300,6 @@
 										}
 
 									}
-					
-					.featured-destinations__three {}
-
-						.featured-destinations__learn-more {}
-
-							.featured-destinations__learn-more-link {
-
-								display: block;
-								width: 100%;
-								max-width: 500px;
-								margin: 2.5em auto 0 auto;
-								padding: 1em 1.5em;
-								text-align: center;
-								color: $color-base-white;
-								background: $color-primary-orange;
-
-								&:hover {
-
-									text-decoration: none;
-
-								}
-
-							}
 
 			/* Partners */
 
