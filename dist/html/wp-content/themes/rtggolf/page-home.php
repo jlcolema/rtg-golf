@@ -8,7 +8,7 @@
 
 			<div class="featured-destinations__title-one">
 
-				<div class="featured-destinations__title">The Experience</div>
+				<div class="featured-destinations__title">RTG Golf</div>
 
 				<h2 class="featured-destinations__header">From concept to completion <u>and every detail in between</u></h2>
 
@@ -16,115 +16,63 @@
 
 			<div class="featured-destinations__title-two">
 
-				<ul class="featured-destinations__list">
+				<?php
 
-					<li class="featured-destinations__item">
+					$featured_destinations = get_field( 'featured_destinations' );
 
-						<picture class="featured-destinations__picture">
+				?>
 
-							<source srcset="https://via.placeholder.com/400x400" media="(min-width: 1000px)">
+				<?php if ( $featured_destinations ) : ?>
 
-							<source srcset="https://via.placeholder.com/400x400" media="(min-width: 700px)">
+					<ul class="featured-destinations__list">
 
-							<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="featured-destinations__img">
+						<?php foreach( $featured_destinations as $featured_destination ) : ?>
 
-						</picture>
+							<?php
 
-						<h3 class="featured-destinations__location">
-							
-							<a href="#" class="featured-destinations__link">Step One</a>
-						
-						</h3>
+								$featured_destination_title = get_the_title( $featured_destination->ID );
 
-						<div class="featured-destinations__details">
+								$featured_destination_link = get_permalink( $featured_destination->ID );
 
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id at velit, dolorum tempora ipsam iusto maxime culpa totam quaerat, illum voluptas rerum dicta alias ad sed quasi nihil voluptatum numquam.</p>
+							?>
 
-						</div>
+							<li class="featured-destinations__item">
 
-						<div class="featured-destinations__more">
+								<picture class="featured-destinations__picture">
 
-							<a href="#" class="featured-destinations__more-link">Learn More</a>
+									<source srcset="https://via.placeholder.com/400x400" media="(min-width: 1000px)">
 
-						</div>
+									<source srcset="https://via.placeholder.com/400x400" media="(min-width: 700px)">
 
-					</li>
+									<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="featured-destinations__img">
 
-					<li class="featured-destinations__item">
+								</picture>
 
-						<picture class="featured-destinations__picture">
+								<h3 class="featured-destinations__location">
+									
+									<a href="<?php echo $featured_destination_link; ?>" class="featured-destinations__link"><?php echo $featured_destination_title; ?></a>
+								
+								</h3>
 
-							<source srcset="https://via.placeholder.com/400x400" media="(min-width: 1000px)">
+								<div class="featured-destinations__details">
 
-							<source srcset="https://via.placeholder.com/400x400" media="(min-width: 700px)">
+									<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus nostrum, vero nulla a nisi maiores minima est maxime quod tenetur excepturi et ratione ea illo. Ipsa laudantium fuga vero voluptatum!</p>
 
-							<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="featured-destinations__img">
+								</div>
 
-						</picture>
+								<div class="featured-destinations__more">
 
-						<h3 class="featured-destinations__location">
-							
-							<a href="#" class="featured-destinations__link">Step Two</a>
-						
-						</h3>
+									<a href="<?php echo $featured_destination_link; ?>" class="featured-destinations__more-link">Learn More</a>
 
-						<div class="featured-destinations__details">
+								</div>
 
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id at velit, dolorum tempora ipsam iusto maxime culpa totam quaerat, illum voluptas rerum dicta alias ad sed quasi nihil voluptatum numquam.</p>
+							</li>
 
-						</div>
+						<?php endforeach; ?>
 
-						<div class="featured-destinations__more">
+					</ul>
 
-							<a href="#" class="featured-destinations__more-link">Learn More</a>
-
-						</div>
-
-					</li>
-
-					<li class="featured-destinations__item">
-
-						<picture class="featured-destinations__picture">
-
-							<source srcset="https://via.placeholder.com/400x400" media="(min-width: 1000px)">
-
-							<source srcset="https://via.placeholder.com/400x400" media="(min-width: 700px)">
-
-							<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="featured-destinations__img">
-
-						</picture>
-
-						<h3 class="featured-destinations__location">
-							
-							<a href="#" class="featured-destinations__link">Step Three</a>
-						
-						</h3>
-
-						<div class="featured-destinations__details">
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id at velit, dolorum tempora ipsam iusto maxime culpa totam quaerat, illum voluptas rerum dicta alias ad sed quasi nihil voluptatum numquam.</p>
-
-						</div>
-
-						<div class="featured-destinations__more">
-
-							<a href="#" class="featured-destinations__more-link">Learn More</a>
-
-						</div>
-
-					</li>
-
-				</ul>
-
-			</div>
-
-			<div class="featured-destinations__three">
-
-				<div class="featured-destinations__learn-more">
-
-					<a href="/the-experience/" class="featured-destinations__learn-more-link">Learn More About the Experience</a>
-
-				</div>
+				<?php endif; ?>
 
 			</div>
 
