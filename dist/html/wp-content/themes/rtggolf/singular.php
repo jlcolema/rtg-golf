@@ -42,28 +42,4 @@ get_header();
 
 	</article>
 
-	<?php /* Sidebar */ ?>
-
-	<div class="">
-
-		<?php /* Recent Posts Widget */ ?>
-
-		<div class="">
-
-			<h3 class="">Recent Posts</h3>
-
-			Date
-
-		</div>
-
-		<?php /* Categories Widget */ ?>
-
-		<div class="">
-
-			<h3 class="">Categories</h3>
-
-		</div>
-
-	</div>
-
 <?php get_footer(); ?>
