@@ -313,63 +313,43 @@
 
 			<div class="affiliations">
 
-				<ul class="affiliations__list">
+				<?php if ( have_rows( 'affiliations_list', 'option' ) ) : ?>
 
-					<li class="affiliations__item">
-						
-						<a href="#" class="affiliations__link">
-						
-							<picture class="affiliations__picture">
+					<ul class="affiliations__list">
 
-								<source srcset="https://via.placeholder.com/200x80" media="(min-width: 1000px)">
+						<?php while ( have_rows( 'affiliations_list', 'option' ) ) : the_row(); ?>
 
-								<source srcset="https://via.placeholder.com/200x80" media="(min-width: 700px)">
+							<?php
 
-								<img src="https://via.placeholder.com/200x80" alt="RTG Golf" class="banner__img">
+								$affiliations_image = get_sub_field( 'affiliations_image', 'option' );
 
-							</picture>
+								$affiliations_url = get_sub_field( 'affiliations_url', 'option' );
 
-						</a>
-					
-					</li>
+							?>
 
-					<li class="affiliations__item">
-						
-						<a href="#" rel="external" class="affiliations__link">
-						
-							<picture class="affiliations__picture">
+							<li class="affiliations__item">
+								
+								<a href="<?php echo $affiliations_url; ?>" rel="external" class="affiliations__link">
+								
+									<picture class="affiliations__picture">
 
-								<source srcset="https://via.placeholder.com/200x80" media="(min-width: 1000px)">
+										<source srcset="<?php echo $affiliations_image; ?>" media="(min-width: 1000px)">
 
-								<source srcset="https://via.placeholder.com/200x80" media="(min-width: 700px)">
+										<source srcset="<?php echo $affiliations_image; ?>" media="(min-width: 700px)">
 
-								<img src="https://via.placeholder.com/200x80" alt="St. Andrews Links Authorized Provider" class="banner__img">
+										<img src="<?php echo $affiliations_image; ?>" alt="RTG Golf" class="banner__img">
 
-							</picture>
-						
-						</a>
-					
-					</li>
-					
-					<li class="affiliations__item">
-						
-						<a href="#" rel="external" class="affiliations__link">
-						
-							<picture class="affiliations__picture">
+									</picture>
 
-								<source srcset="https://via.placeholder.com/200x80" media="(min-width: 1000px)">
+								</a>
+							
+							</li>
 
-								<source srcset="https://via.placeholder.com/200x80" media="(min-width: 700px)">
+						<?php endwhile; ?>
 
-								<img src="https://via.placeholder.com/200x80" alt="IAGTO" class="banner__img">
+					</ul>
 
-							</picture>
-						
-						</a>
-					
-					</li>
-
-				</ul>
+				<?php endif; ?>
 
 			</div>
 
