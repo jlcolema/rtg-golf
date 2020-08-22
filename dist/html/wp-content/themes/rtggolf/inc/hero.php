@@ -2,41 +2,51 @@
 
 	<div class="hero__inner-wrap">
 
-		<div class="hero__cta">
+		<?php
 
-			<div class="hero__label">RTG Golf</div>
+			$hero = get_field( 'hero' );
 
-			<h1 class="hero__header">Another Trip of a Lifetime</h1>
+		?>
 
-			<div class="hero__details">
+		<?php if ( $hero ) : ?>
 
-				<p>We take golf trips from good to great!</p>
+			<div class="hero__cta">
+
+				<div class="hero__label">RTG Golf</div>
+
+				<h1 class="hero__header"><?php echo $hero['hero_headline']; ?></h1>
+
+				<div class="hero__details">
+
+					<p><?php echo $hero['hero_detail']; ?></p>
+
+				</div>
+
+				<div class="hero__more">
+
+					<a href="<?php echo $hero['hero_link']; ?>" class="hero__link">Learn More</a>
+
+				</div>
 
 			</div>
 
-			<div class="hero__more">
+			<div class="hero__provider">
 
-				<a href="/about-us/" class="hero__link">Learn More</a>
+				<span class="">St. Andrews Links Authorized Provider</span>
 
 			</div>
 
-		</div>
+			<picture class="hero__picture">
 
-		<div class="hero__provider">
+				<source srcset="<?php echo $hero['hero_image']; ?>" media="(min-width: 1000px)">
 
-			<span class="">St. Andrews Links Authorized Provider</span>
+				<source srcset="<?php echo $hero['hero_image']; ?>" media="(min-width: 700px)">
 
-		</div>
+				<img src="<?php echo $hero['hero_image']; ?>" alt="A very nice description." class="hero__img">
 
-		<picture class="hero__picture">
+			</picture>
 
-			<source srcset="https://via.placeholder.com/1600x600" media="(min-width: 1000px)">
-
-			<source srcset="https://via.placeholder.com/1200x600" media="(min-width: 700px)">
-
-			<img src="https://via.placeholder.com/1000x600" alt="A very nice description." class="hero__img">
-
-		</picture>
+		<?php endif; ?>
 
 	</div>
 
