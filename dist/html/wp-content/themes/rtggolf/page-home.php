@@ -34,17 +34,21 @@
 
 								$featured_destination_link = get_permalink( $featured_destination->ID );
 
+								$featured_destination_summary = get_field( 'destination_summary', $featured_destination->ID );
+
+								$featured_destination_image = get_field( 'destination_featured_image', $featured_destination->ID );
+
 							?>
 
 							<li class="featured-destinations__item">
 
 								<picture class="featured-destinations__picture">
 
-									<source srcset="https://via.placeholder.com/400x400" media="(min-width: 1000px)">
+									<source srcset="<?php echo $featured_destination_image; ?>" media="(min-width: 1000px)">
 
-									<source srcset="https://via.placeholder.com/400x400" media="(min-width: 700px)">
+									<source srcset="<?php echo $featured_destination_image; ?>" media="(min-width: 700px)">
 
-									<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="featured-destinations__img">
+									<img src="<?php echo $featured_destination_image; ?>" alt="A very nice description." class="featured-destinations__img">
 
 								</picture>
 
@@ -56,7 +60,7 @@
 
 								<div class="featured-destinations__details">
 
-									<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus nostrum, vero nulla a nisi maiores minima est maxime quod tenetur excepturi et ratione ea illo. Ipsa laudantium fuga vero voluptatum!</p>
+									<?php echo $featured_destination_summary; ?>
 
 								</div>
 
