@@ -371,3 +371,55 @@
 									}
 
 								}
+
+			/* Posts */
+
+			.posts {}
+
+				.posts__inner-wrap {}
+
+					.posts__list {}
+
+						.posts__item {}
+
+							.posts__picture {}
+
+								.posts__img {}
+
+							.posts__title {
+
+								font-size: 2.25rem;
+
+							}
+
+								.posts__link {
+
+									&:hover {}
+
+								}
+
+							.posts__footer {}
+
+								.posts__time {}
+
+							.posts__excerpt {
+
+								p {
+
+									&:last-of-type {
+
+										margin: 0;
+
+									}
+
+								}
+							
+							.posts__more {}
+
+								.posts__more-link {
+
+									&:hover {}
+
+								}
+
+							}
