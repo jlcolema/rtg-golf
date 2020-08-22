@@ -9,6 +9,15 @@
 	margin: 4.5em 0 0 0;
 	// background: pink;
 
+	// Temporarily hidden on blog and individual blog post entries
+
+	.blog &,
+	.single-post & {
+
+		display: none;
+
+	}
+
 }
 
 	.testimonial__inner-wrap {}
