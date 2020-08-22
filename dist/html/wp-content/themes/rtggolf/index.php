@@ -20,77 +20,104 @@ get_header();
 
 	<?php /* List of Posts */ ?>
 
-	<div class="">
+	<div class="posts">
 
-		<div class="">
+		<div class="posts__inner-wrap">
 
 			<div class="posts__list">
 
-				<article class="posts__item h-entry">
+				<?php
 
-					<div class="">
+					$post_listing_options = array(
 
-						<img src="https://via.placeholder.com/400x300" alt="A very nice description." class="" />
+						'post_type'		=> 'post',
+						'post_status'	=> 'publish',
+						'numberposts'	=> -1,
+						'orderby'		=> 'menu_order',
+						'order'			=> 'ASC'
 
-					</div>
+					);
 
-					<h1 class="">
+					$posts = get_posts( $post_listing_options );
+
+				?>
+
+				<?php foreach ( $posts as $post ) : ?>
+
+					<?php
+
+						/* Thumbnail
+						------------------------------*/
+
+						// Attachment
+
+						$partner_photo_attachment_id = get_field( 'partner_photo', $partner->ID );
+
+						// Size (use Small, Medium, Large, and Full)
+
+						$partner_photo_size_full = 'full';
+
+						// Options
+
+						$partner_photo_full = wp_get_attachment_image_src( $partner_photo_attachment_id, $partner_photo_size_full );
+
+						// Fields
+
+						$post_featured_image = get_field( 'post_featured_image', $post->ID );
+
+						$post_title = get_field( 'post_title', $post->ID );
+
+						$post_excerpt = get_field( 'post_excerpt', $post->ID );
+
+					?>
+
+					<article class="posts__item h-entry">
+
+						<picture class="posts__picture">
+
+							<source srcset="<?php echo $post_featured_image; ?>" media="(min-width: 1000px)">
+
+							<source srcset="<?php echo $post_featured_image; ?>" media="(min-width: 700px)">
+
+							<img src="<?php echo $post_featured_image; ?>" alt="A very nice description." class="posts__img">
+
+						</picture>
+
+						<h1 class="posts__title">
+							
+							<a href="<?php the_permalink(); ?>" class="posts__link"><?php echo $post->post_title; ?></a>
 						
-						<a href="#" class="">Title</a>
-					
-					</h1>
+						</h1>
 
-					<div class="">
+						<footer class="posts__footer">
 
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid corporis quasi sequi quos sit repellendus odio, est hic voluptatibus odit, accusantium animi quidem officia quae cupiditate nisi, pariatur repudiandae laborum.</p>
+							<time datetime="" class="posts__time"><?php echo get_the_date( 'F j, Y' ); ?></time>
 
-					</div>
+						</footer>
 
-					<div class="">
+						<div class="posts__excerpt">
 
-						<a href="#" class="">Read More</a>
+							<?php echo $post_excerpt; ?>
 
-					</div>
+						</div>
 
-					<footer class="">
+						<div class="posts__more">
 
-						<time datetime="" class="">August 20, 2020</time>
+							<a href="<?php the_permalink(); ?>" class="posts__more-link">Read More</a>
 
-					</footer>
+						</div>
 
-				</article>
+					</article>
 
-			</div>
-
-			<div class="">
-
-				<?php /* Post Navigation */ ?>
+				<?php endforeach; ?>
 
 			</div>
 
-		</div>
+			<div class="posts__navigation">
 
-	</div>
+				<?php /* Posts Navigation */ ?>
 
-	<?php /* Sidebar */ ?>
-
-	<div class="">
-
-		<?php /* List of Recent Posts */ ?>
-
-		<div class="">
-
-			<h3 class="">Recent Posts</h3>
-
-			Date
-
-		</div>
-
-		<?php /* List of Categories */ ?>
-
-		<div class="">
-
-			<h3 class="">Categories</h3>
+			</div>
 
 		</div>
 
