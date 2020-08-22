@@ -380,9 +380,28 @@
 
 					.posts__list {}
 
-						.posts__item {}
+						.posts__item {
 
-							.posts__picture {}
+							margin: 0 0 3em 0;
+							padding: 0 0 3em 0;
+							border-bottom: 1px solid $color-gray-20;
+
+							&:last-of-type {
+
+								margin: 0;
+								padding: 0;
+								border: none;
+
+							}
+
+						}
+
+							.posts__picture {
+
+								display: block;
+								margin: 0 0 1.5em 0;
+
+							}
 
 								.posts__img {}
 
@@ -400,9 +419,15 @@
 
 							.posts__footer {}
 
-								.posts__time {}
+								.posts__time {
+
+									color: $color-gray-40;
+
+								}
 
 							.posts__excerpt {
+
+								margin: 1em 0 0 0;
 
 								p {
 
@@ -413,13 +438,29 @@
 									}
 
 								}
+
+							}
 							
-							.posts__more {}
+							.posts__more {
+
+								margin: 2em 0 0 0;
+
+							}
 
 								.posts__more-link {
 
-									&:hover {}
+									display: inline-block;
+									padding: 1em 1.5em;
+									color: $color-primary-blue;
+									// background: lighten($color-primary-blue, 50%);
+									border: 1px solid $color-primary-blue;
+
+									&:hover {
+
+										color: $color-base-white;
+										background: $color-primary-blue;
+										text-decoration: none;
+
+									}
 
 								}
-
-							}
