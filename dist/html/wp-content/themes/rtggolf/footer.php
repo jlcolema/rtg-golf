@@ -321,14 +321,16 @@
 
 							<?php
 
-								$affiliations_image = get_sub_field( 'affiliations_image', 'option' );
+								$affiliations_name = get_sub_field( 'affiliations_name', 'option' );
 
 								$affiliations_url = get_sub_field( 'affiliations_url', 'option' );
+
+								$affiliations_image = get_sub_field( 'affiliations_image', 'option' );
 
 							?>
 
 							<li class="affiliations__item">
-								
+
 								<a href="<?php echo $affiliations_url; ?>" rel="external" class="affiliations__link">
 								
 									<picture class="affiliations__picture">
@@ -337,7 +339,7 @@
 
 										<source srcset="<?php echo $affiliations_image; ?>" media="(min-width: 700px)">
 
-										<img src="<?php echo $affiliations_image; ?>" alt="RTG Golf" class="banner__img">
+										<img src="<?php echo $affiliations_image; ?>" alt="<?php echo $affiliations_name; ?>" class="banner__img">
 
 									</picture>
 
