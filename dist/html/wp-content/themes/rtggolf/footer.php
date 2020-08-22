@@ -325,6 +325,8 @@
 
 								$affiliations_url = get_sub_field( 'affiliations_url', 'option' );
 
+								// TODO: Create a 400 x 160 and 200 x 80 if possible
+
 								$affiliations_image = get_sub_field( 'affiliations_image', 'option' );
 
 							?>
@@ -335,9 +337,7 @@
 								
 									<picture class="affiliations__picture">
 
-										<source srcset="<?php echo $affiliations_image; ?>" media="(min-width: 1000px)">
-
-										<source srcset="<?php echo $affiliations_image; ?>" media="(min-width: 700px)">
+										<source srcset="<?php echo $affiliations_image; ?> 2x">
 
 										<img src="<?php echo $affiliations_image; ?>" alt="<?php echo $affiliations_name; ?>" class="banner__img">
 
