@@ -2,21 +2,39 @@
 
 	<?php /* Title */ ?>
 
-	<div class="">
+	<div class="matrix">
 
-		<div class="">
-
-			<h2 class="">Another Trip of a Lifetime</h2>
-
-			<h3 class="">Professional Design and Management of Golf Travel</h3>
+		<div class="matrix__inner-wrap">
 
 			<div class="">
 
-				<p>At RTG Golf our business is the professional design and management of golf travel. We are expert at tying together all the details involved in the planning and execution of great golf trips. From site selection, accommodations and expense management to creating and scoring the appropriate competition.</p>
+				<picture class="title__picture">
 
-				<p>RTG Golf is a Twin Cities based business established in 1999. Since that time we have sent thousands of golf travelers to destinations around the globe. We have tremendous experience in both domestic and international destinations – with a particular expertise in the British Isles.</p>
+					<source srcset="https://via.placeholder.com/600x600" media="(min-width: 1000px)">
 
-				<p>We are golfers that go on golf trips and understand the nuances that transform golf trips from Good to Great!</p>
+					<source srcset="https://via.placeholder.com/600x600" media="(min-width: 700px)">
+
+					<img src="https://via.placeholder.com/600x600" alt="A very nice description." class="title__img">
+
+				</picture>
+
+			</div>
+
+			<div class="">
+
+				<h2 class="">Another Trip of a Lifetime</h2>
+
+				<h3 class="">Professional Design and Management of Golf Travel</h3>
+
+				<div class="">
+
+					<p>At RTG Golf our business is the professional design and management of golf travel. We are expert at tying together all the details involved in the planning and execution of great golf trips. From site selection, accommodations and expense management to creating and scoring the appropriate competition.</p>
+
+					<p>RTG Golf is a Twin Cities based business established in 1999. Since that time we have sent thousands of golf travelers to destinations around the globe. We have tremendous experience in both domestic and international destinations – with a particular expertise in the British Isles.</p>
+
+					<p>We are golfers that go on golf trips and understand the nuances that transform golf trips from Good to Great!</p>
+
+				</div>
 
 			</div>
 
@@ -93,15 +111,21 @@
 
 							// Attachment
 
-							$partner_thumbnail_attachment_id = get_field( 'partner_thumbnail', $partner->ID );
+							$partner_photo_attachment_id = get_field( 'partner_photo', $partner->ID );
 
-							// Size
+							// Size (use Small, Medium, Large, and Full)
 
-							$partner_thumbnail_size_full = 'full';
+							$partner_photo_size_full = 'full';
 
 							// Options
 
-							$partner_thumbnail_full = wp_get_attachment_image_src( $partner_thumbnail_attachment_id, $partner_thumbnail_size_full );
+							$partner_photo_full = wp_get_attachment_image_src( $partner_photo_attachment_id, $partner_photo_size_full );
+
+							// Fields
+
+							$partner_title = get_field( 'partner_title', $partner->ID );
+
+							$partner_bio = get_field( 'partner_bio', $partner->ID );
 
 						?>
 
@@ -109,23 +133,21 @@
 
 							<picture class="partners__picture">
 
-								<source srcset="https://via.placeholder.com/400x400" media="(min-width: 1000px)">
+								<source srcset="<?php echo $partner_photo_full[0]; ?>" media="(min-width: 1000px)">
 
-								<source srcset="https://via.placeholder.com/400x400" media="(min-width: 700px)">
+								<source srcset="<?php echo $partner_photo_full[0]; ?>" media="(min-width: 700px)">
 
-								<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="partners__img">
+								<img src="<?php echo $partner_photo_full[0]; ?>" alt="A very nice description." class="partners__img">
 
 							</picture>
 
 							<h2 class="partners__name"><?php echo $partner->post_title; ?></h2>
 
-							<h3 class="partners__title">Partner</h3>
+							<h3 class="partners__title"><?php echo $partner_title; ?></h3>
 
 							<div class="partners__bio">
 
-								<p>RTG Golf is a second career for me. In 1999, after 25 years in the restaurant business I decided I wanted to explore a second career. Still at it 20 years later.</p>
-
-								<p>In that 20 years I have “researched” golf all over the world and have gained the expertise to create great golf itineraries domestically and internationally.</p>
+								<?php echo $partner_bio; ?>
 
 							</div>
 
