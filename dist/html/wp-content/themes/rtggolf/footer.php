@@ -91,11 +91,11 @@
 
 					<div class="newsletter__cta">
 
-						<h3 class="newsletter__title">Join Our E-mail List</h3>
+						<h3 class="newsletter__title"><?php the_field( 'newsletter_headline', 'option' ); ?></h3>
 
 						<div class="newsletter__detail">
 
-							<p>Sign up for our newsletter and keep up to date with new destinations and trip ideas.</p>
+							<p><?php the_field( 'newsletter_detail', 'option' ); ?></p>
 
 						</div>
 
@@ -103,7 +103,7 @@
 
 					<div class="newsletter__more">
 
-						<a href="#" class="newsletter__link">Sign Up</a>
+						<a href="<?php the_field( 'newsletter_url', 'option' ); ?>" rel="external" class="newsletter__link">Sign Up</a>
 
 					</div>
 
