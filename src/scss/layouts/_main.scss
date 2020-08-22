@@ -12,7 +12,7 @@
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: stretch;
 		align-content: flex-start;
 
 		width: 100%;
@@ -32,6 +32,10 @@
 
 			flex: 1;
 			margin-left: 3em;
+			// padding-left: 2.25em;
+			// border-left: 1px solid $color-gray-10;
+
+			// background: pink;
 
 		}
 
@@ -384,7 +388,7 @@
 
 							margin: 0 0 3em 0;
 							padding: 0 0 3em 0;
-							border-bottom: 1px solid $color-gray-20;
+							border-bottom: 1px solid $color-gray-10;
 
 							&:last-of-type {
 
@@ -451,14 +455,11 @@
 
 									display: inline-block;
 									padding: 1em 1.5em;
-									color: $color-primary-blue;
-									// background: lighten($color-primary-blue, 50%);
-									border: 1px solid $color-primary-blue;
+									color: $color-base-white;
+									background: $color-primary-blue;
 
 									&:hover {
 
-										color: $color-base-white;
-										background: $color-primary-blue;
 										text-decoration: none;
 
 									}
