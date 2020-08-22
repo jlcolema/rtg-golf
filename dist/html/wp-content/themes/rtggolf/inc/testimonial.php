@@ -47,13 +47,15 @@
 
 				</div>
 
-				<span class="testimonial__source">
+				<div class="testimonial__source">
+
+					<span class="testimonial__dash">&mdash;</span>
 
 					<strong class="testimonial__name"><?php echo $testimonial->post_title; ?></strong>
 					
 					<i class="testimonial__title">CEO</i>
 
-				</span>	
+				</div>	
 
 			</blockquote>
 
