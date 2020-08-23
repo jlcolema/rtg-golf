@@ -7,11 +7,11 @@
 .hero {
 
 	position: relative;
-	width: 100vw;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
+	// width: 100vw;
+	// left: 50%;
+	// right: 50%;
+	// margin-left: -50vw;
+	// margin-right: -50vw;
 	margin-bottom: 3em;
 	overflow: hidden;
 
@@ -48,13 +48,15 @@
 				max-width: 500px; 
 				margin: 0;
 				font-size: 4.5rem;
-				font-style: italic;
+				// font-style: italic;
+				text-shadow: 0 3px 7px rgba($color-base-black, 0.25);
 
 			}
 
 			.hero__details {
 
 				margin: 1.5em 0 0 0;
+				text-shadow: 0 3px 7px rgba($color-base-black, 0.25);
 
 				p {
 
@@ -102,6 +104,9 @@
 			top: 0;
 			height: 100%;
 			transform: translate(-50%, 0);
+
+			background: darken($color-primary-blue, 15%);
+
 			z-index: -1;
 
 		}
@@ -110,5 +115,9 @@
 
 				max-width: none;
 				height: 100%;
+
+				// filter: grayscale(100%);
+
+				opacity: 0.75;
 
 			}
