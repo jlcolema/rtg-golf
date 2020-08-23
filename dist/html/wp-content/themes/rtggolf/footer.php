@@ -339,7 +339,7 @@
 
 										<source srcset="<?php echo $affiliations_image; ?> 2x">
 
-										<img src="<?php echo $affiliations_image; ?>" alt="<?php echo $affiliations_name; ?>" class="banner__img">
+										<img src="<?php echo $affiliations_image; ?>" alt="<?php echo $affiliations_name; ?>" class="affiliations__img">
 
 									</picture>
 

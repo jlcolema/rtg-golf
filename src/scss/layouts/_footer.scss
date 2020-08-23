@@ -6,7 +6,7 @@
 
 .footer {
 
-	margin: 4em 0 0 0;
+	margin: 5em 0 0 0;
 	color: $color-base-white;
 	background: $color-primary-blue;
 
@@ -263,6 +263,15 @@
 						@include hide-text;
 
 					}
+
+						.affiliations__picture {}
+
+							.affiliations__img {
+
+								max-width: none;
+								height: 100%;
+
+							}
 
 		.copyright {
 
