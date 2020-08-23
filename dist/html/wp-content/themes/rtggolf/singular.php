@@ -14,29 +14,51 @@ get_header();
 
 	<?php /* Post */ ?>
 
-	<article class="">
+	<article class="post">
 
-		<h1 class="">Title</h1>
+		<div class="post__inner-wrap">
 
-		<footer class="">
+			<h1 class="post__title"><?php the_title(); ?></h1>
 
-			<time datetime="" class="">August 20, 2020</time>
+			<footer class="post__footer">
 
-			<div class="">
+				<time datetime="" class="post__time"><?php echo get_the_date( 'F j, Y' ); ?></time>
 
-				Category
+				<div class="post__category">
+
+					<?php
+
+						$post_categories = get_field( 'post_category' );
+					
+					?>
+
+					<?php if ( $post_categories ) : ?>
+
+						<ul class="post__category-list">
+
+							<?php foreach ( $post_categories as $post_category ) : ?>
+
+								<li class="post__category-item">
+
+									<a href="<?php echo esc_url( get_term_link( $post_category ) ); ?>" class="post__category-link"><?php echo esc_html( $post_category->name ); ?></a>
+
+								</li>
+
+							<?php endforeach; ?>
+
+						</ul>
+
+					<?php endif; ?>
+
+				</div>
+
+			</footer>
+
+			<div class="post__content">
+
+				<?php the_field( 'post_content' ); ?>
 
 			</div>
-
-		</footer>
-
-		<div class="">
-
-			<p>RTG golf traveled with a small group of golfers in August of 2019. Most of the travelers are veterans of several trips to Ireland & Scotland having played most of the courses that grab the headlines.</p>
-
-			<p>This trip was designed to play a couple of the big names as well as get off the beaten path. Total success on both initiatives. The group loved Ailsa at Turnberry, Dundonald Links and Western Gailes–but the trip became memorable once we ventured further west from the Ayrshire coast.</p>
-
-			<p>We took the long and winding road (yes, the one of Beatles lore) to the tiny village of Machrihanish located in the shadow of Campbeltown.</p>
 
 		</div>
 
