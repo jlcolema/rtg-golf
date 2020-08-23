@@ -465,3 +465,57 @@
 									}
 
 								}
+
+			/* Post */
+
+			.post {}
+
+				.post__inner-wrap {}
+
+					.post__title {
+
+						font-size: 2.25rem;
+
+					}
+
+					.post__footer {}
+
+						.post__time {
+
+							color: $color-gray-40;
+
+						}
+
+						.post__category {}
+
+							.post__category-list {
+
+								margin: 0;
+								padding: 0;
+								list-style: none;
+
+							}
+
+								.post__category-item {}
+
+									.post__category-link {
+
+										&:hover {}
+
+									}
+
+					.post__content {
+
+						margin: 1em 0 0 0;
+
+						p {
+
+							&:last-of-type {
+
+								margin: 0;
+
+							}
+
+						}
+
+					}
