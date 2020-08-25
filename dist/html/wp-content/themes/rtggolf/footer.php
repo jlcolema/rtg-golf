@@ -107,7 +107,11 @@
 
 					</div>
 
-					<!-- Illustration Source: https://www.vecteezy.com/free-vector/golf, Golf Vectors by Vecteezy. -->
+					<div class="newsletter__attribution">
+
+						<a href="https://www.vecteezy.com/free-vector/golf" rel="external" class="newsletter__attribution-link">Golf Vectors by Vecteezy</a>
+
+					</div>
 
 				</div>
 
