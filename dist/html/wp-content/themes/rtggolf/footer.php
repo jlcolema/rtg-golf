@@ -107,6 +107,8 @@
 
 					</div>
 
+					<!-- Illustration Source: https://www.vecteezy.com/free-vector/golf, Golf Vectors by Vecteezy. -->
+
 				</div>
 
 			</div>
