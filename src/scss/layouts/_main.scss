@@ -57,7 +57,7 @@
 
 							position: relative;
 							margin: 0 0 3em 0;
-							background: pink;
+							// background: pink;
 
 							&:last-of-type {
 
@@ -94,12 +94,13 @@
 
 									margin: 0;
 									color: $color-base-white;
+									text-shadow: 0 3px 7px rgba($color-base-black, 0.25);
 
 								}
 
 								.favorite-trips__more {
 
-									margin: 2.5em 0 0 0;
+									margin: 2em 0 0 0;
 
 								}
 
@@ -136,7 +137,7 @@
 
 							position: relative;
 							margin: 0 0 3em 0;
-							background: pink;
+							// background: pink;
 
 							&:last-of-type {
 
@@ -173,12 +174,13 @@
 
 									margin: 0;
 									color: $color-base-white;
+									text-shadow: 0 3px 7px rgba($color-base-black, 0.25);
 
 								}
 
 								.destinations__more {
 
-									margin: 2.5em 0 0 0;
+									margin: 2em 0 0 0;
 
 								}
 
