@@ -305,6 +305,32 @@
 
 									}
 
+					.featured-destinations__title-three {}
+
+						.featured-destinations__learn-more {
+
+							width: 100%;
+							max-width: 400px;
+							margin: 4em auto 0 auto;
+
+						}
+
+							.featured-destinations__learn-more-link {
+
+								display: block;
+								padding: 1em 2.5em 1em 2.5em;
+								text-align: center;
+								color: $color-base-white;
+								background: $color-primary-orange;
+
+								&:hover {
+
+									text-decoration: none;
+
+								}
+
+							}
+
 			/* Partners */
 
 			.partners {
@@ -517,5 +543,103 @@
 							}
 
 						}
+
+					}
+
+			/* Contact Form */
+
+			.wpcf7 {
+
+				margin: 3em 0 0 0;
+
+			}
+
+				.screen-reader-response {
+
+					display: none;
+
+				}
+
+				.wpcf7-form {}
+
+					.form__fieldset {}
+
+						.form__legend {
+
+							display: none;
+
+						}
+
+						.form__list {
+
+							margin: 0;
+							padding: 0;
+							list-style: none;
+
+						}
+
+							.form__item {
+
+								margin: 0 0 2em 0;
+
+							}
+
+							.form__item--is-required {}
+
+								label {
+
+									margin: 0 0 0.25em 0;
+
+								}
+
+									.required {
+
+										color: $color-primary-orange;
+
+									}
+
+								.wpcf7-form-control-wrap {}
+
+									input {
+
+										&.wpcf7-not-valid {
+
+											border-color: $color-primary-orange;
+
+										}
+
+									}
+
+									select {}
+
+									textarea {
+
+										&.wpcf7-not-valid {
+
+											border-color: $color-primary-orange;
+
+										}
+
+									}
+
+									.wpcf7-not-valid-tip {
+
+										display: block;
+										margin: 0.65em 0 0 0;
+										color: $color-primary-orange;
+
+									}
+
+					.form__button {
+
+						margin: 1em 0 0 0;
+
+					}
+
+						.wpcf7-submit {}
+
+					.wpcf7-response-output {
+
+						display: none;
 
 					}

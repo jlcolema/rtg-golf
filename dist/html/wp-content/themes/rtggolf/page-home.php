@@ -80,6 +80,16 @@
 
 			</div>
 
+			<div class="featured-destinations__title-three">
+
+				<div class="featured-destinations__learn-more">
+
+					<a href="/the-experience/" class="featured-destinations__learn-more-link">Learn More</a>
+
+				</div>
+
+			</div>
+				
 		</div>
 
 	</div>
