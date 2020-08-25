@@ -45,11 +45,13 @@
 
 			.hero__header {
 
+				width: 100%;
 				max-width: 500px; 
 				margin: 0;
 				font-size: 4.5rem;
-				// font-style: italic;
+				font-style: italic;
 				text-shadow: 0 3px 7px rgba($color-base-black, 0.25);
+				// background: pink;
 
 			}
 
@@ -59,6 +61,8 @@
 				text-shadow: 0 3px 7px rgba($color-base-black, 0.25);
 
 				p {
+
+					font-size: 1.5rem;
 
 					&:last-of-type {
 
