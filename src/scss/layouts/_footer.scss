@@ -70,7 +70,8 @@
 							}
 
 								a,
-								.secondary-nav__link {
+								.secondary-nav__link,
+								.single-post & a {
 
 									color: $color-base-white;
 
