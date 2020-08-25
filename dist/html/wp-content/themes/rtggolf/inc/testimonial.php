@@ -2,6 +2,8 @@
 
 	<div class="inner-wrap testimonial__inner-wrap">
 
+		<h3 class="testimonial__header">What Our Clients Say</h3>
+
 	<?php
 
 		$testimonial_listing_options = array(

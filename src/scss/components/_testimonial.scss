@@ -7,7 +7,7 @@
 .testimonial {
 
 	margin: 4.5em 0 0 0;
-	padding: 3.5em 0 0 0;
+	padding: 4.5em 0 0 0;
 	// background: pink;
 	border-top: 1px solid $color-gray-10;
 
@@ -23,6 +23,19 @@
 }
 
 	.testimonial__inner-wrap {}
+
+		.testimonial__header {
+
+			margin: 0 0 1.5em 0;
+			font-size: 1rem;
+			font-family: 'Montserrat', Helvetica, Arial, Helvetica, sans-serif;
+			text-align: center;
+			font-weight: normal;
+			text-transform: uppercase;
+			letter-spacing: 7px;
+			color: $color-gray-30;
+
+		}
 
 		.testimonial__blockquote {}
 
