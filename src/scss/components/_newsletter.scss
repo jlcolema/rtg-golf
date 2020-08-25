@@ -9,7 +9,7 @@
 	position: relative;
 	color: $color-base-white;
 	background: lighten($color-primary-green, 50%);
-	border: 1px solid lighten($color-primary-green, 25%);
+	border: 1px solid lighten($color-primary-green, 15%);
 	overflow: hidden;
 
 	&:after {
@@ -39,14 +39,15 @@
 
 			.newsletter__title {
 
-				color: $color-primary-green;
+				font-family: 'Montserrat', Helvetica, Arial, Helvetica, sans-serif;
+				color: rgb(88, 124, 64);
 
 			}
 
 			.newsletter__detail {
 
 				padding: 0 480px 0 0;
-				color: $color-primary-green;
+				color: rgb(88, 124, 64);
 
 				p {
 
@@ -86,7 +87,29 @@
 				padding: 1em 3.5em 1em 3.5em;
 				text-align: center;
 				color: $color-base-white;
-				background: $color-primary-orange;
+				background: $color-primary-green;
+
+				&:hover {
+
+					text-decoration: none;
+
+				}
+
+			}
+		
+		.newsletter__attribution {
+
+			position: absolute;
+			right: 10px;
+			bottom: 7px;
+			font-size: 0.75rem;
+			z-index: 2;
+
+		}
+
+			.newsletter__attribution-link {
+
+				color: $color-base-white;
 
 				&:hover {
 
