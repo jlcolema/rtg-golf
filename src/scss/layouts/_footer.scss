@@ -130,7 +130,15 @@
 
 							.p-region {}
 
-						.p-tel {}
+						.p-tel {
+
+							a {
+
+								color: $color-base-white;
+
+							}
+
+						}
 
 						.u-email {}
 
