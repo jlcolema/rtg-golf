@@ -55,7 +55,7 @@
 
 						<a href="#" class="utilities__link">
 							
-							Shopping Bag
+							Shopping Cart
 						
 							<span class="utilities__quantity">3</span>
 
