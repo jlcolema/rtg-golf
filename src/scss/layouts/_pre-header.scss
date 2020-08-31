@@ -6,8 +6,21 @@
 
 .pre-header {
 
+	padding: 0 20px;
 	color: $color-base-white;
 	background: $color-primary-green;
+
+	@media screen and (min-width: 600px) {
+
+		padding: 0 40px;
+
+	}
+
+	@media screen and (min-width: 800px) {
+
+		padding: 0 60px;
+
+	}
 
 }
 
