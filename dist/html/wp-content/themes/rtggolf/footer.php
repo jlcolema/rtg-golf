@@ -241,49 +241,66 @@
 
 					<div class="widget__content">
 
-						<div class="h-card contact__h-card">
+						<?php
 
-							<div class="p-name">Tom Kozlak</div>
+							$partner_listing_options = array(
 
-							<div class="p-adr">
+								'post_type'		=> 'partner',
+								'post_status'	=> 'publish',
+								'numberposts'	=> -1,
+								'orderby'		=> 'menu_order',
+								'order'			=> 'ASC'
 
-								<span class="p-locality">St. Paul,</span>
-									
-								<span class="p-region">MN</span>
+							);
+
+							$partners = get_posts( $partner_listing_options );
+
+						?>
+
+						<?php foreach ( $partners as $partner ) : ?>
+
+							<?php
+
+								/* Options
+								------------------------------*/
+
+								$partner_title = get_field( 'partner_title', $partner->ID );
+
+								$partner_location = get_field( 'partner_location', $partner->ID );
+
+								$partner_city = get_field( 'partner_city', $partner->ID );
+
+								$partner_state = get_field( 'partner_state', $partner->ID );
+
+								$partner_phone_number = get_field( 'partner_phone_number', $partner->ID );
+
+								$partner_email_address = get_field( 'partner_email_address', $partner->ID );
+
+							?>
+
+							<div class="h-card contact__h-card">
+
+								<div class="p-name"><?php echo $partner->post_title; ?></div>
+
+								<div class="p-adr">
+
+									<span class="p-locality"><?php echo $partner_location[ 'partner_city' ]; ?>,</span>
+										
+									<span class="p-region"><?php echo $partner_location[ 'partner_state' ]; ?></span>
+
+								</div>
+
+								<div class="p-tel"><?php echo $partner_phone_number; ?></div>
+
+								<div class="u-email">
+
+									<a href="mailto:<?php echo $partner_email_address; ?>" class="u-email__link"><?php echo $partner_email_address; ?></a>
+
+								</div>
 
 							</div>
 
-							<div class="p-tel">(612) 816-3337</div>
-
-							<div class="u-email">
-
-								<a href="mailto:tomk@rtggolf.com" class="u-email__link">tomk@rtggolf.com</a>
-
-							</div>
-
-						</div>
-
-						<div class="h-card contact__h-card">
-
-							<div class="p-name">Scott Cole</div>
-
-							<div class="p-adr">
-
-								<span class="p-locality">New Richmond,</span>
-
-								<span class="p-region">WI</span>
-
-							</div>
-
-							<div class="p-tel">(715) 529-4979</div>
-
-							<div class="u-email">
-
-								<a href="mailto:scottc@rtggolf.com" class="u-email__link">scottc@rtggolf.com</a>
-
-							</div>
-
-						</div>
+						<?php endforeach; ?>
 
 						<div class="social">
 
@@ -291,19 +308,19 @@
 
 								<li class="social__item social__facebook">
 
-									<a href="https://www.facebook/rtggolf" rel="external" class="social__link">Facebook</a>
+									<a href="<?php the_field( 'social_media_facebook', 'option' ); ?>" rel="external" class="social__link">Facebook</a>
 
 								</li>
 
 								<li class="social__item social__twitter">
 
-									<a href="https://www.twitter/rtggolf" rel="external" class="social__link">Twitter</a>
+									<a href="<?php the_field( 'social_media_twitter', 'option' ); ?>" rel="external" class="social__link">Twitter</a>
 
 								</li>
 
 								<li class="social__item social__instagram">
 
-									<a href="https://www.instagram/rtggolf" rel="external" class="social__link">Instagram</a>
+									<a href="<?php the_field( 'social_media_instagram', 'option' ); ?>" rel="external" class="social__link">Instagram</a>
 
 								</li>
 
