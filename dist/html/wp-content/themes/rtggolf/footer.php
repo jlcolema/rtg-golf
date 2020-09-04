@@ -15,7 +15,17 @@
 
 			</div>
 
-			<?php if ( ! is_front_page() && is_home() OR is_single() && ! is_singular( 'trip' ) && ! is_singular( 'destination' ) ) : ?>
+			<?php /*
+
+				// The sidebar should display on the following:
+
+				// 1. Blog
+				// 2. Individual Post
+				// 3. Contact Us
+
+			*/ ?>
+
+			<?php if ( ! is_front_page() && is_home() OR is_single() && ! is_singular( 'trip' ) && ! is_singular( 'destination' ) OR is_page( 'contact-us' ) ) : ?>
 
 				<div class="main__secondary">
 
