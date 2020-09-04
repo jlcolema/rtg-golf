@@ -11,15 +11,6 @@
 	// background: pink;
 	border-top: 1px solid $color-gray-10;
 
-	// Temporarily hidden on blog and individual blog post entries
-
-	.blog &,
-	.single-post & {
-
-		display: none;
-
-	}
-
 }
 
 	.testimonial__inner-wrap {}
