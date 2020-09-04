@@ -39,17 +39,23 @@
 
 				<ul class="utilities__list">
 
+					<?php /*
+
 					<li class="utilities__item">
 
 						<a href="#" class="utilities__link">Member Login</a>
 
 					</li>
 
+					*/ ?>
+
 					<li class="utilities__item">
 
 						<a href="/contact-us/" class="utilities__link">Contact Us</a>
 
 					</li>
+
+					<?php /*
 
 					<li class="utilities__item utilities__shopping-bag">
 
@@ -62,6 +68,8 @@
 						</a>
 
 					</li>
+
+					*/ ?>
 
 				</ul>
 
