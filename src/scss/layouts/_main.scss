@@ -598,7 +598,15 @@
 
 							.form__item {
 
+								width: 100%;
+								max-width: 480px;
 								margin: 0 0 2em 0;
+
+								&:last-of-type {
+
+									max-width: none;
+
+								}
 
 							}
 
@@ -654,7 +662,13 @@
 
 					}
 
-						.wpcf7-submit {}
+						.wpcf7-submit,
+						.wpcf7-submit[type="submit"] {
+
+							display: inline-block;
+							width: auto;
+
+						}
 
 					.wpcf7-response-output {
 
