@@ -84,7 +84,9 @@
 
 								a,
 								.secondary-nav__link,
-								.single-post & a {
+								.single-post & a,
+								.single-trip & a,
+								.single-destination & a {
 
 									color: $color-base-white;
 
