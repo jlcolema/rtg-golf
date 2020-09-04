@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 
+	<!-- Overview -->
+
+	<!-- Travefy -->
+
+	<!-- Itenerary -->
+
+	<!-- Locations -->
+
 	<?php /* Overview */ ?>
 
 	<div class="">
