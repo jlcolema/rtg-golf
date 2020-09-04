@@ -13,10 +13,6 @@
 
 ?>
 
-				<?php /* Testimonial */ ?>
-
-				<?php get_template_part( 'inc/testimonial' ); ?>
-
 			</div>
 
 			<?php if ( ! is_front_page() && is_home() OR is_single() && ! is_singular( 'trip' ) && ! is_singular( 'destination' ) ) : ?>
@@ -65,25 +61,11 @@
 
 		<div class="wrap pre-footer__wrap">
 
+			<?php /* Testimonial */ ?>
+
+			<?php get_template_part( 'inc/testimonial' ); ?>
+
 			<?php /* Newsletter */ ?>
-
-			<?php /* Form */ ?>
-
-			<?php /*
-
-			<div class="newsletter">
-
-				<div class="newsletter__inner-wrap">
-
-					<iframe class="newsletter__iframe airtable-embed" src="https://airtable.com/embed/shrCKH5OjqWsRTRUi?backgroundColor=purple"; frameborder="0" onmousewheel="" width="100%" height="533"></iframe>
-
-				</div>
-
-			</div>
-
-			*/ ?>
-
-			<?php /* CTA */ ?>
 
 			<div class="newsletter">
 
