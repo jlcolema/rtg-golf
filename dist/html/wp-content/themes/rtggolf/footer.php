@@ -209,13 +209,13 @@
 
 								<footer class="summary__footer">
 
-									<time datetime="" class="summary__time">August 11, 2020</time>
+									<time datetime="" class="summary__time"><?php echo get_the_date( 'F j, Y' ); ?></time>
 
 								</footer>
 
 								<div class="summary__excerpt">
 
-									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat hic provident quae ducimus dolorem asperiores repudiandae, excepturi illo culpa distinctio laboriosam molestiae? Vero eaque, repellendus minus eos fugit magni voluptatem!</p>
+									<?php the_field( 'post_excerpt' ); ?>
 
 								</div>
 
