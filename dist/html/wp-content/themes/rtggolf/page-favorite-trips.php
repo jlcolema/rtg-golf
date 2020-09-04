@@ -61,6 +61,12 @@
 
 							<h2 class="favorite-trips__title"><?php echo $trip->post_title; ?></h2>
 
+							<div class="favorite-trips__detail">
+
+								<p>A short description of the trip.</p>
+
+							</div>
+
 							<div class="favorite-trips__more">
 
 								<a href="<?php echo get_permalink( $trip->ID ); ?>" class="favorite-trips__link">Learn More</a>

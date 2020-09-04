@@ -61,6 +61,12 @@
 
 						<h2 class="destinations__title"><?php echo $destination->post_title; ?></h2>
 
+						<div class="destinations__detail">
+							
+							<p>A short description of the trip.</p>
+
+						</div>
+
 						<div class="destinations__more">
 
 							<a href="<?php echo get_permalink( $destination->ID ); ?>" class="destinations__link">Learn More</a>
