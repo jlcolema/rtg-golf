@@ -59,7 +59,15 @@
 					.utilities__link {
 
 						display: block;
-						padding: 1em 1.5em 1em 1.5em;
+						
+						// When showing the Member Sign In and Shopping Cart buttons
+
+						// padding: 1em 1.5em 1em 1.5em;
+
+						// While just showing the Contact Us button
+
+						padding: 1em 0 1em 1.5em;
+
 						color: $color-base-white;
 
 					}
