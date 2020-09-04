@@ -31,31 +31,43 @@
 
 					<div class="widgets">
 
-						<div class="widget__item widget__recent-posts">
+						<?php /* Widget for the Contact Us page */ ?>
 
-							<h3 class="widget__header">Title</h3>
+						<?php if ( is_page( 'contact-us' ) ) : ?>
 
-							<div class="widget__content">
+							<p>Content for the contact us page.</p>
 
-								<article class="summary">
+						<?php /* Widgets for the Blog and Individual Post pages */ ?>
 
-									<h1 class="summary__title">
+						<?php else : ?>
 
-										<a href="#" class="summary__link">Title</a>
+							<div class="widget__item widget__recent-posts">
 
-									</h1>
+								<h3 class="widget__header">Title</h3>
 
-									<footer class="summary__footer">
+								<div class="widget__content">
 
-										<time datetime="" class="summary__time">August 11, 2020</time>
+									<article class="summary">
 
-									</footer>
+										<h1 class="summary__title">
 
-								</article>
+											<a href="#" class="summary__link">Title</a>
+
+										</h1>
+
+										<footer class="summary__footer">
+
+											<time datetime="" class="summary__time">August 11, 2020</time>
+
+										</footer>
+
+									</article>
+
+								</div>
 
 							</div>
 
-						</div>
+						<?php endif; ?>
 
 					</div>
 
