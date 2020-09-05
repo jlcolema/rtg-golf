@@ -24,7 +24,15 @@
 
 			<!-- Use unique ID for content entry -->
 
-			<iframe src="https://travefy.com/trip/6yw9rqt2mbmwqz2auy7m5xw4932dpfq" class="trip__travefy-iframe"></iframe>
+			<!-- <iframe src="https://travefy.com/trip/6yw9rqt2mbmwqz2auy7m5xw4932dpfq" class="trip__travefy-iframe"></iframe> -->
+
+			<!-- Use the following... -->
+
+			<div data-travefy-itinerary-id="6yw9rqt2mbmwqz2auy7m5xw4932dpfq" class="travefy-itinerary travefy__itinerary"></div>
+
+			<!-- Add this script to pages that have the data-travefy-itinerary-id code above -->
+
+			<script data-version="v0" id="travefy-itinerary-embedder" type="text/javascript"> (function () { function l() { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//travefy.com/embed/itinerary.1.0.js'; var e = document.getElementById('travefy-itinerary-embedder'); e.parentNode.insertBefore(s, e); } if (window.attachEvent) { window.attachEvent('onload', l); } else { window.addEventListener('load', l, false); } })(); </script>
 
 		</div>
 
