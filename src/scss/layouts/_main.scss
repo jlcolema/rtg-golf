@@ -28,7 +28,7 @@
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
-		align-items: stretch;
+		align-items: flex-start;
 		align-content: flex-start;
 
 		width: 100%;
@@ -49,9 +49,11 @@
 			flex: 1;
 			margin-left: 3em;
 			// padding-left: 2.25em;
-			// border-left: 1px solid $color-gray-10;
+			// border: 1px solid $color-gray-20;
 
 			// background: pink;
+			background: $color-gray-10;
+			background: lighten($color-primary-tan, 25%);
 
 		}
 
@@ -1063,7 +1065,7 @@
 							.form__item {
 
 								width: 100%;
-								max-width: 480px;
+								// max-width: 480px;
 								margin: 0 0 2em 0;
 
 								&:last-of-type {
