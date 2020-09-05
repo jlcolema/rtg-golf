@@ -293,8 +293,8 @@
 								'post_type'		=> 'post',
 								'post_status'	=> 'publish',
 								'numberposts'	=> 1,
-								'orderby'		=> 'menu_order',
-								'order'			=> 'ASC'
+								'orderby'		=> 'date',
+								'order'			=> 'DSC'
 
 							);
 
