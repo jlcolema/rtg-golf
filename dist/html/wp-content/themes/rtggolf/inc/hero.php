@@ -14,11 +14,11 @@
 
 				<div class="hero__label">RTG Golf</div>
 
-				<h1 class="hero__header"><?php echo $hero['hero_headline']; ?></h1>
+				<h1 class="hero__header"><?php echo $hero['hero_header']; ?></h1>
 
 				<div class="hero__details">
 
-					<p><?php echo $hero['hero_detail']; ?></p>
+					<p><?php echo $hero['hero_subheader']; ?></p>
 
 				</div>
 
