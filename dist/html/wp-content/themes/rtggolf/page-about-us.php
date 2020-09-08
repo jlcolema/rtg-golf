@@ -1,81 +1,77 @@
 <?php get_header(); ?>
 
-	<?php /* Title */ ?>
+	<?php /* Story */ ?>
 
-	<div class="matrix">
+	<?php if ( have_rows( 'story' ) ) : ?>
 
-		<div class="matrix__inner-wrap">
+		<?php while ( have_rows( 'story' ) ) : ?>
 
-			<div class="">
+			<?php the_row(); ?>
 
-				<picture class="title__picture">
+			<?php if ( get_row_layout() == 'story_image_and_content' ) : ?>
 
-					<source srcset="https://via.placeholder.com/600x600" media="(min-width: 1000px)">
+				<?php
 
-					<source srcset="https://via.placeholder.com/600x600" media="(min-width: 700px)">
+					// Image
 
-					<img src="https://via.placeholder.com/600x600" alt="A very nice description." class="title__img">
+					$story_image = get_sub_field( 'story_image' );
 
-				</picture>
+					// Header
 
-			</div>
+					$story_header = get_sub_field( 'story_header' );
 
-			<div class="">
+					// Subheader
 
-				<h2 class="">Another Trip of a Lifetime</h2>
+					$story_subheader = get_sub_field( 'story_subheader' );
 
-				<h3 class="">Professional Design and Management of Golf Travel</h3>
+					// Content
 
-				<div class="">
+					$story_content = get_sub_field( 'story_content' );
 
-					<p>At RTG Golf our business is the professional design and management of golf travel. We are expert at tying together all the details involved in the planning and execution of great golf trips. From site selection, accommodations and expense management to creating and scoring the appropriate competition.</p>
-
-					<p>RTG Golf is a Twin Cities based business established in 1999. Since that time we have sent thousands of golf travelers to destinations around the globe. We have tremendous experience in both domestic and international destinations – with a particular expertise in the British Isles.</p>
-
-					<p>We are golfers that go on golf trips and understand the nuances that transform golf trips from Good to Great!</p>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</div>
-
-	<?php /* Title */ ?>
-
-	<div class="">
-
-		<div class="">
-
-			<div class="">
-
-				<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="" />
-
-			</div>
-
-			<h2 class="">The Experience</h2>
-
-			<h3 class="">Taking Golf Trips from Good to Great</h3>
-
-			<div class="">
-
-				<p>Anyone can book a golf trip. At RTG Golf we take your golf trip from good to great by eliminating the trial and error of finding the right courses, accommodations, transportation, restaurants, pubs, sights, etc.</p>
-
-				<p>We have not only been to the destinations we sell, we have sent thousands of travelers to the same. Our first hand experience and feedback from our clients keeps us in the know and up to date on great golf travel.</p>
+				?>
 
 				<div class="">
 
-					<img src="https://via.placeholder.com/300x100" alt="Signature" class="" />
+					<div class="">
+
+						<div class="">
+
+							<picture class="">
+
+								<source srcset="<?php echo $story_image; ?>" media="(min-width: 1000px)">
+
+								<source srcset="<?php echo $story_image; ?>" media="(min-width: 700px)">
+
+								<img src="<?php echo $story_image; ?>" alt="A very nice description." class="">
+
+							</picture>
+
+						</div>
+
+						<div class="">
+
+							<h2 class=""><?php echo $story_header; ?></h2>
+
+							<h3 class=""><?php echo $story_subheader; ?></h3>
+
+							<div class="">
+
+								<?php echo $story_content; ?>
+
+							</div>
+
+						</div>
+
+					</div>
 
 				</div>
 
-			</div>
+			<?php endif; ?>
 
-		</div>
+		<?php endwhile; ?>
 
-	</div>
-					
+	<?php endif; ?>
+
 	<?php /* Partners */ ?>
 
 	<div class="partners">
