@@ -74,89 +74,68 @@
 
 	<?php /* Partners */ ?>
 
-	<div class="partners">
+	<?php $partners = get_field( 'partners' ); ?>
 
-		<div class="inner-wrap partners__inner-wrap">
+	<?php if ( $partners ) : ?>
 
-			<div class="partners__one">
+		<div class="partners">
 
-				<ul class="partners__list">
+			<div class="inner-wrap partners__inner-wrap">
 
-					<?php
+				<div class="partners__one">
 
-						$partner_listing_options = array(
+				<?php if ( $partners[ 'partners_list' ] ) : ?>
 
-							'post_type'		=> 'partner',
-							'post_status'	=> 'publish',
-							'numberposts'	=> -1,
-							'orderby'		=> 'menu_order',
-							'order'			=> 'ASC'
+						<ul class="partners__list">
 
-						);
+							<?php foreach ( $partners[ 'partners_list' ] as $post ) : ?>
 
-						$partners = get_posts( $partner_listing_options );
+								<?php setup_postdata( $post ); ?>
 
-					?>
+								<?php
 
-					<?php foreach ( $partners as $partner ) : ?>
+									// Options
 
-						<?php
+								?>
 
-							/* Thumbnail
-							------------------------------*/
+								<li class="partners__item">
 
-							// Attachment
+									<picture class="partners__picture">
 
-							$partner_photo_attachment_id = get_field( 'partner_photo', $partner->ID );
+										<source srcset="<?php the_field( 'partner_photo' ); ?>" media="(min-width: 1000px)">
 
-							// Size (use Small, Medium, Large, and Full)
+										<source srcset="<?php the_field( 'partner_photo' ); ?>" media="(min-width: 700px)">
 
-							$partner_photo_size_full = 'full';
+										<img src="<?php the_field( 'partner_photo' ); ?>" alt="A very nice description." class="partners__img">
 
-							// Options
+									</picture>
 
-							$partner_photo_full = wp_get_attachment_image_src( $partner_photo_attachment_id, $partner_photo_size_full );
+									<h2 class="partners__name"><?php the_title(); ?></h2>
 
-							// Fields
+									<h3 class="partners__title"><?php the_field( 'partner_title' ); ?></h3>
 
-							$partner_title = get_field( 'partner_title', $partner->ID );
+									<div class="partners__bio">
 
-							$partner_bio = get_field( 'partner_bio', $partner->ID );
+										<?php the_field( 'partner_bio' ); ?>
 
-						?>
+									</div>
 
-						<li class="partners__item">
+								</li>
 
-							<picture class="partners__picture">
+							<?php endforeach; ?>
 
-								<source srcset="<?php echo $partner_photo_full[0]; ?>" media="(min-width: 1000px)">
+							<?php wp_reset_postdata(); ?>
 
-								<source srcset="<?php echo $partner_photo_full[0]; ?>" media="(min-width: 700px)">
+						</ul>
 
-								<img src="<?php echo $partner_photo_full[0]; ?>" alt="A very nice description." class="partners__img">
+					<?php endif; ?>
 
-							</picture>
-
-							<h2 class="partners__name"><?php echo $partner->post_title; ?></h2>
-
-							<h3 class="partners__title"><?php echo $partner_title; ?></h3>
-
-							<div class="partners__bio">
-
-								<?php echo $partner_bio; ?>
-
-							</div>
-
-						</li>
-
-					<?php endforeach; ?>
-
-				</ul>
+				</div>
 
 			</div>
 
 		</div>
 
-	</div>
+	<?php endif; ?>
 
 <?php get_footer(); ?>
