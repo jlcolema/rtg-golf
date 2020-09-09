@@ -69,19 +69,25 @@ get_header();
 
 						$post_excerpt = get_field( 'post_excerpt', $post->ID );
 
+						$post_preview = get_field( 'post_preview', $post->ID );
+
 					?>
 
 					<article class="posts__item h-entry">
 
-						<picture class="posts__picture">
+						<?php if ( $post_preview[ 'post_preview_image' ] ) : ?>
 
-							<source srcset="<?php echo $post_featured_image; ?>" media="(min-width: 1000px)">
+							<picture class="posts__picture">
 
-							<source srcset="<?php echo $post_featured_image; ?>" media="(min-width: 700px)">
+								<source srcset="<?php echo $post_preview[ 'post_preview_image' ]; ?>" media="(min-width: 1000px)">
 
-							<img src="<?php echo $post_featured_image; ?>" alt="A very nice description." class="posts__img">
+								<source srcset="<?php echo $post_preview[ 'post_preview_image' ]; ?>" media="(min-width: 700px)">
 
-						</picture>
+								<img src="<?php echo $post_preview[ 'post_preview_image' ]; ?>" alt="A very nice description." class="posts__img">
+
+							</picture>
+
+						<?php endif; ?>
 
 						<h1 class="posts__title">
 							
@@ -97,7 +103,7 @@ get_header();
 
 						<div class="posts__excerpt">
 
-							<?php echo $post_excerpt; ?>
+							<?php echo $post_preview[ 'post_preview_excerpt' ]; ?>
 
 						</div>
 
