@@ -2,87 +2,72 @@
 
 	<?php /* List of Destinations */ ?>
 
-	<div class="destinations">
+	<?php $destinations = get_field( 'destinations' ); ?>
 
-		<div class="inner-wrap destinations__inner-wrap">
+	<?php if ( $destinations ) : ?>
 
-			<ul class="destinations__list">
+		<div class="destinations">
 
-				<?php
+			<div class="inner-wrap destinations__inner-wrap">
 
-					$destination_listing_options = array(
+				<?php if ( $destinations[ 'destinations_list' ] ) : ?>
 
-						'post_type'		=> 'destination',
-						'post_status'	=> 'publish',
-						'numberposts'	=> -1,
-						'orderby'		=> 'menu_order',
-						'order'			=> 'ASC'
+					<ul class="destinations__list">
 
-					);
+						<?php foreach( $destinations[ 'destinations_list' ] as $post ) : ?>
 
-					$destinations = get_posts( $destination_listing_options );
+							<?php setup_postdata( $post ); ?>
 
-				?>
+							<?php
 
-				<?php foreach ( $destinations as $destination ) : ?>
+								$destination_preview = get_field( 'destination_preview' );
+								
+							?>
 
-				<?php
+							<li class="destinations__item">
 
-					/* Thumbnail
-					------------------------------*/
+								<picture class="destinations__picture">
 
-					// Attachment
+									<source srcset="<?php echo $destination_preview['destination_preview_image']; ?>" media="(min-width: 1000px)">
 
-					$destination_preview_image_attachment_id = get_field( 'destination_preview_image', $destination->ID );
+									<source srcset="<?php echo $destination_preview['destination_preview_image']; ?>" media="(min-width: 700px)">
 
-					// Size
+									<img src="<?php echo $destination_preview['destination_preview_image']; ?>" alt="A very nice description." class="destinations__img">
 
-					$destination_preview_image_size_full = 'full';
+								</picture>
 
-					// Options
+								<div class="destinations__overlay">
 
-					$destination_preview_image_full = wp_get_attachment_image_src( $destination_preview_image_attachment_id, $destination_preview_image_size_full );
+									<h2 class="destinations__title"><?php the_title(); ?></h2>
 
-				?>
+									<div class="destinations__detail">
+										
+										<?php echo $destination_preview['destinations_preview_short_description']; ?>
 
-				<li class="destinations__item">
+									</div>
 
-					<picture class="destinations__picture">
+									<div class="destinations__more">
 
-						<source srcset="<?php echo $destination_preview_image_full[0]; ?>" media="(min-width: 1000px)">
+										<a href="<?php the_permalink(); ?>" class="destinations__link">Learn More</a>
 
-						<source srcset="<?php echo $destination_preview_image_full[0]; ?>" media="(min-width: 700px)">
+									</div>
 
-						<img src="<?php echo $destination_preview_image_full[0]; ?>" alt="A very nice description." class="destinations__img">
+								</div>
 
-					</picture>
+							</li>
 
-					<div class="destinations__overlay">
+						<?php endforeach; ?>
 
-						<h2 class="destinations__title"><?php echo $destination->post_title; ?></h2>
+						<?php wp_reset_postdata(); ?>
 
-						<div class="destinations__detail">
-							
-							<p>A short description of the trip.</p>
+					</ul>
 
-						</div>
+				<?php endif; ?>
 
-						<div class="destinations__more">
-
-							<a href="<?php echo get_permalink( $destination->ID ); ?>" class="destinations__link">Learn More</a>
-
-						</div>
-
-					</div>
-
-				</li>
-
-				<?php endforeach; ?>
-
-			</ul>
+			</div>
 
 		</div>
 
-	</div>
+	<?php endif; ?>
 
 <?php get_footer(); ?>
