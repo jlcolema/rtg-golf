@@ -2,87 +2,72 @@
 
 	<?php /* Favorite Trips */ ?>
 
-	<div class="favorite-trips">
+	<?php $favorite_trips = get_field( 'favorite_trips' ); ?>
 
-		<div class="inner-wrap favorite-trips__inner-wrap">
+	<?php if ( $favorite_trips ) : ?>
 
-			<ul class="favorite-trips__list">
+		<div class="favorite-trips">
 
-				<?php
+			<div class="inner-wrap favorite-trips__inner-wrap">
 
-					$trip_listing_options = array(
+				<?php if ( $favorite_trips[ 'favorite_trips_list' ] ) : ?>
 
-						'post_type'		=> 'trip',
-						'post_status'	=> 'publish',
-						'numberposts'	=> -1,
-						'orderby'		=> 'menu_order',
-						'order'			=> 'ASC'
+					<ul class="favorite-trips__list">
 
-					);
+						<?php foreach( $favorite_trips[ 'favorite_trips_list' ] as $post ) : ?>
 
-					$trips = get_posts( $trip_listing_options );
+							<?php setup_postdata( $post ); ?>
 
-				?>
+							<?php
 
-				<?php foreach ( $trips as $trip ) : ?>
+								$trip_preview = get_field( 'trip_preview' );
 
-					<?php
+							?>
 
-						/* Thumbnail
-						------------------------------*/
+							<li class="favorite-trips__item">
 
-						// Attachment
+								<picture class="favorite-trips__picture">
 
-						$trip_featured_image_attachment_id = get_field( 'trip_featured_image', $trip->ID );
+									<source srcset="<?php echo $trip_preview['trip_preview_image']; ?>" media="(min-width: 1000px)">
 
-						// Size
+									<source srcset="<?php echo $trip_preview['trip_preview_image']; ?>" media="(min-width: 700px)">
 
-						$trip_featured_image_size_full = 'full';
+									<img src="<?php echo $trip_preview['trip_preview_image']; ?>" alt="A very nice description." class="favorite-trips__img">
 
-						// Options
+								</picture>
 
-						$trip_featured_image_full = wp_get_attachment_image_src( $trip_featured_image_attachment_id, $trip_featured_image_size_full );
+								<div class="favorite-trips__overlay">
 
-					?>
+									<h2 class="favorite-trips__title"><?php the_title(); ?></h2>
 
-					<li class="favorite-trips__item">
+									<div class="favorite-trips__detail">
 
-						<picture class="favorite-trips__picture">
+										<?php echo $trip_preview['trip_preview_short_description']; ?>
 
-							<source srcset="<?php echo $trip_featured_image_full[0]; ?>" media="(min-width: 1000px)">
+									</div>
 
-							<source srcset="<?php echo $trip_featured_image_full[0]; ?>" media="(min-width: 700px)">
+									<div class="favorite-trips__more">
 
-							<img src="<?php echo $trip_featured_image_full[0]; ?>" alt="A very nice description." class="favorite-trips__img">
+										<a href="<?php the_permalink(); ?>" class="favorite-trips__link">Learn More</a>
 
-						</picture>
+									</div>
 
-						<div class="favorite-trips__overlay">
+								</div>
 
-							<h2 class="favorite-trips__title"><?php echo $trip->post_title; ?></h2>
+							</li>
 
-							<div class="favorite-trips__detail">
+						<?php endforeach; ?>
 
-								<p>A short description of the trip.</p>
+						<?php wp_reset_postdata(); ?>
 
-							</div>
+					</ul>
 
-							<div class="favorite-trips__more">
+				<?php endif; ?>
 
-								<a href="<?php echo get_permalink( $trip->ID ); ?>" class="favorite-trips__link">Learn More</a>
-
-							</div>
-
-						</div>
-
-					</li>
-
-				<?php endforeach; ?>
-
-			</ul>
+			</div>
 
 		</div>
 
-	</div>
+	<?php endif; ?>
 
 <?php get_footer(); ?>
