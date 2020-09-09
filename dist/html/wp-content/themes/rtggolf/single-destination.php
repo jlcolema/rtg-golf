@@ -2,255 +2,90 @@
 
 	<!-- Overview -->
 
-	<div class="destination__overview">
+	<?php $destination_overview = get_field( 'destination_overview' ); ?>
 
-		<div class="inner-wrap destination__overview-inner-wrap">
+	<?php if ( $destination_overview ) : ?>
 
-			<h2 class="destination__overview-header">Domestic Golf Trips</h2>
+		<div class="destination__overview">
 
-			<h3 class="destination__overview-subheader">So many places and so little time...</h3>
+			<div class="inner-wrap destination__overview-inner-wrap">
 
-			<p class="destination__overview-description">Most commonly asked question, "Where are we going this year?"</p>
+				<h2 class="destination__overview-header"><?php echo $destination_overview['destination_overview_header']; ?></h2>
 
-			<div class="">
+				<h3 class="destination__overview-subheader"><?php echo $destination_overview['destination_overview_subheader']; ?></h3>
 
-				<h4 class="">Play the Greats</h4>
+				<div class="destination__overview-description">
 
-				Pebble Beach
-				Pinehurst
-				Bandon Dunes
-				Kohler
-				Erin Hills
-				Sand Valley
-				Kiawah Island
+					<?php echo $destination_overview['destination_overview_content']; ?>
 
-				<h4 class="">Our Favorite Buddy Trip Destinations</h4>
-
-				Mesquite
-				Palm Springs
-				Innisbrook
-				Park City
-				Sunriver
-				Vegas
-				Horseshoe Bay
-				Whistler
+				</div>
 
 			</div>
 
 		</div>
 
-	</div>
+	<?php endif; ?>
 
 	<!-- Locations -->
 
-	<div class="destination__locations">
+	<?php $destination_locations = get_field( 'destination_locations' ); ?>
 
-		<div class="inner-wrap destination__locations-inner-wrap">
+	<?php if ( have_rows( 'destination_locations' ) ) : ?>
 
-			<h2 class="destination__locations-header">Header</h2>
+		<?php while ( have_rows( 'destination_locations' ) ) : the_row(); ?>
 
-			<h3 class="destination__locations-subheader">Subheader</h3>
+			<div class="destination__locations">
 
-			<ul class="destination__locations-list">
+				<div class="inner-wrap destination__locations-inner-wrap">
 
-				<li class="destination__locations-item">
+					<h2 class="destination__locations-header"><?php echo $destination_locations['destination_locations_header']; ?></h2>
 
-					<picture class="destination__locations-picture">
+					<h3 class="destination__locations-subheader"><?php echo $destination_locations['destination_locations_subheader']; ?></h3>
 
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
+					<?php if ( have_rows( 'destination_locations_list' ) ) : ?>
 
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
+						<ul class="destination__locations-list">
 
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="destination__locations-img">
+							<?php while ( have_rows( 'destination_locations_list' ) ) : the_row(); ?>
 
-					</picture>
+								<li class="destination__locations-item">
 
-					<div class="destination__locations-overlay">
+									<picture class="destination__locations-picture">
 
-						<h2 class="destination__locations-title">Pinehurst</h2>
+										<source srcset="<?php the_sub_field( 'destination_locations_image' ); ?>" media="(min-width: 1000px)">
 
-						<div class="destination__locations-detail">
+										<source srcset="<?php the_sub_field( 'destination_locations_image' ); ?>" media="(min-width: 700px)">
 
-							<p>A short description.</p>
+										<img src="<?php the_sub_field( 'destination_locations_image' ); ?>" alt="A very nice description." class="destination__locations-img">
 
-						</div>
+									</picture>
 
-					</div>
-					
-				</li>
+									<div class="destination__locations-overlay">
 
-				<li class="destination__locations-item">
+										<h2 class="destination__locations-title"><?php the_sub_field( 'destination_locations_title' ); ?></h2>
 
-					<picture class="destination__locations-picture">
+										<div class="destination__locations-detail">
 
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
+											<?php the_sub_field( 'destination_locations_short_description' ); ?>
 
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
+										</div>
 
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="destination__locations-img">
+									</div>
+									
+								</li>
 
-					</picture>
+							<?php endwhile; ?>
 
-					<div class="destination__locations-overlay">
+						</ul>
 
-						<h2 class="destination__locations-title">Erin Hills</h2>
+					<?php endif; ?>
 
-						<div class="destination__locations-detail">
+				</div>
 
-							<p>A short description.</p>
+			</div>
 
-						</div>
+		<?php endwhile; ?>
 
-					</div>
-					
-				</li>
-				
-				<li class="destination__locations-item">
-
-					<picture class="destination__locations-picture">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
-
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="destination__locations-img">
-
-					</picture>
-
-					<div class="destination__locations-overlay">
-
-						<h2 class="destination__locations-title">Pebble Beach</h2>
-
-						<div class="destination__locations-detail">
-
-							<p>A short description.</p>
-
-						</div>
-
-					</div>
-					
-				</li>
-
-				<li class="destination__locations-item">
-
-					<picture class="destination__locations-picture">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
-
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="destination__locations-img">
-
-					</picture>
-
-					<div class="destination__locations-overlay">
-
-						<h2 class="destination__locations-title">TPC Sawgrass</h2>
-
-						<div class="destination__locations-detail">
-
-							<p>A short description.</p>
-
-						</div>
-
-					</div>
-					
-				</li>
-
-				<li class="destination__locations-item">
-
-					<picture class="destination__locations-picture">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
-
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="destination__locations-img">
-
-					</picture>
-
-					<div class="destination__locations-overlay">
-
-						<h2 class="destination__locations-title">Bandon Dunes</h2>
-
-						<div class="destination__locations-detail">
-
-							<p>A short description.</p>
-
-						</div>
-
-					</div>
-					
-				</li>
-			
-				<li class="destination__locations-item">
-
-					<picture class="destination__locations-picture">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
-
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="destination__locations-img">
-
-					</picture>
-
-					<div class="destination__locations-overlay">
-
-						<h2 class="destination__locations-title">Kohler</h2>
-
-						<div class="destination__locations-detail">
-
-							<p>A short description.</p>
-
-						</div>
-
-					</div>
-					
-				</li>			
-
-				<li class="destination__locations-item">
-
-					<picture class="destination__locations-picture">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
-
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="destination__locations-img">
-
-					</picture>
-
-					<div class="destination__locations-overlay">
-
-						<h2 class="destination__locations-title">Kiawah Island</h2>
-
-						<div class="destination__locations-detail">
-
-							<p>A short description.</p>
-
-						</div>
-
-					</div>
-					
-				</li>				
-
-			</ul>
-
-		</div>
-
-	</div>
-
-	<!-- Promo ? -->
-
-	<div class="destination__promo">
-
-		<div class="inner-wrap destination__promo-inner-wrap">
-
-			Promo?
-
-		</div>
-
-	</div>
+	<?php endif; ?>
 
 <?php get_footer(); ?>
