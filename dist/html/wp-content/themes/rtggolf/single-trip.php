@@ -100,205 +100,64 @@
 
 	<!-- Locations -->
 
-	<div class="trip__locations">
+	<?php $trip_locations = get_field( 'trip_locations' ); ?>
 
-		<div class="inner-wrap trip__locations-inner-wrap">
+	<?php if ( have_rows( 'trip_locations' ) ) : ?>
 
-			<h2 class="trip__locations-header">What's not to like...</h2>
+		<?php while ( have_rows( 'trip_locations' ) ) : the_row(); ?>
 
-			<h3 class="trip__locations-subheader">Seven Rounds of World Class Golf. Seven Nights on the Emerald Isle.</h3>
+			<div class="trip__locations">
 
-			<ul class="trip__locations-list">
+				<div class="inner-wrap trip__locations-inner-wrap">
 
-				<li class="trip__locations-item">
+					<h2 class="trip__locations-header"><?php echo $trip_locations[ 'trip_locations_header' ]; ?></h2>
 
-					<picture class="trip__locations-picture">
+					<h3 class="trip__locations-subheader"><?php echo $trip_locations[ 'trip_locations_subheader' ]; ?></h3>
 
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
+					<?php if ( have_rows( 'trip_locations_list' ) ) : ?>
 
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
+						<ul class="trip__locations-list">
 
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="trip__locations-img">
+							<?php while ( have_rows( 'trip_locations_list' ) ) : the_row(); ?>
 
-					</picture>
+								<li class="trip__locations-item">
 
-					<div class="trip__locations-overlay">
+									<picture class="trip__locations-picture">
 
-						<h2 class="trip__locations-title">Sandy Hills</h2>
+										<source srcset="<?php the_sub_field( 'trip_locations_image' ); ?>" media="(min-width: 1000px)">
 
-						<div class="trip__locations-detail">
+										<source srcset="<?php the_sub_field( 'trip_locations_image' ); ?>" media="(min-width: 700px)">
 
+										<img src="<?php the_sub_field( 'trip_locations_image' ); ?>" alt="A very nice description." class="trip__locations-img">
 
+									</picture>
 
-						</div>
+									<div class="trip__locations-overlay">
 
-					</div>
-					
-				</li>
+										<h2 class="trip__locations-title"><?php the_sub_field( 'trip_locations_title' ); ?></h2>
 
-				<li class="trip__locations-item">
+										<div class="trip__locations-detail">
 
-					<picture class="trip__locations-picture">
+											<?php the_sub_field( 'trip_locations_short_description' ); ?>
 
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
+										</div>
 
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
+									</div>
+									
+								</li>
 
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="trip__locations-img">
+							<?php endwhile; ?>
 
-					</picture>
+						</ul>
 
-					<div class="trip__locations-overlay">
+					<?php endif; ?>
 
-						<h2 class="trip__locations-title">Portsalon</h2>
+				</div>
 
-						<div class="trip__locations-detail">
+			</div>
 
-							<p>One of Ireland's best "hidden gems"</p>
+		<?php endwhile; ?>
 
-						</div>
-
-					</div>
-					
-				</li>
-				
-				<li class="trip__locations-item">
-
-					<picture class="trip__locations-picture">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
-
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="trip__locations-img">
-
-					</picture>
-
-					<div class="trip__locations-overlay">
-
-						<h2 class="trip__locations-title">Ballyliffin</h2>
-
-						<div class="trip__locations-detail">
-
-							<p>Site of 2017 Irish Open</p>
-
-						</div>
-
-					</div>
-					
-				</li>
-
-				<li class="trip__locations-item">
-
-					<picture class="trip__locations-picture">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
-
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="trip__locations-img">
-
-					</picture>
-
-					<div class="trip__locations-overlay">
-
-						<h2 class="trip__locations-title">Portstewart</h2>
-
-						<div class="trip__locations-detail">
-
-							<p>Site of 2018 and 2021 Irish Open</p>
-
-						</div>
-
-					</div>
-					
-				</li>
-
-				<li class="trip__locations-item">
-
-					<picture class="trip__locations-picture">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
-
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="trip__locations-img">
-
-					</picture>
-
-					<div class="trip__locations-overlay">
-
-						<h2 class="trip__locations-title">Royal Portrush</h2>
-
-						<div class="trip__locations-detail">
-
-							Site of the 2019 Open Championship
-							7th in the World -- Golf Digest
-							13th in the World, 2nd in Ireland -- Golf.com
-
-						</div>
-
-					</div>
-					
-				</li>
-			
-				<li class="trip__locations-item">
-
-					<picture class="trip__locations-picture">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
-
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="trip__locations-img">
-
-					</picture>
-
-					<div class="trip__locations-overlay">
-
-						<h2 class="trip__locations-title">Ardglass</h2>
-
-						<div class="trip__locations-detail">
-
-							<p>Ardglass has grown out of the "hidden gem" category, taking its place among the "must plays" in Ireland.</p>
-
-						</div>
-
-					</div>
-					
-				</li>			
-
-				<li class="trip__locations-item">
-
-					<picture class="trip__locations-picture">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 1000px)">
-
-						<source srcset="https://via.placeholder.com/960x400" media="(min-width: 700px)">
-
-						<img src="https://via.placeholder.com/960x400" alt="A very nice description." class="trip__locations-img">
-
-					</picture>
-
-					<div class="trip__locations-overlay">
-
-						<h2 class="trip__locations-title">Royal County Down</h2>
-
-						<div class="trip__locations-detail">
-
-							1st in the World -- Golf Digest
-							6th in the World -- Golf.com
-
-						</div>
-
-					</div>
-					
-				</li>				
-
-			</ul>
-
-		</div>
-
-	</div>
+	<?php endif; ?>
 
 <?php get_footer(); ?>
