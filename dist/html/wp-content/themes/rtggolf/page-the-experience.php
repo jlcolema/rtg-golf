@@ -38,13 +38,13 @@
 
 				<div class="inner-wrap experience__services-inner-wrap">
 
-					<div class="">
+					<div class="experience__services-section-one">
 
-						<h2 class=""><?php echo $experience_services[ 'experience_services_header' ]; ?></h2>
+						<h2 class="experience__services-header"><?php echo $experience_services[ 'experience_services_header' ]; ?></h2>
 
-						<h3 class=""><?php echo $experience_services[ 'experience_services_subheader' ]; ?></h3>
+						<h3 class="experience__services-subheader"><?php echo $experience_services[ 'experience_services_subheader' ]; ?></h3>
 
-						<div class="">
+						<div class="experience__services-content">
 
 							<?php echo $experience_services[ 'experience_services_content' ]; ?>
 
@@ -52,23 +52,29 @@
 
 					</div>
 
-					<div class="">
+					<div class="experience__services-section-two">
 
 						<?php if ( have_rows( 'experience_services_list' ) ) : ?>
 
-							<ul class="">
+							<ul class="experience__services-list">
 
 								<?php while ( have_rows( 'experience_services_list' ) ) : the_row(); ?>
 
-									<li class="">
+									<li class="experience__services-item">
 										
-										<div class="">
+										<div class="experience__services-icon">
+
+											<?php /*
 
 											<img src="<?php the_sub_field( 'experience_services_icon' ); ?>" alt="" class="" />
 
+											*/ ?>
+
+											<img src="https://via.placeholder.com/120x120" alt="" class="experience__services-img" />
+
 										</div>
 
-										<div class="">
+										<div class="experience__services-title">
 
 											<?php the_sub_field( 'experience_services_title' ); ?>
 
