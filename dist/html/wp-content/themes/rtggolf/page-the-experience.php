@@ -1,36 +1,52 @@
 <?php get_header(); ?>
 
-	<?php /* Title */ ?>
+	<?php /* Overview */ ?>
 
-	<div class="">
+	<?php $experience_overview = get_field( 'experience_overview' ); ?>
 
-		<div class="">
+	<?php if ( $experience_overview ) : ?>
 
-			The Experience
+		<div class="experience__overview">
 
-			RTG will take your golf trip from concept to completion with attention to every detail in between.
+			<div class="inner-wrap experience__overview-inner-wrap">
 
-			"As golfers that go on these golf trips ourselves, we understand the unique requirements that are peculiar to golfers and their trips."
+				<h2 class="experience__overview-header"><?php echo $experience_overview[ 'experience_overview_header' ]; ?></h2>
+
+				<h3 class="experience__overview-subheader"><?php echo $experience_overview[ 'experience_overview_subheader' ]; ?></h3>
+
+				<div class="experience__overview-content">
+
+					<?php echo $experience_overview[ 'experience_overview_content' ]; ?>
+
+				</div>
+
+			</div>
 
 		</div>
 
-	</div>
+	<?php endif; ?>
 
-	<?php /* Title */ ?>
+	<?php /* Services */ ?>
 
-	<div class="">
-	
-		<div class="">
+	<div class="experience__services">
+
+		<div class="inner-wrap experience__services-inner-wrap">
 
 			<div class="">
 
-				<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="" />
+				<h2 class="">RTG will take your golf trip from concept to completion with attention to every detail in between.</h2>
+
+				<h3 class="">Subheader</h3>
+
+				<div class="">
+
+					<p>Content</p>
+
+				</div>
 
 			</div>
 
 			<div class="">
-
-				RTG will take your golf trip from concept to completion with attention to every detail in between.
 
 				<ul class="">
 
@@ -43,9 +59,41 @@
 
 				</ul>
 
-				RTG Golf is expert in assisting trip leaders with moving their trip -- from "great idea to looking "on the calendar".
+			</div>
 
-				<p><i>We understand that your trip is full up until the minute the first payment is due! We have discovered that if you provide your golf pals with: dates, destination, and price -- they will have all the information they need to accept or decline the invitation.</i></p>
+		</div>
+
+	</div>
+
+	<?php /* Details */ ?>
+
+	<div class="experience__details">
+	
+		<div class="inner-wrap experience__details-inner-wrap">
+
+			<div class="">
+
+				<picture class="experience__picture">
+
+					<source srcset="https://via.placeholder.com/400x400" media="(min-width: 1000px)">
+
+					<source srcset="https://via.placeholder.com/400x400" media="(min-width: 700px)">
+
+					<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="experience__img">
+
+				</picture>
+
+			</div>
+
+			<div class="">
+
+				<h2 class="">RTG Golf is expert in assisting trip leaders with moving their trip -- from "great idea to looking "on the calendar".</h2>
+
+				<div class="">
+
+					<p><i>We understand that your trip is full up until the minute the first payment is due! We have discovered that if you provide your golf pals with: dates, destination, and price -- they will have all the information they need to accept or decline the invitation.</i></p>
+
+				</div>
 
 			</div>
 
