@@ -364,6 +364,47 @@
 
 								}
 
+			/* The Experience */
+
+			.experience__overview {}
+
+				.experience__overview-inner-wrap {}
+
+					.experience__overview-header {
+
+						font-size: 2.25rem;
+						font-family: 'Merriweather', Times, 'Times New Roman', serif;
+						font-weight: bold;
+						text-align: center;
+
+					}
+
+					.experience__overview-subheader {
+
+						margin: 0;
+						font-size: 1.5em;
+						font-family: 'Montserrat', Helvetica, Arial, Helvetica, sans-serif;
+						font-weight: normal;
+						text-align: center;
+						color: $color-primary-orange;
+
+					}
+
+					.experience__overview-content {
+
+						margin: 1em 0 0 0;
+						font-style: italic;
+						text-align: center;
+						color: $color-gray-50;
+
+						p {
+
+							&:last-of-type {}
+
+						}
+
+					}
+
 			/* Destinations */
 
 			.destinations {}
