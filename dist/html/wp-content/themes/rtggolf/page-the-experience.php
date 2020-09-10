@@ -64,13 +64,7 @@
 										
 										<div class="experience__services-icon">
 
-											<?php /*
-
-											<img src="<?php the_sub_field( 'experience_services_icon' ); ?>" alt="" class="" />
-
-											*/ ?>
-
-											<img src="https://via.placeholder.com/120x120" alt="" class="experience__services-img" />
+											<img src="<?php the_sub_field( 'experience_services_icon' ); ?>" alt="" class="experience__services-img" />
 
 										</div>
 
