@@ -40,13 +40,13 @@
 
 					<div class="">
 
-						<h2 class="">RTG will take your golf trip from concept to completion with attention to every detail in between.</h2>
+						<h2 class=""><?php echo $experience_services[ 'experience_services_header' ]; ?></h2>
 
-						<h3 class="">Subheader</h3>
+						<h3 class=""><?php echo $experience_services[ 'experience_services_subheader' ]; ?></h3>
 
 						<div class="">
 
-							<p>Content</p>
+							<?php echo $experience_services[ 'experience_services_content' ]; ?>
 
 						</div>
 
