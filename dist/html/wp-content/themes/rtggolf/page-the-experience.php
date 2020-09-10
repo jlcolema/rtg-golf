@@ -28,42 +28,69 @@
 
 	<?php /* Services */ ?>
 
-	<div class="experience__services">
+	<?php $experience_services = get_field( 'experience_services' ); ?>
 
-		<div class="inner-wrap experience__services-inner-wrap">
+	<?php if ( have_rows( 'experience_services' ) ) : ?>
 
-			<div class="">
+		<?php while ( have_rows( 'experience_services' ) ) : the_row(); ?>
 
-				<h2 class="">RTG will take your golf trip from concept to completion with attention to every detail in between.</h2>
+			<div class="experience__services">
 
-				<h3 class="">Subheader</h3>
+				<div class="inner-wrap experience__services-inner-wrap">
 
-				<div class="">
+					<div class="">
 
-					<p>Content</p>
+						<h2 class="">RTG will take your golf trip from concept to completion with attention to every detail in between.</h2>
+
+						<h3 class="">Subheader</h3>
+
+						<div class="">
+
+							<p>Content</p>
+
+						</div>
+
+					</div>
+
+					<div class="">
+
+						<?php if ( have_rows( 'experience_services_list' ) ) : ?>
+
+							<ul class="">
+
+								<?php while ( have_rows( 'experience_services_list' ) ) : the_row(); ?>
+
+									<li class="">
+										
+										<div class="">
+
+											<img src="<?php the_sub_field( 'experience_services_icon' ); ?>" alt="" class="" />
+
+										</div>
+
+										<div class="">
+
+											<?php the_sub_field( 'experience_services_title' ); ?>
+
+										</div>
+
+									</li>
+
+								<?php endwhile; ?>
+
+							</ul>
+
+						<?php endif; ?>
+
+					</div>
 
 				</div>
 
 			</div>
 
-			<div class="">
+		<?php endwhile; ?>
 
-				<ul class="">
-
-					<li class="">Detailed proposals delivered online in a format that is easy to share with fellow travelers</li>
-					<li class="">Online Registration and payments</li>
-					<li class="">Individual trip websites</li>
-					<li class="">Detailed trip itineraries</li>
-					<li class="">All your trip details at your finger tips while you travel</li>
-					<li class="">Competition Design and real-time scoring</li>
-
-				</ul>
-
-			</div>
-
-		</div>
-
-	</div>
+	<?php endif; ?>
 
 	<?php /* Details */ ?>
 
