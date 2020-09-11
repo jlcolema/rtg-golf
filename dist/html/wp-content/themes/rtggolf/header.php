@@ -49,6 +49,24 @@
 
 					*/ ?>
 
+					<li class="utilities__item utilities__item--social utilities__item--social-facebook">
+
+						<a href="<?php the_field( 'social_media_facebook', 'option' ); ?>" rel="external" class="utilities__link utilities__item--social-link utilities__social-link-facebook">Facebook</a>
+
+					</li>
+
+					<li class="utilities__item utilities__item--social utilities__item--social-twitter">
+
+						<a href="<?php the_field( 'social_media_twitter', 'option' ); ?>" rel="external" class="utilities__link utilities__item--social-link utilities__social-link-twitter">Twitter</a>
+
+					</li>
+
+					<li class="utilities__item utilities__item--social utilities__item--social-instagram">
+
+						<a href="<?php the_field( 'social_media_instagram', 'option' ); ?>" rel="external" class="utilities__link utilities__item--social-link utilities__social-link-instagram">Instagram</a>
+
+					</li>
+
 					<li class="utilities__item">
 
 						<a href="/contact-us/" class="utilities__link">Contact Us</a>
