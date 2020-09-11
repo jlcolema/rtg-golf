@@ -246,6 +246,16 @@
 
 						.trip__itinerary-subheader {
 
+							margin: 0 0 1em 0;
+							font-size: 1.5em;
+							font-family: 'Montserrat', Helvetica, Arial, Helvetica, sans-serif;
+							font-weight: normal;
+							color: $color-primary-orange;
+
+						}
+
+						.trip__itinerary-label {
+
 							margin: 0 0 1.5em 0;
 							font-size: 1rem;
 							font-family: 'Montserrat', Helvetica, Arial, Helvetica, sans-serif;
