@@ -32,7 +32,7 @@
 
 			<div class="hero__provider">
 
-				<span class="">St. Andrews Links Authorized Provider</span>
+				<span class="hero__provider-span">St. Andrews Links Authorized Provider</span>
 
 			</div>
 
