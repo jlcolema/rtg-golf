@@ -40,6 +40,10 @@
 
 					<div class="experience__services-section-one">
 
+						<?php /*
+
+							TODO: Is this content needed? It's a duplicate of the the section above it.
+
 						<h2 class="experience__services-header"><?php echo $experience_services[ 'experience_services_header' ]; ?></h2>
 
 						<h3 class="experience__services-subheader"><?php echo $experience_services[ 'experience_services_subheader' ]; ?></h3>
@@ -49,6 +53,8 @@
 							<?php echo $experience_services[ 'experience_services_content' ]; ?>
 
 						</div>
+
+						*/ ?>
 
 					</div>
 
