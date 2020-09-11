@@ -6,15 +6,15 @@
 
 	<?php if ( $contact_us_overview ) : ?>
 
-		<div class="">
+		<div class="contact_us_overview">
 
-			<div class="">
+			<div class="contact_us_overview__inner-wrap">
 
-				<h2 class=""><?php echo $contact_us_overview[ 'contact_us_overview_header' ]; ?></h2>
+				<h2 class="contact_us_overview__header"><?php echo $contact_us_overview[ 'contact_us_overview_header' ]; ?></h2>
 
-				<h3 class=""><?php echo $contact_us_overview[ 'contact_us_overview_subheader' ]; ?></h3>
+				<h3 class="contact_us_overview__subheader"><?php echo $contact_us_overview[ 'contact_us_overview_subheader' ]; ?></h3>
 
-				<div class="">
+				<div class="contact_us_overview__content">
 
 					<?php echo $contact_us_overview[ 'contact_us_overview_content' ]; ?>
 
