@@ -82,7 +82,9 @@
 
 					<h2 class="trip__itinerary-header"><?php echo $trip_itinerary[ 'trip_itinerary_header' ]; ?></h2>
 
-					<h3 class="trip__itinerary-subheader">Itinerary</h3>
+					<h3 class="trip__itinerary-subheader"><?php echo $trip_itinerary[ 'trip_itinerary_subheader' ]; ?></h3>
+
+					<h3 class="trip__itinerary-label">Itinerary</h3>
 
 					<div class="trip__itinerary-description">
 
