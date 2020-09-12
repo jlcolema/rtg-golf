@@ -30,31 +30,31 @@
 
 				?>
 
-				<div class="">
+				<div class="story">
 
-					<div class="">
+					<div class="story__inner-wrap">
 
-						<div class="">
+						<div class="story__image">
 
-							<picture class="">
+							<picture class="story__picture">
 
 								<source srcset="<?php echo $story_image; ?>" media="(min-width: 1000px)">
 
 								<source srcset="<?php echo $story_image; ?>" media="(min-width: 700px)">
 
-								<img src="<?php echo $story_image; ?>" alt="A very nice description." class="">
+								<img src="<?php echo $story_image; ?>" alt="A very nice description." class="story__img">
 
 							</picture>
 
 						</div>
 
-						<div class="">
+						<div class="story__contents">
 
-							<h2 class=""><?php echo $story_header; ?></h2>
+							<h2 class="story__header"><?php echo $story_header; ?></h2>
 
-							<h3 class=""><?php echo $story_subheader; ?></h3>
+							<h3 class="story__subheader"><?php echo $story_subheader; ?></h3>
 
-							<div class="">
+							<div class="story__content">
 
 								<?php echo $story_content; ?>
 
