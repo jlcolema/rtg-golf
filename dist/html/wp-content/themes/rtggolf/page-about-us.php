@@ -100,23 +100,31 @@
 
 								<li class="partners__item">
 
-									<picture class="partners__picture">
+									<div class="partners__image">
 
-										<source srcset="<?php the_field( 'partner_photo' ); ?>" media="(min-width: 1000px)">
+										<picture class="partners__picture">
 
-										<source srcset="<?php the_field( 'partner_photo' ); ?>" media="(min-width: 700px)">
+											<source srcset="<?php the_field( 'partner_photo' ); ?>" media="(min-width: 1000px)">
 
-										<img src="<?php the_field( 'partner_photo' ); ?>" alt="A very nice description." class="partners__img">
+											<source srcset="<?php the_field( 'partner_photo' ); ?>" media="(min-width: 700px)">
 
-									</picture>
+											<img src="<?php the_field( 'partner_photo' ); ?>" alt="A very nice description." class="partners__img">
 
-									<h2 class="partners__name"><?php the_title(); ?></h2>
+										</picture>
 
-									<h3 class="partners__title"><?php the_field( 'partner_title' ); ?></h3>
+									</div>
 
-									<div class="partners__bio">
+									<div class="partners__content">
 
-										<?php the_field( 'partner_bio' ); ?>
+										<h2 class="partners__name"><?php the_title(); ?></h2>
+
+										<h3 class="partners__title"><?php the_field( 'partner_title' ); ?></h3>
+
+										<div class="partners__bio">
+
+											<?php the_field( 'partner_bio' ); ?>
+
+										</div>
 
 									</div>
 
