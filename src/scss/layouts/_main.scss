@@ -1507,9 +1507,42 @@
 
 				}
 
-					.secondary-widget__header {}
+					.secondary-widget__header {
+
+						margin: 0 0 1em 0;
+						font-size: 1rem;
+						font-family: 'Montserrat', Helvetica, Arial, Helvetica, sans-serif;
+						font-weight: normal;
+						// text-align: center;
+						text-transform: uppercase;
+						letter-spacing: 3px;
+						color: $color-gray-40;
+
+					}
 
 					.secondary-widget__content {}
+
+					.secondary-widget__categories {}
+
+						.categories__list {
+
+							margin: 0;
+							padding: 0;
+							list-style: none;
+
+						}
+
+							.categories__item {
+
+								&:last-of-type {
+
+									margin: 0;
+
+								}
+
+							}
+
+								.categories__link {}
 
 					.secondary-widget__contacts {}
 

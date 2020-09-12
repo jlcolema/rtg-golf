@@ -113,27 +113,59 @@
 
 		<?php else : ?>
 
-			<div class="secondary-widget secondary-widget__item secondary-widget__recent-posts">
+			<div class="secondary-widget secondary-widget__item secondary-widget__categories">
 
-				<h3 class="secondary-widget__header">Title</h3>
+				<h3 class="secondary-widget__header">Categories</h3>
 
 				<div class="secondary-widget__content">
 
-					<article class="summary">
+					<ul class="categories__list">
 
-						<h1 class="summary__title">
+						<?php $categories = get_categories(); ?>
 
-							<a href="#" class="summary__link">Title</a>
+						<?php foreach( $categories as $category ) : ?>
 
-						</h1>
+							<li class="categories__item">
 
-						<footer class="summary__footer">
+								<a href="<?php echo get_category_link( $category->term_id ); ?>" class="categories__link"><?php echo $category->name; ?></a>
 
-							<time datetime="" class="summary__time">August 11, 2020</time>
+							</li>
 
-						</footer>
+						<?php endforeach; ?>
 
-					</article>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="secondary-widget secondary-widget__social">
+
+				<h3 class="secondary-widget__header">Social</h3>
+
+				<div class="secondary-widget__content">
+
+					<ul class="secondary-social__list">
+
+						<li class="secondary-social__item secondary-social__facebook">
+
+							<a href="<?php the_field( 'secondary-social_media_facebook', 'option' ); ?>" rel="external" class="secondary-social__link">Facebook</a>
+
+						</li>
+
+						<li class="secondary-social__item secondary-social__twitter">
+
+							<a href="<?php the_field( 'secondary-social_media_twitter', 'option' ); ?>" rel="external" class="secondary-social__link">Twitter</a>
+
+						</li>
+
+						<li class="secondary-social__item secondary-social__instagram">
+
+							<a href="<?php the_field( 'secondary-social_media_instagram', 'option' ); ?>" rel="external" class="secondary-social__link">Instagram</a>
+
+						</li>
+
+					</ul>
 
 				</div>
 
