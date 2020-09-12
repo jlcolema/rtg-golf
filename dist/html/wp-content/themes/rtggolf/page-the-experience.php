@@ -98,40 +98,76 @@
 
 	<?php endif; ?>
 
-	<?php /* Details */ ?>
+	<?php /* Story */ ?>
 
-	<div class="experience__details">
-	
-		<div class="inner-wrap experience__details-inner-wrap">
+	<?php if ( have_rows( 'story_two' ) ) : ?>
 
-			<div class="">
+		<?php while ( have_rows( 'story_two' ) ) : ?>
 
-				<picture class="experience__picture">
+			<?php the_row(); ?>
 
-					<source srcset="https://via.placeholder.com/400x400" media="(min-width: 1000px)">
+			<?php if ( get_row_layout() == 'story_two_image_and_content' ) : ?>
 
-					<source srcset="https://via.placeholder.com/400x400" media="(min-width: 700px)">
+				<?php
 
-					<img src="https://via.placeholder.com/400x400" alt="A very nice description." class="experience__img">
+					// Image
 
-				</picture>
+					$story_two_image = get_sub_field( 'story_two_image' );
 
-			</div>
+					// Header
 
-			<div class="">
+					$story_two_header = get_sub_field( 'story_two_header' );
 
-				<h2 class="">RTG Golf is expert in assisting trip leaders with moving their trip -- from "great idea to looking "on the calendar".</h2>
+					// Subheader
 
-				<div class="">
+					$story_two_subheader = get_sub_field( 'story_two_subheader' );
 
-					<p><i>We understand that your trip is full up until the minute the first payment is due! We have discovered that if you provide your golf pals with: dates, destination, and price -- they will have all the information they need to accept or decline the invitation.</i></p>
+					// Content
+
+					$story_two_content = get_sub_field( 'story_two_content' );
+
+				?>
+
+				<div class="story-two">
+
+					<div class="story-two__inner-wrap">
+
+						<div class="story-two__image">
+
+							<picture class="story-two__picture">
+
+								<source srcset="<?php echo $story_two_image; ?>" media="(min-width: 1000px)">
+
+								<source srcset="<?php echo $story_two_image; ?>" media="(min-width: 700px)">
+
+								<img src="<?php echo $story_two_image; ?>" alt="A very nice description." class="story-two__img">
+
+							</picture>
+
+						</div>
+
+						<div class="story-two__contents">
+
+							<h2 class="story-two__header"><?php echo $story_two_header; ?></h2>
+
+							<h3 class="story-two__subheader"><?php echo $story_two_subheader; ?></h3>
+
+							<div class="story-two__content">
+
+								<?php echo $story_two_content; ?>
+
+							</div>
+
+						</div>
+
+					</div>
 
 				</div>
 
-			</div>
+			<?php endif; ?>
 
-		</div>
+		<?php endwhile; ?>
 
-	</div>
+	<?php endif; ?>
 
 <?php get_footer(); ?>
