@@ -52,8 +52,8 @@
 			// border: 1px solid $color-gray-20;
 
 			// background: pink;
-			background: $color-gray-10;
-			background: lighten($color-primary-tan, 25%);
+			// background: $color-gray-10;
+			// background: lighten($color-primary-tan, 25%);
 
 		}
 
@@ -1486,5 +1486,151 @@
 							.wpcf7-response-output {
 
 								display: none;
+
+							}
+
+			/* Sidebar */
+
+			.secondary-widgets {}
+
+				.secondary-widget {
+
+					margin: 0 0 2em 0;
+					padding: 2em;
+					background: lighten($color-primary-tan, 25%);
+
+					&:last-of-type {
+
+						margin: 0;
+
+					}
+
+				}
+
+					.secondary-widget__header {}
+
+					.secondary-widget__content {}
+
+					.secondary-widget__contacts {}
+
+						.secondary-h-card {
+
+							margin: 0 0 1.5em 0;
+
+							&:last-of-type {
+
+								margin: 0;
+
+							}
+
+						}
+
+							.secondary-p-name {
+
+								font-weight: bold;
+
+							}
+
+							.secondary-p-adr {}
+
+								.secondary-p-locality {}
+
+								.secondary-p-region {}
+
+							.secondary-p-tel {
+
+								a {
+
+									color: $color-gray-80;
+
+								}
+
+							}
+
+							.secondary-u-email {}
+
+								.secondary-u-email__link {
+
+									color: $color-gray-80;
+
+									&:hover {}
+
+								}
+
+					.secondary-widget__social {}
+
+						.secondary-social__list {
+
+							display: flex;
+							flex-direction: row;
+							flex-wrap: nowrap;
+							justify-content: flex-start;
+							align-items: flex-start;
+							align-content: flex-start;
+
+							margin: 0;
+							padding: 0;
+							list-style: none;
+
+						}
+
+							.secondary-social__item {
+
+								margin: 0 1.5em 0 0;
+
+								&:last-of-type {
+
+									margin: 0;
+
+								}
+
+							}
+
+								.secondary-social__link {
+
+									display: block;
+									width: 40px;
+									height: 40px;
+									background: $color-primary-green url(../img/social.svg) 0 0 no-repeat;
+									background-size: 120px 40px;
+									border-radius: 50%;
+									@include hide-text;
+									transition: background-color 0.35s ease-in-out;
+
+									&:hover {
+
+										// background-color: rgba($color-base-white, 0.35);
+
+									}
+
+								}
+
+							.secondary-social__facebook {
+
+								.secondary-social__link {}
+
+							}
+
+							.secondary-social__twitter {
+
+								.secondary-social__link {
+
+									background-position-x: -40px;
+
+									&:hover {}
+
+								}
+
+							}
+
+							.secondary-social__instagram {
+
+								.secondary-social__link {
+
+									background-position-x: -80px;
+
+									&:hover {}
+
+								}
 
 							}

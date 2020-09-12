@@ -8,7 +8,7 @@
 
 			<div class="secondary-widget secondary-widget__contacts">
 
-				<h3 class="secondary-widget__header">Title</h3>
+				<h3 class="secondary-widget__header">Contact Us</h3>
 
 				<div class="secondary-widget__content">
 
@@ -49,23 +49,23 @@
 
 						?>
 
-						<div class="h-card contact__h-card">
+						<div class="secondary-h-card contact__h-card">
 
-							<div class="p-name"><?php echo $partner->post_title; ?></div>
+							<div class="secondary-p-name"><?php echo $partner->post_title; ?></div>
 
-							<div class="p-adr">
+							<div class="secondary-p-adr">
 
-								<span class="p-locality"><?php echo $partner_location[ 'partner_city' ]; ?>,</span>
+								<span class="secondary-p-locality"><?php echo $partner_location[ 'partner_city' ]; ?>,</span>
 									
-								<span class="p-region"><?php echo $partner_location[ 'partner_state' ]; ?></span>
+								<span class="secondary-p-region"><?php echo $partner_location[ 'partner_state' ]; ?></span>
 
 							</div>
 
-							<div class="p-tel"><?php echo $partner_phone_number; ?></div>
+							<div class="secondary-p-tel"><?php echo $partner_phone_number; ?></div>
 
-							<div class="u-email">
+							<div class="secondary-u-email">
 
-								<a href="mailto:<?php echo $partner_email_address; ?>" class="u-email__link"><?php echo $partner_email_address; ?></a>
+								<a href="mailto:<?php echo $partner_email_address; ?>" class="secondary-u-email__link"><?php echo $partner_email_address; ?></a>
 
 							</div>
 
@@ -79,7 +79,7 @@
 
 			<div class="secondary-widget secondary-widget__social">
 
-				<h3 class="secondary-widget__header">Title</h3>
+				<h3 class="secondary-widget__header">Social</h3>
 
 				<div class="secondary-widget__content">
 
