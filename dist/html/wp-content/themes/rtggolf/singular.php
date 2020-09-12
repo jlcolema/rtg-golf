@@ -40,7 +40,7 @@ get_header();
 
 								<li class="post__category-item">
 
-									<a href="<?php echo esc_url( get_term_link( $post_category ) ); ?>" class="post__category-link"><?php echo esc_html( $post_category->name ); ?></a>
+									Filed in: <a href="<?php echo esc_url( get_term_link( $post_category ) ); ?>" class="post__category-link"><?php echo esc_html( $post_category->name ); ?></a>
 
 								</li>
 
