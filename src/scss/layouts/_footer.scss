@@ -73,6 +73,7 @@
 
 								margin: 0 0 0.65em 0;
 								font-weight: normal;
+								border: none;
 
 								&:last-of-type {
 
@@ -88,6 +89,7 @@
 								.single-trip & a,
 								.single-destination & a {
 
+									padding: 0;
 									color: $color-base-white;
 
 									&:hover {
