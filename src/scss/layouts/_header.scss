@@ -11,13 +11,13 @@
 
 	@media screen and (min-width: 600px) {
 
-		padding: 0 40px;
+		// padding: 0 40px;
 
 	}
 
 	@media screen and (min-width: 800px) {
 
-		padding: 0 60px;
+		// padding: 0 60px;
 
 	}
 
@@ -25,16 +25,27 @@
 
 	.header__wrap {
 
+		position: relative;
+
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		flex-wrap: nowrap;
-		justify-content: space-between;
-		align-items: center;
+		justify-content: flex-start;
+		align-items: flex-start;
 		align-content: flex-start;
 
 		width: 100%;
 		max-width: 960px;
 		margin: 0 auto;
+
+		@media screen and (min-width: 840px) {
+
+			position: static;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+		}
 
 	}
 
@@ -50,20 +61,48 @@
 
 			}
 
-		.nav {}
+		.nav {
 
-			.nav__toggle {
+			width: 100%;
 
-				display: none;
+			@media screen and (min-width: 840px) {
+
+				width: auto;
 
 			}
 
-				.nav__label {}
+		}
+
+			.nav__toggle {
+
+				position: absolute;
+				right: 0;
+				top: 25px;
+				z-index: 1;
+
+				@media screen and (min-width: 840px) {
+
+					display: none;
+
+				}
+
+			}
+
+				.nav__label {
+
+					display: block;
+					width: 50px;
+					height: 50px;
+					background: $color-primary-green;
+					cursor: pointer;
+					@include hide-text;
+
+				}
 
 			.nav__list {
 
-				display: flex;
-				flex-direction: row;
+				display: none;
+				flex-direction: column;
 				flex-wrap: nowrap;
 				justify-content: flex-start;
 				align-items: flex-start;
@@ -74,21 +113,59 @@
 				font-family: 'Merriweather', Times, 'Times New Roman', serif;
 				list-style: none;
 
+				border-top: 1px solid $color-gray-10;
+
+				@media screen and (min-width: 840px) {
+
+					display: flex;
+					flex-direction: row;
+					border: none;
+
+				}
+
+				&.nav__list--is-open {
+
+					display: flex;
+
+				}
+
 			}
 
 				.nav__item,
 				.menu-item {
 
-					margin: 0 0 0 1.75em;
+					width: 100%;
+					margin: 0;
 					font-weight: bold;
+					border-bottom: 1px solid $color-gray-10;
+
+					@media screen and (min-width: 840px) {
+
+						width: auto;
+						margin: 0 0 0 1.75em;
+						border: none;
+
+					}
+
+					&:last-of-type {
+
+						border: none;
+
+					}
 
 					a {
 
 						display: block;
-						// padding: 1em 0 1em 0;
+						padding: 1em 0.75em;
 						color: $color-gray-80;
 						// background: pink;
 						text-decoration: none;
+
+						@media screen and (min-width: 840px) {
+
+							padding: 0;
+
+						}
 
 						&:hover {
 
