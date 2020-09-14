@@ -71,13 +71,13 @@
 
 		// Notes...
 
-		// $('.c-small-screen-nav__toggle').click( function() {
+		$('.nav__label').click( function() {
 
-		// 	$(this).parent().next().addClass('c-primary-nav--is-open');
+			$(this).parent().next().toggleClass('nav__list--is-open');
 
-		// 	$('body').addClass('primary-nav-is-open');
+			// $('body').addClass('primary-nav-is-open');
 
-		// });
+		});
 
 		// $('.c-primary-nav__toggle').click( function() {
 
