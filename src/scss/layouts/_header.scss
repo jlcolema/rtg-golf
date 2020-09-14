@@ -93,7 +93,9 @@
 					display: block;
 					width: 50px;
 					height: 50px;
-					background: $color-primary-green;
+					background: url(../img/toggle.svg) center center no-repeat;
+					background-size: 50px 50px;
+					// border: 1px solid $color-primary-green;
 					cursor: pointer;
 					@include hide-text;
 
