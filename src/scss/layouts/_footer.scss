@@ -13,13 +13,13 @@
 
 	@media screen and (min-width: 600px) {
 
-		padding: 0 40px;
+		// padding: 0 40px;
 
 	}
 
 	@media screen and (min-width: 800px) {
 
-		padding: 0 60px;
+		// padding: 0 60px;
 
 	}
 
@@ -37,17 +37,37 @@
 		.widgets {
 
 			display: flex;
-			flex-direction: row;
+			flex-direction: column;
 			flex-wrap: nowrap;
-			justify-content: space-between;
+			justify-content: flex-start;
 			align-items: flex-start;
 			align-content: flex-start;
+
+			@media screen and (min-width: 840px) {
+
+				flex-direction: row;
+				justify-content: space-between;
+
+			}
 
 		}
 
 			.widget__item {
 
-				width: calc(33.33333% - 3em);
+				margin: 0 0 4em 0;
+
+				@media screen and (min-width: 840px) {
+
+					width: calc(33.33333% - 3em);
+					margin: 0;
+
+				}
+
+				&:last-of-type {
+
+					margin: 0;
+
+				}
 
 			}
 
