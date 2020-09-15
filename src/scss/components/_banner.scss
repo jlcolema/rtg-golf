@@ -19,13 +19,13 @@
 
 	@media screen and (min-width: 600px) {
 
-		padding: 0 40px;
+		// padding: 0 40px;
 
 	}
 
 	@media screen and (min-width: 800px) {
 
-		padding: 0 60px;
+		// padding: 0 60px;
 
 	}
 
@@ -42,19 +42,31 @@
 
 		width: 100%;
 		max-width: 960px;
-		height: 200px;
+		height: 120px;
 		margin: 0 auto;
 		color: $color-base-white;
+
+		@media screen and (min-width: 840px) {
+
+			height: 200px;
+
+		}
 
 	}
 
 		.banner__title {
 
 			margin: 0;
-			font-size: 3.375rem;
+			font-size: 2.25rem;
 			// font-family: 'Montserrat', Helvetica, Arial, Helvetica, sans-serif;
 			font-weight: normal;
 			text-shadow: 0 3px 7px rgba($color-base-black, 0.25);
+
+			@media screen and (min-width: 840px) {
+
+				font-size: 3.375rem;
+
+			}
 
 		}
 
