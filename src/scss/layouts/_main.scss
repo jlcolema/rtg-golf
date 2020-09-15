@@ -928,9 +928,9 @@
 						.featured-destinations__list {
 
 							display: flex;
-							flex-direction: row;
+							flex-direction: column;
 							flex-wrap: nowrap;
-							justify-content: space-between;
+							justify-content: flex-start;
 							align-items: stretch;
 							align-content: flex-start;
 
@@ -940,13 +940,32 @@
 
 							// background: pink;
 
+							@media screen and (min-width: 840px) {
+
+								flex-direction: row;
+								justify-content: space-between;
+
+							}
+
 						}
 
 							.featured-destinations__item {
 
-								width: calc(33.33333% - 2em);
-								margin: 0;
+								margin: 0 0 3em 0;
 								// background: pink;
+
+								@media screen and (min-width: 840px) {
+
+									width: calc(33.33333% - 2em);
+									margin: 0;
+
+								}
+
+								&:last-of-type {
+
+									margin: 0;
+
+								}
 
 							}
 
@@ -1004,8 +1023,14 @@
 						.featured-destinations__learn-more {
 
 							width: 100%;
-							max-width: 400px;
+							// max-width: 400px;
 							margin: 4em auto 0 auto;
+
+							@media screen and (min-width: 840px) {
+
+								max-width: 400px;
+
+							}
 
 						}
 
