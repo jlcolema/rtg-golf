@@ -665,8 +665,14 @@
 						.destinations__item {
 
 							position: relative;
-							margin: 0 0 3em 0;
+							margin: 0 0 2em 0;
 							// background: pink;
+
+							@media screen and (min-width: 840px) {
+
+								margin: 0 0 3em 0;
+
+							}
 
 							&:last-of-type {
 
@@ -694,8 +700,14 @@
 								top: 0;
 								width: 100%;
 								height: 100%;
-								padding: 3em;
+								padding: 1em;
 								z-index: 1;
+
+								@media screen and (min-width: 840px) {
+
+									padding: 3em;
+
+								}
 
 							}
 
@@ -725,17 +737,29 @@
 
 								.destinations__more {
 
-									margin: 2em 0 0 0;
+									margin: 1em 0 0 0;
+
+									@media screen and (min-width: 840px) {
+
+										margin: 2em 0 0 0;
+
+									}
 
 								}
 
 									.destinations__link {
 
 										display: inline-block;
-										padding: 1em 2.5em 1em 2.5em;
+										padding: 0.75em 1.5em 0.75em 1.5em;
 										color: $color-base-white;
 										background: $color-primary-green;
 			
+										@media screen and (min-width: 840px) {
+
+											padding: 1em 2.5em 1em 2.5em;
+
+										}
+
 										&:hover {
 			
 											text-decoration: none;
