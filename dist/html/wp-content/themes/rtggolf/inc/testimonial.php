@@ -39,13 +39,17 @@
 
 			$testimonial_thumbnail_full = wp_get_attachment_image_src( $testimonial_thumbnail_attachment_id, $testimonial_thumbnail_size_full );
 
+			$testimonial_title = get_field( 'testimonial_title', $testimonial->ID );
+
+			$testimonial_quote = get_field( 'testimonial_quote', $testimonial->ID );
+
 		?>
 
 			<blockquote class="testimonial__blockquote">
 
 				<div class="testimonial__quote">
 
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti et iste eius! Excepturi, recusandae laboriosam! Ipsum facere molestias eum iure esse pariatur nulla, similique sit porro necessitatibus fugit eligendi quos.</p>
+					<?php echo $testimonial_quote; ?>
 
 				</div>
 
@@ -55,7 +59,11 @@
 
 					<strong class="testimonial__name"><?php echo $testimonial->post_title; ?></strong>
 					
-					<i class="testimonial__title">CEO</i>
+					<i class="testimonial__title">
+					
+						<?php echo $testimonial_title; ?>
+					
+					</i>
 
 				</div>	
 
