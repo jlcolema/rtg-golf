@@ -27,3 +27,9 @@ node_modules/
 # Ignore OS generated files.
 
 .DS_Store
+
+# Miscellaneous
+
+*.code-workspace
+*.nova
+package-lock.json
